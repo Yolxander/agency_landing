@@ -6,7 +6,8 @@ WebFont.load({
     google: {
         families: [
             'Gugi',
-            'Notable'
+            'Notable',
+            'Audiowide'
         ]
     }
 });

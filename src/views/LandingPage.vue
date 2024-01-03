@@ -2,16 +2,19 @@
     <section class="hero">
       <NavBarComponent />
         <CallToAction />
+        <WhiteStrapComponent />
     </section>
 </template>
 
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import CallToAction from "@/components/CallToAction.vue";
+import WhiteStrapComponent from "@/components/WhiteStrapComponent.vue";
 
 export default {
     name: "LandingPage",
     components: {
+        WhiteStrapComponent,
         CallToAction,
         NavBarComponent
     },
@@ -26,6 +29,7 @@ export default {
         background-color: black;
         flex-direction: row;
         justify-content: space-between;
+        position: relative;
     }
 
 </style>

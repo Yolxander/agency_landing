@@ -55,6 +55,7 @@ export default {
 
   .divider{
       color: #FFFFFF;
+      cursor: pointer;
   }
 
   .right-side{
