@@ -1,17 +1,23 @@
 <template>
   <div class="strap">
-    <div class="text-container">
-        <p>automation</p>
-        <p>web design & development</p>
-        <p>seo</p>
-        <p>marketing</p>
-    </div>
+      <div class="text-container">
+          <!-- Duplicate the array to ensure continuity in the animation -->
+          <div class="marquee">
+              <p v-for="word in [...words, ...words]" :key="word" class="marquee-content">{{ word }}</p>
+          </div>
+      </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: "WhiteStrapComponent"
+    name: "WhiteStrapComponent",
+    data() {
+        return {
+            // Define the words array
+            words: ['automation', 'web design & development', 'seo', 'marketing']
+        };
+    }
 }
 </script>
 
@@ -48,7 +54,24 @@ export default {
       font-weight: 400;
       line-height: normal;
       text-transform: uppercase;
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 40px;
+      padding-left: 40px;
+      margin: 0;
+      border-top: 2px solid goldenrod;
+  }
+
+  .marquee {
+      display: flex; /* Use flexbox for a seamless continuous line of text */
+      animation: marquee 30s linear infinite; /* Adjust the time for speed */
+  }
+
+  .marquee p {
+      /* ... existing styles ... */
+      margin: 0 20px; /* Adjust margin for spacing between words */
+  }
+
+  @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
   }
 </style>
