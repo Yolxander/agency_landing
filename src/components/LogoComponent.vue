@@ -12,11 +12,14 @@ export default {
 </script>
 
 <style scoped>
+
 .logo{
     width: 80px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
+
 .logo p{
     color: #FFF;
     font-family: 'Gugi', sans-serif;

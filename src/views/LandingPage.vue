@@ -1,15 +1,18 @@
 <template>
     <section class="hero">
       <NavBarComponent />
+        <CallToAction />
     </section>
 </template>
 
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
+import CallToAction from "@/components/CallToAction.vue";
 
 export default {
     name: "LandingPage",
     components: {
+        CallToAction,
         NavBarComponent
     },
 
