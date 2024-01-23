@@ -4,6 +4,8 @@
         <div class="lines" id="container_nav_menu_middle_line" :style="{ width: this.showMenu ? '100%' : '', transition: 'width 1s ease-out' }"></div>
         <div class="lines" id="container_nav_menu_bottom_line" :style="{ width: this.showMenu ? '100%' : '', transition: 'width 1s ease-out' }"></div>
     </div>
+
+
 </template>
 
 <script>
@@ -17,6 +19,7 @@ export default  {
     },
     methods: {
         toggleMenu() {
+            this.$emit('toggleOverlay');
             this.showMenu = !this.showMenu;
             setTimeout(() => {
                 this.showLinks = true;

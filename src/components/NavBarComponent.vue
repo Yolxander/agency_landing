@@ -51,6 +51,7 @@ export default {
       height: 25vh;
       padding-right: 70px;
       padding-left: 70px;
+      background: black;
   }
 
   .divider{

@@ -1,13 +1,12 @@
 <template>
     <section class="hero">
-      <NavBarComponent />
         <CallToAction />
         <WhiteStrapComponent />
     </section>
 </template>
 
 <script>
-import NavBarComponent from "@/components/NavBarComponent.vue";
+
 import CallToAction from "@/components/CallToAction.vue";
 import WhiteStrapComponent from "@/components/WhiteStrapComponent.vue";
 
@@ -16,7 +15,11 @@ export default {
     components: {
         WhiteStrapComponent,
         CallToAction,
-        NavBarComponent
+    },
+    data() {
+        return {
+            showMenu: false,
+        }
     },
 
 }
@@ -24,7 +27,7 @@ export default {
 
 <style scoped>
     .hero{
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
         background-color: black;
         flex-direction: row;

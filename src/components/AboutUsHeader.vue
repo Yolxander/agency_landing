@@ -1,0 +1,39 @@
+<template>
+    <div class="container">
+      <h1>
+          WHO <span><br>WE ARE ?</span>
+      </h1>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "AboutUsHeader"
+}
+</script>
+
+<style scoped>
+  .container{
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      height: fit-content;
+  }
+  h1{
+      color: #FFF;
+      font-family: 'Notable', sans-serif;
+      font-size: 65px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 170%; /* 153px */
+      text-transform: capitalize;
+      width: 500px;
+      margin: 0;
+      text-align: start;
+  }
+
+  span{
+      color: #616161;
+  }
+
+</style>

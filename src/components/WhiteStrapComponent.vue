@@ -35,6 +35,7 @@ export default {
       position: absolute;
       bottom: 30%;
       left: -25px;
+      overflow: hidden; /* Hide the overflow to create a continuous loop */
   }
 
   .text-container{
@@ -42,10 +43,12 @@ export default {
       font-family: 'Audiowide', sans-serif;
       display: flex;
       margin-right: 60px;
+      white-space: nowrap; /* Prevent wrapping of text */
   }
 
   .text-container p{
-      border: 1px solid white;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
       width: fit-content;
       height: 66.416px;
       flex-shrink: 0;
@@ -71,7 +74,8 @@ export default {
   }
 
   @keyframes marquee {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(0%); }
+
   }
 </style>

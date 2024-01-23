@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import WebFont from 'webfontloader';
+import router from './router';
+// Define the feature flag
+window.__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false;
 
 WebFont.load({
     google: {
@@ -12,4 +15,4 @@ WebFont.load({
     }
 });
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
