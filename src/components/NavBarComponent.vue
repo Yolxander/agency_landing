@@ -32,6 +32,7 @@
             <MenuButton />
         </div>
     </nav>
+
 </template>
 
 <script>

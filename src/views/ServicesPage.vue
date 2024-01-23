@@ -21,25 +21,25 @@
 import AboutUsHeader from "@/components/AboutUsHeader.vue";
 
 export default {
-    name: "AboutUsPage",
+    name: "ServicesPage",
     components: {AboutUsHeader},
 }
 </script>
 
 <style scoped>
 .hero{
-    height: 90vh;
+    height: 80vh;
     width: 100vw;
     background-color: black;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
 }
 
 .right-side {
     width: 45%;
-    height: 90vh;
+    height: 70vh;
     /*border: 1px solid white;*/
     /*background: #2c3e50;*/
     display: flex;

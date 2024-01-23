@@ -1,11 +1,9 @@
 <template>
-    <NavBarComponent @toggleOverlay="toggleOverlay" />
-    <div class="overlay" v-if="showOverlay"></div>
+    <NavBarComponent  />
     <router-view/>
 </template>
 
 <script>
-import { ref } from 'vue';
 
 import NavBarComponent from "@/components/NavBarComponent.vue";
 
@@ -14,15 +12,6 @@ export default {
     components: {
         NavBarComponent,
     },
-    setup() {
-        const showOverlay = ref(false);
-
-        const toggleOverlay = () => {
-            showOverlay.value = !showOverlay.value;
-        }
-
-        return { showOverlay, toggleOverlay };
-    }
 }
 </script>
 
