@@ -1,10 +1,16 @@
 <template>
-    <NavBarComponent  />
-   <LandingPage />
-    <AboutUsPage />
-  <WhatWeDoPage />
-  <ContactUsPage />
+    <div>
+        <NavBarComponent />
+        <div ref="sections">
+            <LandingPage ref="landingPage" />
+            <AboutUsPage ref="aboutUsPage" />
+            <WhatWeDoPage ref="whatWeDoPage" />
+            <ContactUsPage ref="contactUsPage" />
+        </div>
+    </div>
 </template>
+
+
 
 <script>
 

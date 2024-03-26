@@ -70,6 +70,7 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     margin-right: 70px;
+    margin-top: 40px;
     font-size: 22px;
     color: #FFFFFF;
     text-align: left;
