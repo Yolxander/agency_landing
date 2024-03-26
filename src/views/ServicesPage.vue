@@ -6,15 +6,12 @@
           </ObserverComponent>
       </div>
         <div class="left-side">
-            <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
-              <p id="first_paragraph">
-                <span>AYT</span> <span class="small-header">Studios</span>  is a full service digital agency. we can make all your digital dreams come true.
-              </p>
-            </ObserverComponent>
-            <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
-              <p id="second_paragraph">
-                web design & developement, mobile apps and automation
-            </p>
+          <p id="first_paragraph">
+              <span>AYT</span> <span class="small-header">Studios</span>  is a full service digital agency. we can make all your digital dreams come true.
+          </p>
+          <p id="second_paragraph">
+              web design & developement, mobile apps and automation
+          </p>
           <p id="third_paragraph">
               web design & developement, mobile apps and automation
           </p>

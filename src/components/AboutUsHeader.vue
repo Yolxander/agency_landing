@@ -1,14 +1,19 @@
 <template>
     <div class="container">
       <h1>
-          WHO <span><br>WE ARE ?</span>
+         {{ header.part1 }} <span><br>{{ header.part2 }}</span>
       </h1>
     </div>
 </template>
 
 <script>
 export default {
-    name: "AboutUsHeader"
+    name: "AboutUsHeader",
+    props: {
+        header: {
+            required: true,
+        },
+    },
 }
 </script>
 

@@ -2,7 +2,7 @@
     <section class="hero">
       <div class="right-side">
           <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
-            <AboutUsHeader/>
+              <AboutUsHeader :header="header"/>
           </ObserverComponent>
       </div>
         <div class="left-side" >
@@ -24,6 +24,14 @@ import ObserverComponent from "@/components/IntersectionObserver.vue";
 export default {
     name: "AboutUsPage",
     components: {ObserverComponent, AboutUsHeader},
+    data() {
+        return {
+            header: {
+                part1: "Who",
+                part2: "we are ?",
+            },
+        }
+    }
 
 }
 </script>
@@ -37,7 +45,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0vh;
+    padding-top: 90px;
 }
 
 .right-side {

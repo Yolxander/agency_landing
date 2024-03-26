@@ -2,16 +2,16 @@
     <section class="hero">
       <div class="right-side">
           <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
-            <AboutUsHeader/>
+            <AboutUsHeader :header="header"/>
           </ObserverComponent>
       </div>
         <div class="left-side" >
             <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
-              <p id="first_paragraph">
-                <span>AYT</span> <span class="small-header">Studios</span> is a full-service digital agency. We can make all your digital dreams come true. As your dedicated digital partner, we focus on bringing your business's unique vision and goals to life online. Our approach is to blend creativity with technology, crafting a digital presence that captures your business’s essence and objectives in vibrant, effective digital narratives.              <br>
-                <br>
-                Join us at AYT Studios for a journey into the digital future. Our team is committed to creating engaging, seamless online experiences for your customers. Let's work together to elevate your business in the digital world, ensuring it's not just seen, but remembered.
-              </p>
+                <ul>
+                    <li v-for="service in services" :key="service.name">
+                        <span>{{ service.name }}</span> - {{ service.description }}
+                    </li>
+                </ul>
             </ObserverComponent>
         </div>
     </section>
@@ -26,6 +26,20 @@ export default {
     components: {
         ObserverComponent,
         AboutUsHeader
+    },
+    data() {
+        return {
+            header: {
+                part1: "What",
+                part2: "we do ?",
+            },
+            services: [
+                { name: 'Automation', description: 'Harness the power of technology to streamline your operations and increase efficiency.' },
+                { name: 'Web Design & Development', description: 'Create stunning, user-friendly websites that drive engagement and conversions.' },
+                { name: 'SEO', description: 'Improve your online visibility and rank higher on search engine results pages.' },
+                { name: 'Marketing', description: 'Craft compelling marketing strategies that connect with your audience and amplify your brand.' },
+            ],
+        }
     }
 }
 </script>
@@ -39,46 +53,46 @@ export default {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    padding-top: 70px;
 }
 
 .right-side {
-    width: 45%;
+    width: 43%;
     height: 60vh;
     /*border: 1px solid white;*/
     /*background: #2c3e50;*/
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-right: 70px;
+    align-items: flex-start;
 }
 
 
 .left-side {
     width: 40%;
-    height: fit-content;
+    height: 60vh;
     /*border: 1px solid white;*/
     /*background: #42b983;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
-
+    align-items: flex-start;
     font-size: 22px;
     color: #FFFFFF;
-    text-align: right;
-    padding-right: 40px;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 50px;
 }
 
-.left-side #first_paragraph{
-    width: 550px;
+.left-side ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.left-side #second_paragraph {
-    width: 300px;
-}
-
-.left-side #third_paragraph{
-    width: 300px;
+.left-side ul span{
+    font-family: 'Audiowide', sans-serif;
 }
 
 .left-side p span{
@@ -89,10 +103,6 @@ export default {
     font-weight: 400;
     line-height: normal;
     margin: 0;
-}
-
-.left-side .small-header{
-    font-size: 30px;
 }
 
 
