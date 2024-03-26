@@ -22,7 +22,7 @@
             <label class="label" for="message">Message</label>
         </div>
         <div class="form-field col x-100 align-center">
-            <input class="submit-btn" type="submit" value="Submit">
+                <button class="white">Send</button>
         </div>
     </form>
 </template>
@@ -160,6 +160,49 @@ body {
 .select-field .input-text:not(:focus):not(:not(:empty)) + .label {
     /* Keep label above if the select has value(s) */
     transform: translateY(-24px);
+}
+
+button {
+    display: inline-block;
+    padding: .75em 2em;
+    font-size: 18px;
+    background: none;
+    border-radius: 5px;
+    border: solid 1px #000;
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    transition: all .5s ease;
+    &.white {
+        border: solid 1px #fff;
+        border-top: solid 2px #fff;
+        border-bottom: solid 2px #fff;
+        color: #fff;
+        &:after {
+            background-color: rgba(255, 255, 255, 0.25);
+            border-bottom: solid 3px #fff;
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        border-bottom: solid 3px #000;
+        opacity: 0;
+        -webkit-transition: all 1.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 1.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &:hover {
+        transform: scale(1.025);
+        cursor: pointer;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
 }
 
 
