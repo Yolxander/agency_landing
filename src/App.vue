@@ -1,15 +1,26 @@
 <template>
     <NavBarComponent  />
-    <router-view/>
+   <LandingPage />
+    <AboutUsPage />
+  <WhatWeDoPage />
+  <ContactUsPage />
 </template>
 
 <script>
 
 import NavBarComponent from "@/components/NavBarComponent.vue";
+import LandingPage from "@/views/LandingPage.vue";
+import AboutUsPage from "@/views/AboutUsPage.vue";
+import WhatWeDoPage from "@/views/WhatWeDoPage.vue";
+import ContactUsPage from "@/views/ContactUsPage.vue";
 
 export default {
     name: 'App',
     components: {
+        ContactUsPage,
+        WhatWeDoPage,
+        AboutUsPage,
+        LandingPage,
         NavBarComponent,
     },
 }
@@ -27,7 +38,6 @@ export default {
 body{
     margin: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .overlay {

@@ -5,19 +5,14 @@
             <AboutUsHeader/>
           </ObserverComponent>
       </div>
-        <div class="left-side">
+        <div class="left-side" >
             <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
               <p id="first_paragraph">
-                <span>AYT</span> <span class="small-header">Studios</span>  is a full service digital agency. we can make all your digital dreams come true.
+                <span>AYT</span> <span class="small-header">Studios</span> is a full-service digital agency. We can make all your digital dreams come true. As your dedicated digital partner, we focus on bringing your business's unique vision and goals to life online. Our approach is to blend creativity with technology, crafting a digital presence that captures your business’s essence and objectives in vibrant, effective digital narratives.              <br>
+                <br>
+                Join us at AYT Studios for a journey into the digital future. Our team is committed to creating engaging, seamless online experiences for your customers. Let's work together to elevate your business in the digital world, ensuring it's not just seen, but remembered.
               </p>
             </ObserverComponent>
-            <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
-              <p id="second_paragraph">
-                web design & developement, mobile apps and automation
-            </p>
-          <p id="third_paragraph">
-              web design & developement, mobile apps and automation
-          </p>
         </div>
     </section>
 </template>
@@ -27,14 +22,17 @@ import AboutUsHeader from "@/components/AboutUsHeader.vue";
 import ObserverComponent from "@/components/IntersectionObserver.vue";
 
 export default {
-    name: "ServicesPage",
-    components: {ObserverComponent, AboutUsHeader},
+    name: "WhatWeDoPage",
+    components: {
+        ObserverComponent,
+        AboutUsHeader
+    }
 }
 </script>
 
 <style scoped>
 .hero{
-    height: 80vh;
+    height: 70vh;
     width: 100vw;
     background-color: black;
     display: flex;
@@ -45,29 +43,30 @@ export default {
 
 .right-side {
     width: 45%;
-    height: 70vh;
+    height: 60vh;
     /*border: 1px solid white;*/
     /*background: #2c3e50;*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-right: 40px;
+    justify-content: start;
+    margin-right: 70px;
 }
 
 
 .left-side {
     width: 40%;
-    height: 50vh;
+    height: fit-content;
     /*border: 1px solid white;*/
     /*background: #42b983;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    margin-right: 70px;
+
     font-size: 22px;
     color: #FFFFFF;
     text-align: right;
+    padding-right: 40px;
 }
 
 .left-side #first_paragraph{
