@@ -81,18 +81,40 @@ export default {
     width: 550px;
 }
 
-.left-side #second_paragraph {
-    width: 300px;
-}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: 85vh;
+        justify-content: space-evenly;
+    }
 
-.left-side #third_paragraph{
-    width: 300px;
-}
+    .bottom-content{
+        flex-direction: column;
+    }
+
+    .right-side {
+        width: 90%;
+        height: 80%;
+        font-size: 25px;
+        color: #FFFFFF;
+        text-align:center;
+        align-items: center;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .right-side p{
+        width: 100%;
+    }
 
 
+    .left-side {
+        width: 100%;
+        margin-right: 0px;
+        text-align: left;
+    }
 
-.left-side .small-header{
-    font-size: 30px;
 }
 
 

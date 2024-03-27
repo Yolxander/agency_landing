@@ -36,4 +36,15 @@ export default {
       color: #616161;
   }
 
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+     h1{
+         font-size: 45px;
+     }
+
+      .container{
+          height:fit-content;
+      }
+
+  }
 </style>
