@@ -7,7 +7,7 @@
       </div>
         <div class="left-side" >
             <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
-                <ul>
+                <ul class="list">
                     <li v-for="service in services" :key="service.name">
                         <span>{{ service.name }}</span> - {{ service.description }}
                     </li>
@@ -103,6 +103,45 @@ export default {
     font-weight: 400;
     line-height: normal;
     margin: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: 85vh;
+    }
+
+    .left-side, .right-side {
+        width: 95%;
+        margin-right: 0;
+        font-size: 20px;
+        color: #FFFFFF;
+        text-align: center;
+        display: flex;
+    }
+
+
+    .right-side {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0px;
+    }
+
+    .left-side{
+        padding-left: 0px;
+        padding-top: 0px;
+    };
+
+    .left-side list{
+        width: 85%;
+    }
+
+
 }
 
 
