@@ -45,25 +45,42 @@ export default {
 </script>
 
 <style scoped>
-  nav {
-      display: flex;
-      justify-content: space-between;
-      height: 25vh;
-      padding-right: 70px;
-      padding-left: 70px;
-      background: black;
-  }
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 25vh; /* Adjust based on content */
+    padding-right: 70px;
+    padding-left: 70px;
+    background: black;
+}
 
-  .divider{
-      color: #FFFFFF;
-      cursor: pointer;
-  }
+.divider {
+    color: #FFFFFF;
+    cursor: pointer;
+}
 
-  .right-side{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 20%;
-  }
+.right-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%; /* Adjust or use max-width for better control */
+}
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        height: 10vh; /* Smaller height for mobile */
+        padding-right: 20px; /* Less padding on the sides */
+        padding-left: 30px;
+    }
+
+    .right-side {
+        width: 40%; /* Increase width to accommodate smaller icons */
+    }
+
+    svg {
+      display: none;
+
+    }
+}
 </style>

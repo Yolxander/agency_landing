@@ -31,8 +31,20 @@ export default {
         width: 100vw;
         background-color: black;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content:center;
         position: relative;
     }
+
+    section{
+        overflow-x: hidden;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .hero{
+            height: 70vh;
+        }
+    }
+
 
 </style>

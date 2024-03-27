@@ -87,6 +87,26 @@ export default  {
     color: white;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #container_nav_menu_top_line{
+        width: 80%;
+    }
+    #container_nav_menu_bottom_line{
+        width: 80%;
+    }
 
+    #container_nav_menu_middle_line{
+        width: 80%;
+    }
+
+    .lines{
+        border: 1px solid white;
+    }
+
+    #container-nav-menu{
+        height: 40px;
+    }
+}
 
 </style>

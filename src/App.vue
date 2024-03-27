@@ -4,8 +4,8 @@
         <div ref="sections">
             <LandingPage ref="landingPage" />
             <AboutUsPage ref="aboutUsPage" />
-            <WhatWeDoPage ref="whatWeDoPage" />
-            <ContactUsPage ref="contactUsPage" />
+<!--            <WhatWeDoPage ref="whatWeDoPage" />-->
+<!--            <ContactUsPage ref="contactUsPage" />-->
         </div>
     </div>
 </template>
@@ -17,14 +17,14 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import LandingPage from "@/views/LandingPage.vue";
 import AboutUsPage from "@/views/AboutUsPage.vue";
-import WhatWeDoPage from "@/views/WhatWeDoPage.vue";
-import ContactUsPage from "@/views/ContactUsPage.vue";
+// import WhatWeDoPage from "@/views/WhatWeDoPage.vue";
+// import ContactUsPage from "@/views/ContactUsPage.vue";
 
 export default {
     name: 'App',
     components: {
-        ContactUsPage,
-        WhatWeDoPage,
+        // ContactUsPage,
+        // WhatWeDoPage,
         AboutUsPage,
         LandingPage,
         NavBarComponent,

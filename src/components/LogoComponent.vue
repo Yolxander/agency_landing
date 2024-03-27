@@ -1,6 +1,6 @@
 <template>
     <div class="logo">
-        <p>A</p>
+        <p id="a-letter">A</p>
         <p id="y-letter">Y</p>
         <p>T</p>
         <span class="letter">s</span>
@@ -49,7 +49,7 @@ export default {
 <style scoped>
 
 .logo{
-    width: 80px;
+    width: 80px; /* Adjust based on layout */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,35 +57,38 @@ export default {
     margin-left: 50px;
 }
 
-.logo p{
+.logo p {
     color: #FFF;
     font-family: 'Gugi', sans-serif;
-    font-size: 70px;
+    font-size: 70px; /* This might need adjustment */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 10.48px;
+    letter-spacing: 10.48px; /* Adjust as necessary */
     margin: 0;
 }
 
-.logo span{
-    font-size: 25px;
+.logo span {
+    font-size: 25px; /* Adjust if necessary for clarity */
 }
 
-.letter {
-    display: none;
-    transition: opacity 0.5s ease;
-    color: #FFFFFF;
-    animation: fadeInTop 5s ease-in-out;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        width: 40px; /* Smaller logo for mobile */
+        margin-left: 20px; /* Less margin */
+    }
+
+    p, span{
+        display: none;
+    }
+    #a-letter{
+        display: unset;
+        font-size: 40px
+    }
+
+    .logo{
+        margin-left: 0;
+    }
 }
-
-.logo:hover .letter {
-    display:block;
-}
-
-/*#y-letter {*/
-/*    transform: translateY(20px) rotate(4deg); !* Translates Y lower and rotates it *!*/
-/*    animation: fadeInTop 5s ease-in-out;*/
-/*}*/
-
 </style>

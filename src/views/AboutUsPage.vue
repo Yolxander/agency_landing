@@ -23,7 +23,10 @@ import ObserverComponent from "@/components/IntersectionObserver.vue";
 
 export default {
     name: "AboutUsPage",
-    components: {ObserverComponent, AboutUsHeader},
+    components: {
+        ObserverComponent,
+        AboutUsHeader
+    },
     data() {
         return {
             header: {
@@ -45,7 +48,6 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 90px;
 }
 
 .right-side {
@@ -70,7 +72,7 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     margin-right: 70px;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 22px;
     color: #FFFFFF;
     text-align: left;
@@ -80,13 +82,6 @@ export default {
     width: 550px;
 }
 
-.left-side #second_paragraph {
-    width: 300px;
-}
-
-.left-side #third_paragraph{
-    width: 300px;
-}
 
 .left-side p span{
     color: #FFF;
@@ -102,5 +97,43 @@ export default {
     font-size: 30px;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+        height: 90vh;
+        padding-top: 0;
+    }
+
+    .left-side #first_paragraph{
+        width: 100%;
+    }
+
+
+    .left-side, .right-side {
+      width: 95%;
+        margin-right: 0;
+        font-size: 20px;
+        color: #FFFFFF;
+        text-align: center;
+        display: flex;
+    }
+
+    .left-side p span {
+        font-size: 40px;
+    }
+
+    .right-side {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0px;
+    }
+
+
+}
 
 </style>
