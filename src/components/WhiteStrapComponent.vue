@@ -31,7 +31,7 @@ export default {
       gap: 45px;
       flex-shrink: 0;border: 5px solid #000;
       background: #FFF;
-      z-index: 10;
+      z-index: 0;
       position: absolute;
       bottom: 30%;
       left: -25px;

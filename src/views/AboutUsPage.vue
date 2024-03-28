@@ -1,5 +1,5 @@
 <template>
-    <section class="hero">
+    <div class="hero">
       <div class="right-side">
           <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
               <AboutUsHeader :header="header"/>
@@ -14,7 +14,7 @@
             </p>
             </ObserverComponent>
         </div>
-    </section>
+    </div>
 </template>
 <script>
 
@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .hero{
-    height: 70vh;
+    height: 80vh;
     width: 100vw;
     background-color: black;
     display: flex;

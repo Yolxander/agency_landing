@@ -52,7 +52,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: blue;
+    background-color: black;
     z-index: 10; /* Ensure it's above other content */
 }
 </style>

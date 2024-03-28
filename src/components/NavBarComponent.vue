@@ -28,19 +28,21 @@
                   </defs>
                 </svg>
             </span>
-
-            <MenuButton />
+            <HamburgerMenu />
         </div>
     </nav>
 </template>
 
 <script>
-import MenuButton from "@/components/MenuButton.vue";
+import HamburgerMenu from "@/components/HamburgerMenu.vue";
 import LogoComponent from "@/components/LogoComponent.vue";
 
 export default {
     name: "NavBarComponent",
-    components: {LogoComponent, MenuButton}
+    components: {
+        LogoComponent,
+        HamburgerMenu
+    }
 }
 </script>
 
