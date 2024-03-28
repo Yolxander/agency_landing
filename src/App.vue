@@ -2,10 +2,10 @@
     <div>
         <NavBarComponent />
         <div ref="sections">
-            <LandingPage ref="landingPage" />
-            <AboutUsPage ref="aboutUsPage" />
-            <WhatWeDoPage ref="whatWeDoPage" />
-            <ContactUsPage ref="contactUsPage" />
+            <LandingPage id="landingPage" />
+            <AboutUsPage id="aboutUsPage" />
+            <WhatWeDoPage id="whatWeDoPage" />
+            <ContactUsPage id="contactUsPage" />
         </div>
     </div>
 </template>

@@ -6,11 +6,12 @@
         <section id="overlay">
             <nav>
                 <ul>
-                    <li><a href="#">LandingPage</a></li>
-                    <li><a href="#">AboutUsPage</a></li>
-                    <li><a href="#">WhatWeDoPage</a></li>
-                    <li><a href="#">ContactUsPage</a></li>
+                    <li><a  @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#landingPage'">LandingPage</a></li>
+                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#aboutUsPage'">AboutUsPage</a></li>
+                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#whatWeDoPage'">WhatWeDoPage</a></li>
+                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#contactUsPage'">ContactUsPage</a></li>
                 </ul>
+
             </nav>
         </section>
     </div>
@@ -208,7 +209,7 @@ const toggleOverlay = () => {
     #overlay nav {
         position: absolute;
         bottom: 40%;
-        left: 20%;
+        left: 10%;
     }
 }
 
