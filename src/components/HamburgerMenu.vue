@@ -6,10 +6,10 @@
         <section id="overlay">
             <nav>
                 <ul>
-                    <li><a  @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#landingPage'">LandingPage</a></li>
-                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#aboutUsPage'">AboutUsPage</a></li>
-                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#whatWeDoPage'">WhatWeDoPage</a></li>
-                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#contactUsPage'">ContactUsPage</a></li>
+                    <li><router-link to="/" @click="toggleOverlay">Home</router-link></li>
+                    <li><router-link to="/services" @click="toggleOverlay">Services</router-link></li>
+<!--                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#whatWeDoPage'">WhatWeDoPage</a></li>-->
+<!--                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#contactUsPage'">ContactUsPage</a></li>-->
                 </ul>
 
             </nav>

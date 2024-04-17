@@ -68,6 +68,10 @@ export default {
     margin: 0;
 }
 
+.letter{
+    color: white;
+}
+
 .logo span {
     font-size: 25px; /* Adjust if necessary for clarity */
 }

@@ -1,33 +1,16 @@
 <template>
-    <div>
-        <NavBarComponent />
-        <div ref="sections">
-            <LandingPage id="landingPage" />
-            <AboutUsPage id="aboutUsPage" />
-            <WhatWeDoPage id="whatWeDoPage" />
-            <ContactUsPage id="contactUsPage" />
-        </div>
-    </div>
+    <router-view></router-view>
 </template>
 
 
 
 <script>
 
-import NavBarComponent from "@/components/NavBarComponent.vue";
-import LandingPage from "@/views/LandingPage.vue";
-import AboutUsPage from "@/views/AboutUsPage.vue";
-import WhatWeDoPage from "@/views/WhatWeDoPage.vue";
-import ContactUsPage from "@/views/ContactUsPage.vue";
 
 export default {
     name: 'App',
     components: {
-        ContactUsPage,
-        WhatWeDoPage,
-        AboutUsPage,
-        LandingPage,
-        NavBarComponent,
+
     },
 }
 </script>
