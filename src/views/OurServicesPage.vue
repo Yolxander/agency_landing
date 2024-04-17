@@ -50,13 +50,13 @@ export default {
                 },
                 {
                     icon: 'fas fa-calendar-alt',
-                    title: 'Online Booking and Scheduling',
+                    title: 'Booking and Scheduling',
                     description: 'Streamline appointment bookings with an automated scheduling system and reminders.'
                 },
                 {
                     "icon": "fas fa-user-friends",
                     "title": "Online Lead Generation",
-                    "description": "Maximize your lead capture with our advanced online forms and quote generator, designed to streamline customer engagement and enhance your CRM strategy."
+                    "description": "Boost lead capture with custom online forms and a quote generator, optimizing your CRM process."
                 },
                 {
                     icon: 'fas fa-tasks',
