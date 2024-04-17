@@ -2,7 +2,9 @@
     <NavBarComponent />
     <section id="service" class="hero">
         <ObserverComponent classToToggle="fadeInRight" playOnce="true">
-          <AboutUsHeader :header="header"/>
+            <div class="header-container">
+              <AboutUsHeader :header="header"/>
+            </div>
         </ObserverComponent>
         <div class="services-container">
             <div class="row">
@@ -113,12 +115,6 @@ section{
     margin-top: 60px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .hero{
-        height: 70vh;
-    }
-}
 
 section {
     padding: 60px 0;
@@ -210,6 +206,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Adjust this as needed */
+    font-size: 20px;
 }
 
 .col-md-6.col-lg-4.col-sm-12 {
@@ -230,9 +227,8 @@ button {
     border-bottom: solid 2px #000;
     transition: all .5s ease;
     &.white {
-        border: solid 1px #fff;
-        border-top: solid 2px #fff;
-        border-bottom: solid 2px #fff;
+        border-right: solid 0.5px #fff;
+        border-bottom: solid 0.5px #fff;
         color: #fff;
         &:after {
             background-color: rgba(255, 255, 255, 0.25);
@@ -259,6 +255,30 @@ button {
     }
     &:hover::after {
         opacity: 1;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero{
+        height: 70vh;
+    }
+
+    .header-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center; /* Adjust this as needed */
+    }
+    /* Ensure each service card takes full width on smaller screens */
+    .col-md-6.col-lg-4.col-sm-12 {
+        flex: 0 0 100%; /* Updated to take full width */
+        max-width: 100%; /* Updated to take full width */
     }
 }
 
