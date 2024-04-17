@@ -1,11 +1,14 @@
 <template>
     <NavBarComponent />
     <section id="service" class="hero">
-        <AboutUsHeader :header="header"/>
+        <ObserverComponent classToToggle="fadeInRight" playOnce="true">
+          <AboutUsHeader :header="header"/>
+        </ObserverComponent>
         <div class="services-container">
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-sm-12" v-for="service in services" :key="service.title">
-                    <div class="single_service hvr-curl-top-right">
+                    <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
+                      <div class="single_service hvr-curl-top-right">
                         <div class="single_service-left">
 <!--                            <div class="icon">-->
 <!--                                <i :class="service.icon"></i>-->
@@ -17,6 +20,7 @@
                             <button class="white">See More</button>
                         </div>
                     </div>
+                    </ObserverComponent>
                 </div>
             </div>
         </div>
@@ -27,10 +31,11 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import AboutUsHeader from "@/components/AboutUsHeader.vue";
+import ObserverComponent from "@/components/IntersectionObserver.vue";
 
 export default {
     name: "OurServicesPage",
-    components: {AboutUsHeader, NavBarComponent},
+    components: {ObserverComponent, AboutUsHeader, NavBarComponent},
     data() {
         return {
             header: {
@@ -105,7 +110,7 @@ section{
 }
 
 .services-container{
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 /* Responsive adjustments for smaller screens */
