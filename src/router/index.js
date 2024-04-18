@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // Import components that you want to route
 import HomePage from "@/views/HomePage.vue";
 import OurServicesPage from "@/views/OurServicesPage.vue";
+import ModelContainer from "@/components/ModelContainer.vue";
 
 
 const routes = [
@@ -16,7 +17,11 @@ const routes = [
         name: 'Services',
         component:OurServicesPage,
     },
-    // add more routes here
+    {
+        path: '/example',
+        name: 'ModelExample',
+        component:ModelContainer,
+    },
 ];
 
 const router = createRouter({
