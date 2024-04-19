@@ -1,30 +1,33 @@
 <template>
-    <form class="contact-form row">
-        <div class="form-field col x-50">
-            <input id="name" class="input-text js-input" type="text" required>
-            <label class="label" for="name">Name</label>
-        </div>
-        <div class="form-field col x-50">
-            <input id="email" class="input-text js-input" type="email" required>
-            <label class="label" for="email">E-mail</label>
-        </div>
-        <div class="form-field col x-100 select-field">
-            <!-- Removed multiple attribute -->
-            <select id="services" class="input-text js-input" required>
-                <option value="">Select Service</option> <!-- Placeholder option -->
-                <option value="web-development">Web Development</option>
-                <option value="automation">Automation</option>
-                <option value="hosting-domain">Hosting & Domain</option>
-            </select>
-        </div>
-        <div class="form-field col x-100">
-            <input id="message" class="input-text js-input" type="text" required>
-            <label class="label" for="message">Message</label>
-        </div>
-        <div class="form-field col x-100 align-center">
+        <form class="contact-form row">
+            <div class="form-field col x-50">
+                <input id="name" class="input-text js-input" type="text" required>
+                <label class="label" for="name">Name</label>
+            </div>
+            <div class="form-field col x-50">
+                <input id="email" class="input-text js-input" type="email" required>
+                <label class="label" for="email">E-mail</label>
+            </div>
+            <div class="form-field col x-100 select-field">
+                <!-- Removed multiple attribute -->
+                <select id="services" class="input-text js-input" required>
+                    <option value="">Select Service</option> <!-- Placeholder option -->
+                    <option value="web-development-design">Web Development and Design</option>
+                    <option value="hosting-domain-services">Hosting and Domain Services</option>
+                    <option value="booking-scheduling">Booking and Scheduling</option>
+                    <option value="online-lead-generation">Online Lead Generation</option>
+                    <option value="project-management-tracking">Project Management and Tracking</option>
+                    <option value="inventory-work-order-management">Inventory and Work Order Management</option>
+                </select>
+            </div>
+            <div class="form-field col x-100">
+                <input id="message" class="input-text js-input" type="text" required>
+                <label class="label" for="message">Message</label>
+            </div>
+            <div class="form-field col x-100 align-center">
                 <button class="white">Send</button>
-        </div>
-    </form>
+            </div>
+        </form>
 </template>
 
 <script>
@@ -49,14 +52,6 @@ export default {
     text-align: center;
 }
 
-/* Basics */
-html {
-    height: 100%;
-}
-body {
-    height: 100%;
-    position: relative;
-}
 /* Grid */
 .row {
     @include clearfix;
@@ -76,6 +71,7 @@ body {
 
 
 .contact-form {
+    margin-bottom: 50px;
     .form-field {
         position: relative;
         margin: 32px 0;
