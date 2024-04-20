@@ -82,19 +82,8 @@ ul {
     font-size: 18px;
     color: #FFF;
     text-transform: capitalize;
-    margin-bottom: 35px;
     font-weight: 500;
     position: relative;
-}
-
-.footer-col h4::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #FFF;
-    width: 50px;
-    height: 2px;
 }
 
 .footer-col ul li:not(:last-child) {
@@ -138,6 +127,10 @@ ul {
     .footer-col {
         width: 90%;
         margin-bottom: 30px;
+    }
+
+    .footer{
+        height: 100%;
     }
 
 

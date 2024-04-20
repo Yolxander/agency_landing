@@ -363,41 +363,42 @@ button {
         display: flex;
         align-items: center; /* Centers the modal vertically */
         justify-content: center; /* Centers the modal horizontally */
-        .modal {
-            background: black;
-            padding:50px;
-            font-weight:300;
-            position:relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 50vh;
-            width: 50vw;
-            border: 0.5px solid white;
-            border-radius: 5px;
-            h2 {
-                font-size:25px;
-                line-height:25px;
-                margin-bottom:15px;
-                color: white;
-            }
-            p {
-                line-height:22px;
-            }
-            .modal-svg {
-                position:absolute;
-                top:0;
-                left:0;
-                height:100%;
-                width:100%;
-                border-radius:3px;
-                rect {
-                    stroke: #fff;
-                    stroke-width: 2px;
-                    stroke-dasharray: 778;
-                    stroke-dashoffset: 778;
-                }
-            }
+    }
+}
+
+.modal {
+    background: black;
+    padding:50px;
+    font-weight:300;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    width: 50vw;
+    border: 0.5px solid white;
+    border-radius: 5px;
+    h2 {
+        font-size:25px;
+        line-height:25px;
+        margin-bottom:15px;
+        color: white;
+    }
+    p {
+        line-height:22px;
+    }
+    .modal-svg {
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        border-radius:3px;
+        rect {
+            stroke: #fff;
+            stroke-width: 2px;
+            stroke-dasharray: 778;
+            stroke-dashoffset: 778;
         }
     }
 }
@@ -552,6 +553,12 @@ h1{
         font-size: 15px;
         font-weight: 600;
         cursor: pointer;
+    }
+
+    .modal {
+        height: 100%;
+        width: 70vw ;
+
     }
 }
 </style>
