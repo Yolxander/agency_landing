@@ -39,7 +39,7 @@ export default {
   /* Responsive adjustments for smaller screens */
   @media (max-width: 768px) {
      h1{
-         font-size: 45px;
+         font-size: 35px;
      }
 
       .container{
@@ -47,4 +47,6 @@ export default {
       }
 
   }
+
+
 </style>

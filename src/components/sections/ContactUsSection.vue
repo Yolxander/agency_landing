@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .hero{
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     background-color: black;
     display: flex;
@@ -113,6 +113,19 @@ export default {
         width: 100%;
         margin-right: 0px;
         text-align: left;
+    }
+
+}
+
+@media (max-width: 568px) {
+    .hero{
+        padding-top: 60px;
+        padding-bottom: 0px;
+        height: 100vh;
+    }
+
+    p{
+        font-size: 15px;
     }
 
 }

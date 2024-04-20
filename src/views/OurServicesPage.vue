@@ -11,7 +11,7 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 
-import ServicesSection from "@/components/ServicesSection.vue";
+import ServicesSection from "@/components/sections/ServicesSection.vue";
 import ContactUsPage from "@/components/sections/ContactUsSection.vue";
 
 export default {

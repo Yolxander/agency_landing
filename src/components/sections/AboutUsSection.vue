@@ -105,6 +105,10 @@ export default {
         padding-top: 0;
     }
 
+    .left-side{
+        margin-top: 0;
+    }
+
     .left-side #first_paragraph{
         width: 100%;
     }
@@ -133,7 +137,21 @@ export default {
         padding-right: 0px;
     }
 
+    p{
+        margin: 0;
+    }
 
+
+}
+
+@media (max-width: 375px) {
+    .hero {
+        height: 65vh;
+    }
+
+    .left-side, .right-side {
+        font-size: 15px;
+    }
 }
 
 </style>

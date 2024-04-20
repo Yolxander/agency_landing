@@ -201,7 +201,11 @@ button {
     }
 }
 
-
+@media (max-width: 568px) {
+    .contact-form {
+        margin-bottom: 0px;
+    }
+}
 
 </style>
 

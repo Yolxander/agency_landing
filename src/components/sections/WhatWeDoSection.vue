@@ -13,6 +13,7 @@
                     </li>
                 </ul>
             </ObserverComponent>
+              <SeeAllButton />
         </div>
     </section>
 </template>
@@ -20,10 +21,12 @@
 
 import AboutUsHeader from "@/components/AboutUsHeader.vue";
 import ObserverComponent from "@/components/IntersectionObserver.vue";
+import SeeAllButton from "@/components/SeeAllButton.vue";
 
 export default {
     name: "WhatWeDoPage",
     components: {
+        SeeAllButton,
         ObserverComponent,
         AboutUsHeader
     },
@@ -34,10 +37,10 @@ export default {
                 part2: "we do ?",
             },
             services: [
-                { name: 'Automation', description: 'Harness the power of technology to streamline your operations and increase efficiency.' },
-                { name: 'Web Design & Development', description: 'Create stunning, user-friendly websites that drive engagement and conversions.' },
-                { name: 'SEO', description: 'Improve your online visibility and rank higher on search engine results pages.' },
-                { name: 'Marketing', description: 'Craft compelling marketing strategies that connect with your audience and amplify your brand.' },
+                { name: 'Web Development and Design', description: 'Offering custom website creation with responsive design for optimal user experience across all devices.' },
+                { name: 'Hosting and Domain Services', description: 'Reliable web hosting and domain registration services to ensure your website is always accessible and running smoothly.' },
+                { name: 'Booking and Scheduling', description: 'Streamline appointment bookings with an automated scheduling system and reminders.' },
+                { name: 'Online Lead Generation', description: 'Boost lead capture with custom online forms and a quote generator, optimizing your CRM process.' },
             ],
         }
     }
@@ -70,18 +73,17 @@ export default {
 
 .left-side {
     width: 40%;
-    height: 60vh;
-    /*border: 1px solid white;*/
+    height: 63vh;
     /*background: #42b983;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     font-size: 22px;
     color: #FFFFFF;
     text-align: left;
-    padding-left: 40px;
-    padding-top: 50px;
+    margin-left: 40px;
+    margin-top: 50px;
 }
 
 .left-side ul{
@@ -89,6 +91,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /*background: red;*/
 }
 
 .left-side ul span{
@@ -135,6 +138,8 @@ export default {
     .left-side{
         padding-left: 0px;
         padding-top: 0px;
+      margin: 0px;
+        height: fit-content;
     };
 
     .left-side list{
@@ -145,4 +150,14 @@ export default {
 }
 
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 375px) {
+    .hero {
+        height: 65vh;
+    }
+
+    .left-side, .right-side {
+        font-size: 15px;
+    }
+}
 </style>

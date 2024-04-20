@@ -48,4 +48,14 @@ export default {
           width: 100%;
       }
   }
+
+  @media (max-width: 568px) {
+      h1{
+          font-size: 35px;
+      }
+
+      .left-side p{
+          font-size:15px
+      }
+  }
 </style>

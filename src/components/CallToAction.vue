@@ -42,16 +42,15 @@ span{
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 60px; /* Smaller font size for mobile */
-        width: 60%; /* Make the width more responsive */
-        line-height: 150%; /* Adjust line-height for better readability */
-    }
 
     h1{
         position: absolute;
-        bottom: 50%;
-        right: 25%;
+        bottom: 60%;
+        right: 20%;
+        font-size: 45px; /* Smaller font size for mobile */
+        width: 60%; /* Make the width more responsive */
+        line-height: 100%; /* Adjust line-height for better readability */
     }
 }
+
 </style>
