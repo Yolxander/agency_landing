@@ -13,17 +13,21 @@
                 Join us at AYT Studios for a journey into the digital future. Our team is committed to creating engaging, seamless online experiences for your customers. Let's work together to elevate your business in the digital world, ensuring it's not just seen, but remembered.
             </p>
             </ObserverComponent>
+           <LearnMoreButton />
         </div>
+
     </div>
 </template>
 <script>
 
 import AboutUsHeader from "@/components/AboutUsHeader.vue";
 import ObserverComponent from "@/components/IntersectionObserver.vue";
+import LearnMoreButton from "@/components/LearnMoreButton.vue";
 
 export default {
     name: "AboutUsPage",
     components: {
+        LearnMoreButton,
         ObserverComponent,
         AboutUsHeader
     },
@@ -70,7 +74,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-right: 70px;
     margin-top: 20px;
     font-size: 22px;

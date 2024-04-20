@@ -1,14 +1,18 @@
 <template>
     <div class="logo">
-        <p id="a-letter">A</p>
-        <p id="y-letter">Y</p>
-        <p>T</p>
+        <p id="a-letter">S</p>
+        <p id="y-letter">E</p>
+        <p id="y-letter">M</p>
+        <p id="y-letter">P</p>
+        <p id="y-letter">R</p>
+        <p id="y-letter">E</p>
         <span class="letter">s</span>
         <span class="letter">t</span>
         <span class="letter">u</span>
         <span class="letter">d</span>
         <span class="letter">i</span>
         <span class="letter">o</span>
+        <span class="letter">s</span>
     </div>
 </template>
 
@@ -54,13 +58,13 @@ export default {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-left: 50px;
+    margin-left: 60px;
 }
 
 .logo p {
     color: #FFF;
     font-family: 'Gugi', sans-serif;
-    font-size: 70px; /* This might need adjustment */
+    font-size: 30px; /* This might need adjustment */
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -88,7 +92,7 @@ export default {
     }
     #a-letter{
         display: unset;
-        font-size: 40px
+        font-size: 30px
     }
 
     .logo{
