@@ -119,7 +119,6 @@ export default {
 
 @media (max-width: 568px) {
     .hero{
-        padding-top: 60px;
         padding-bottom: 0px;
         height: 100vh;
     }

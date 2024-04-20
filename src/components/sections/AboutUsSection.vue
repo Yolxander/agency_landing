@@ -8,9 +8,9 @@
         <div class="left-side" >
             <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
               <p id="first_paragraph">
-                <span>AYT</span> <span class="small-header">Studios</span> is a full-service digital agency. We can make all your digital dreams come true. As your dedicated digital partner, we focus on bringing your business's unique vision and goals to life online. Our approach is to blend creativity with technology, crafting a digital presence that captures your business’s essence and objectives in vibrant, effective digital narratives.              <br>
+                <span>SEMPRE</span> <span class="small-header">studios</span> is a full-service digital agency. We can make all your digital dreams come true. As your dedicated digital partner, we focus on bringing your business's unique vision and goals to life online. Our approach is to blend creativity with technology, crafting a digital presence that captures your business’s essence and objectives in vibrant, effective digital narratives.              <br>
                 <br>
-                Join us at AYT Studios for a journey into the digital future. Our team is committed to creating engaging, seamless online experiences for your customers. Let's work together to elevate your business in the digital world, ensuring it's not just seen, but remembered.
+                Join us at SEMPRE studios for a journey into the digital future. Our team is committed to creating engaging, seamless online experiences for your customers. Let's work together to elevate your business in the digital world, ensuring it's not just seen, but remembered.
             </p>
             </ObserverComponent>
            <LearnMoreButton />
@@ -90,7 +90,7 @@ export default {
 .left-side p span{
     color: #FFF;
     font-family: 'Gugi', sans-serif;
-    font-size:55px;
+    font-size:45px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -98,7 +98,7 @@ export default {
 }
 
 .left-side .small-header{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /* Responsive adjustments for smaller screens */

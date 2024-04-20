@@ -4,6 +4,7 @@
     </button>
 </template>
 
+
 <script>
 export default {
     name: 'LearnMoreButton',
@@ -55,5 +56,12 @@ export default {
     transform: scale(2) rotate(180deg);
     background: #fff; /* Changed background to white for contrast */
     box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .custom-btn {
+        margin-top: 10px;
+    }
 }
 </style>
