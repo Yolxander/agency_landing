@@ -532,6 +532,7 @@ h1{
     h3 h1{
         font-size: 15px;
         color: white;
+        padding: 0px;
     }
     .modal li{
         color: white;
@@ -557,8 +558,8 @@ h1{
 
     .modal {
         height: 100%;
-        width: 70vw ;
-
+        width: 90vw ;
+        padding: 10px;
     }
 }
 </style>
