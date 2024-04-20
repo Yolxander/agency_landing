@@ -514,7 +514,7 @@ h1{
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .hero{
-        height: 70vh;
+        height: fit-content;
     }
 
     .row {
