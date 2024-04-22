@@ -1,16 +1,9 @@
 <template>
-    <div>
-        <NavBarComponent />
-        <div ref="sections">
-            <ServicesSection />
-            <ContactUsPage id="contactUsPage" />
-        </div>
-    </div>
+    <ServicesSection/>
+    <ContactUsPage id="contactUsPage"/>
 </template>
 
 <script>
-import NavBarComponent from "@/components/NavBarComponent.vue";
-
 import ServicesSection from "@/components/sections/ServicesSection.vue";
 import ContactUsPage from "@/components/sections/ContactUsSection.vue";
 
@@ -19,7 +12,7 @@ export default {
     components: {
         ContactUsPage,
         ServicesSection,
-        NavBarComponent},
+    },
 
 }
 </script>

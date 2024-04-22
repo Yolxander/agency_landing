@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import WebFont from 'webfontloader';
 import router from './router';
+import { createHead } from '@vueuse/head'
 // Define the feature flag
 window.__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = false;
 import VueScrollTo from 'vue-scrollto';
@@ -17,8 +18,12 @@ WebFont.load({
 });
 
 const app = createApp(App);
+const head = createHead()
 
-app.use(router);
+//changes browser tap name to custom desired title
+document.title = 'North Simcoe PM';
+
+app.use(router).use(head);
 app.use(VueScrollTo, {
     container: "body",
     duration: 500,
@@ -32,5 +37,6 @@ app.use(VueScrollTo, {
     x: false,
     y: true
 });
+
 
 app.mount('#app');
