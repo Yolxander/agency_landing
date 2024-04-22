@@ -95,6 +95,28 @@ export default {
                     conclusion: "Make booking a breeze for your clients. **Schedule smarter, not harder!**"
                 },
                 {
+                    icon: 'fas fa-wrench',
+                    title: 'Website Maintenance',
+                    description: 'Comprehensive maintenance services to ensure your website remains up-to-date, secure, and performing optimally.',
+                    expanded_description: [
+                        "**Regular Updates**: Keeps your website up-to-date with the latest security patches and software updates.",
+                        "**Performance Optimization**: Regular monitoring and optimization to ensure your website performs at its best.",
+                        "**Technical Support**: Access to expert technical support to resolve any issues quickly and efficiently."
+                    ],
+                    conclusion: "Keep your website in top condition with our **comprehensive maintenance services. Secure and optimize your online presence today!**"
+                },
+                // {
+                //     icon: 'fas fa-search',
+                //     title: 'SEO Services',
+                //     description: 'Enhance your online visibility and drive more organic traffic with our expert SEO strategies.',
+                //     expanded_description: [
+                //         "**Keyword Optimization**: Target the right keywords to boost your rankings and attract more relevant traffic.",
+                //         "**Content Strategy**: Develop compelling content that engages visitors and improves search engine rankings.",
+                //         "**Analytics and Reporting**: Monitor your SEO performance with detailed analytics and regular reporting."
+                //     ],
+                //     conclusion: "Boost your search engine rankings and attract more visitors. **Start optimizing with our SEO experts today!**"
+                // },
+                {
                     icon: 'fas fa-user-friends',
                     title: 'Online Lead Generation',
                     description: 'Boost lead capture with custom online forms and a quote generator, optimizing your CRM process.',
@@ -106,26 +128,15 @@ export default {
                     conclusion: "Turn clicks into clients with our **lead generation magic. Start capturing more leads today!**"
                 },
                 {
-                    icon: 'fas fa-tasks',
-                    title: 'Project Management and Tracking',
-                    description: 'Enhance project transparency with client dashboards and automate routine tasks for operational efficiency.',
+                    icon: 'fas fa-envelope',
+                    title: 'Email Marketing and Design',
+                    description: 'Create engaging email campaigns that captivate your audience and drive results.',
                     expanded_description: [
-                        "**Transparency**: Real-time dashboards that keep clients informed about project progress.",
-                        "**Automation**: Reduces manual work by automating routine tasks, allowing your team to focus on more critical aspects.",
-                        "**Collaboration**: Facilitates better communication and collaboration within teams and with clients."
+                        "**Custom Designs**: Eye-catching email designs that reflect your brand and engage your audience.",
+                        "**Campaign Management**: Full management of your email campaigns, from concept to execution.",
+                        "**Performance Tracking**: Detailed tracking and analysis to refine strategies and improve outcomes."
                     ],
-                    conclusion: "Keep your projects on track and your clients in the loop. **Elevate your project management today!**"
-                },
-                {
-                    icon: 'fas fa-boxes',
-                    title: 'Inventory and Work Order Management',
-                    description: 'Manage inventory with a real-time database and streamline operations with digital work orders.',
-                    expanded_description: [
-                        "**Real-Time Tracking**: Keeps track of inventory levels in real-time, preventing stockouts and overstock.",
-                        "**Efficiency**: Streamlines the creation and management of work orders, improving operational efficiency.",
-                        "**Integration**: Easily integrates with other systems for a cohesive management experience."
-                    ],
-                    conclusion: "Optimize your inventory and work orders for smoother operations. **Start managing more effectively today!**"
+                    conclusion: "Connect with your audience and drive more conversions with our **custom email marketing solutions. Get started today!**"
                 }
             ]
         }
@@ -146,6 +157,33 @@ export default {
         formatText(text) {
             return text.replace(/\*\*(.*?)\*\*/g, '<span style="font-weight: 600" class="bold-text">$1</span>');
         },
+
+    },
+    mounted() {
+        const queryParams = new URLSearchParams(window.location.search);
+        let serviceIndex = null;
+        if (queryParams.has('web_dev')) {
+           serviceIndex = this.services.findIndex(service => service.title === 'Web Development and Design');
+            if (serviceIndex !== -1) {
+                this.handleButtonClick(serviceIndex);
+            }
+        }if (queryParams.has('hosting')) {
+            serviceIndex = this.services.findIndex(service => service.title === 'Hosting and Domain Services');
+            if (serviceIndex !== -1) {
+                this.handleButtonClick(serviceIndex);
+            }
+        }if (queryParams.has('booking')) {
+            serviceIndex = this.services.findIndex(service => service.title === 'Booking and Scheduling');
+            if (serviceIndex !== -1) {
+                this.handleButtonClick(serviceIndex);
+            }
+        }if (queryParams.has('lead_generation')) {
+            serviceIndex = this.services.findIndex(service => service.title === 'Online Lead Generation');
+            if (serviceIndex !== -1) {
+                this.handleButtonClick(serviceIndex);
+            }
+        }
+
     },
 }
 </script>
