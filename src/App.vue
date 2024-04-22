@@ -22,8 +22,8 @@ export default {
     },
     setup() {
         const siteData = reactive({
-            title: `North Simcoe Property Management in Simcoe County`,
-            description: `North Simcoe Property Management is a leading full service property management company in Simcoe County. Contact us today`,
+            title: `SEMPRE studios`,
+            description: `SEMPRE studios is a full-service digital agency. We can make all your digital dreams come true.`,
         });
         useHead({
             // Can be static or computed

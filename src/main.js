@@ -21,7 +21,7 @@ const app = createApp(App);
 const head = createHead()
 
 //changes browser tap name to custom desired title
-document.title = 'North Simcoe PM';
+document.title = 'SEMEPRE studios';
 
 app.use(router).use(head);
 app.use(VueScrollTo, {
