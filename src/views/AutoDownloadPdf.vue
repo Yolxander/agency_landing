@@ -1,20 +1,29 @@
 <template>
     <div>
-        <!-- Content if needed, otherwise this can be empty -->
+        <!-- Invisible iframe for displaying the PDF -->
+        <iframe :src="pdfUrl" style="display:none;" @load="redirect"></iframe>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'AutoDownloadPdf',
+    name: 'AutoViewPdf',
+
+    data() {
+        return {
+            pdfUrl: 'SempreStudiosServices.pdf',  // Ensure the path is correct
+        };
+    },
+
+    methods: {
+        redirect() {
+            // Redirect to the PDF URL after the iframe has loaded
+            window.location.href = this.pdfUrl;
+        }
+    },
 
     mounted() {
-        const link = document.createElement('a');
-        link.href = '/SempreStudiosServices.pdf';  // Adjust the path to your PDF file
-        link.setAttribute('download', 'SempreStudiosServices.pdf');  // Optional: Set the download file name
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // No actions needed here; the iframe's load event will handle the necessary actions
     }
 }
 </script>
