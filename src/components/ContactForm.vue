@@ -1,17 +1,18 @@
 <template>
-        <form class="contact-form row">
-            <div class="form-field col x-50">
-                <input id="name" class="input-text js-input" type="text" required>
+    <div class="container" :class="{ 'thank-you-active': submitted }">
+        <h3 class="signup">{{ message }}</h3>
+        <form v-if="!submitted" ref="form" @submit.prevent="sendEmail" class="contact-form row">
+            <div  class="form-field col x-50">
+                <input id="name" class="input-text js-input" type="text" name="name" required>
                 <label class="label" for="name">Name</label>
             </div>
             <div class="form-field col x-50">
-                <input id="email" class="input-text js-input" type="email" required>
+                <input id="email" class="input-text js-input" type="email" name="email" required>
                 <label class="label" for="email">E-mail</label>
             </div>
             <div class="form-field col x-100 select-field">
-                <!-- Removed multiple attribute -->
-                <select id="services" class="input-text js-input" required>
-                    <option value="">Select Service</option> <!-- Placeholder option -->
+                <select id="services" class="input-text js-input" name="services" required>
+                    <option value="">Select Service</option>
                     <option value="web-development-design">Web Development and Design</option>
                     <option value="hosting-domain-services">Hosting and Domain Services</option>
                     <option value="booking-scheduling">Booking and Scheduling</option>
@@ -21,24 +22,52 @@
                 </select>
             </div>
             <div class="form-field col x-100">
-                <input id="message" class="input-text js-input" type="text" required>
+                <input id="message" class="input-text js-input" type="text" name="message" required>
                 <label class="label" for="message">Message</label>
             </div>
             <div class="form-field col x-100 align-center">
-                <button class="white">Send</button>
+                <button type="submit" class="white">{{ buttonText }}</button>
             </div>
         </form>
+        <div id="thankYouContainer" v-if="submitted" >
+        <!-- Displayed after form submission -->
+            <p>We will get back to you soon. A confirmation email has been sent to your email address.</p>
+        </div>
+    </div>
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
     name: "ContactForm",
-
-}
+    data() {
+        return {
+            submitted: false,
+            buttonText: 'Send',
+            message: 'Contact Us'
+        };
+    },
+    methods: {
+        sendEmail() {
+            emailjs.sendForm('service_v98lvdp', 'template_32vbj3t', this.$refs.form, 'NxLLnhlEW3KDj2zPO')
+                .then((result) => {
+                    console.log('SUCCESS!', result.text);
+                    this.submitted = true;
+                    this.buttonText = 'Message Submitted';
+                    this.message = 'Thank you for contacting us';
+                }, (error) => {
+                    console.log('FAILED...', error.text);
+                });
+        }
+    }
+};
 </script>
 
 <style scoped>
-
+.thank-you-active {
+    height: 55vh;
+}
 /* Helpers */
 @mixin clearfix {
     &:after {
@@ -204,6 +233,23 @@ button {
 @media (max-width: 568px) {
     .contact-form {
         margin-bottom: 0px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #thankYouContainer{
+        text-align: center;
+        font-size: 20px;
+        width: 90%;
+    }
+
+    h3{
+        text-align: center;
     }
 }
 

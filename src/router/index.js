@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 // Import components that you want to route
 import Home from "../views/HomePage.vue";
 import OurServicesPage from "../views/OurServicesPage.vue";
+import AutoDownloadPdf from "@/views/AutoDownloadPdf.vue";
 
 const routes = [
     {
@@ -12,6 +13,10 @@ const routes = [
     {
         path: "/services",
         component: OurServicesPage,
+    },
+    {
+        path: "/pdf",
+        component: AutoDownloadPdf,
     },
 ];
 
