@@ -13,7 +13,7 @@
                 Join us at SEMPRE studios for a journey into the digital future. Our team is committed to creating engaging, seamless online experiences for your customers. Let's work together to elevate your business in the digital world, ensuring it's not just seen, but remembered.
             </p>
             </ObserverComponent>
-<!--           <LearnMoreButton />-->
+           <LearnMoreButton />
         </div>
 
     </div>
@@ -22,12 +22,12 @@
 
 import AboutUsHeader from "@/components/AboutUsHeader.vue";
 import ObserverComponent from "@/components/IntersectionObserver.vue";
-// import LearnMoreButton from "@/components/LearnMoreButton.vue";
+import LearnMoreButton from "@/components/LearnMoreButton.vue";
 
 export default {
     name: "AboutUsPage",
     components: {
-        // LearnMoreButton,
+        LearnMoreButton,
         ObserverComponent,
         AboutUsHeader
     },

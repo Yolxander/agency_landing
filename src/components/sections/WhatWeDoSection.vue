@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
 .hero{
-    height: 70vh;
+    height: 75vh;
     width: 100vw;
     background-color: black;
     display: flex;
@@ -61,7 +61,7 @@ export default {
 
 .right-side {
     width: 43%;
-    height: 60vh;
+    height: fit-content;
     /*border: 1px solid white;*/
     /*background: #2c3e50;*/
     display: flex;
@@ -73,7 +73,7 @@ export default {
 
 .left-side {
     width: 40%;
-    height: 63vh;
+    height:  fit-content;
     /*background: #42b983;*/
     display: flex;
     flex-direction: column;
@@ -153,7 +153,7 @@ export default {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 375px) {
     .hero {
-        height: 65vh;
+       padding-bottom: 30px;
     }
 
     .left-side, .right-side {

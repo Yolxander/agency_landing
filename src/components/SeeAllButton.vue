@@ -1,8 +1,9 @@
 <template>
     <button class="custom-btn btn-9">
-       See All
+        Sell All
     </button>
 </template>
+
 
 <script>
 export default {
@@ -57,4 +58,5 @@ export default {
     background: #fff; /* Changed background to white for contrast */
     box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5), inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
 }
+
 </style>
