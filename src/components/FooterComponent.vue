@@ -4,7 +4,7 @@
             <div class="footer-col">
                 <h4>company</h4>
                 <ul>
-                    <li><router-link to="/">about us</router-link></li>
+<!--                    <li><router-link to="/">about us</router-link></li>-->
                     <li><router-link to="/services">our services</router-link></li>
                     <!-- <li><router-link to="/privacy-policy">privacy policy</router-link></li> -->
                     <!-- <li><router-link to="/visit">visit website</router-link></li> -->

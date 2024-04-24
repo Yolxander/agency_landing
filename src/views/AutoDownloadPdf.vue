@@ -38,24 +38,36 @@ export default {
     methods: {
         downloadPDF() {
             // Set the path to your PDF file
-            const pdfPath = 'https://sempreagency.netlify.app/SempreStudiosServices.pdf';
+            const pdfPath = 'http://localhost:8080/SempreStudiosServices.pdf';
 
-            // Create a link element, set the URL, and trigger the download
-            const link = document.createElement('a');
-            link.href = pdfPath;
-            link.download = pdfPath.split('/').pop(); // Extract the file name
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            // Attempt to create a link element, set the URL, and trigger the download
+            try {
+                const link = document.createElement('a');
+                link.href = pdfPath;
+                link.setAttribute('download', pdfPath.split('/').pop()); // Extract the file name
+                document.body.appendChild(link);
 
-            // Show the message
-            this.messageVisible = true;
+                // Check if the document has sandbox restrictions
+                if (document.body.contains(link)) {
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    throw new Error('Download blocked by sandbox restrictions.');
+                }
+
+                // Show the message
+                this.messageVisible = true;
+            } catch (error) {
+                console.error("Failed to download PDF automatically:", error);
+                // Fallback: Open PDF in a new tab if automatic download fails
+                window.open(pdfPath, '_blank');
+            }
 
             // Optionally, hide the message after a few seconds
             setTimeout(() => {
                 this.messageVisible = false;
             }, 10000); // Hides the message after 10 seconds
-        },
+        }
     }
 }
 </script>
