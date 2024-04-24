@@ -4,29 +4,29 @@
             <div class="footer-col">
                 <h4>company</h4>
                 <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">our services</a></li>
-                    <li><a href="#">privacy policy</a></li>
-<!--                    <li><a href="#">visit website</a></li>-->
+                    <li><router-link to="/">about us</router-link></li>
+                    <li><router-link to="/services">our services</router-link></li>
+                    <!-- <li><router-link to="/privacy-policy">privacy policy</router-link></li> -->
+                    <!-- <li><router-link to="/visit">visit website</router-link></li> -->
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>get help</h4>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-<!--                    <li><a href="#">shipping</a></li>-->
-<!--                    <li><a href="#">returns</a></li>-->
-<!--                    <li><a href="#">order status</a></li>-->
-<!--                    <li><a href="#">payment options</a></li>-->
+                    <li><router-link to="/faq">FAQ</router-link></li>
+                    <!-- <li><router-link to="/shipping">shipping</router-link></li> -->
+                    <!-- <li><router-link to="/returns">returns</router-link></li> -->
+                    <!-- <li><router-link to="/order-status">order status</router-link></li> -->
+                    <!-- <li><router-link to="/payment-options">payment options</router-link></li> -->
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>online shop</h4>
+                <h4>download info</h4>
                 <ul>
-                    <li><a href="#">download</a></li>
-<!--                    <li><a href="#">changelog</a></li>-->
-<!--                    <li><a href="#">github</a></li>-->
-<!--                    <li><a href="#">all version</a></li>-->
+                    <li><router-link to="/pdf">get pdf</router-link></li>
+                    <!-- <li><router-link to="/changelog">changelog</router-link></li> -->
+                    <!-- <li><router-link to="/github">github</router-link></li> -->
+                    <!-- <li><router-link to="/versions">all versions</router-link></li> -->
                 </ul>
             </div>
         </div>

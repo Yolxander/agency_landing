@@ -2,7 +2,7 @@
     <section class="hero">
         <div class="left-side">
             <p v-if="!messageVisible">
-                <span> Hey there!</span> Thanks for swinging by after our email. We're excited that you're interested in exploring how we can help your business thrive online.
+                <span> Hey there!</span> Thanks for swinging by. We're excited that you're interested in exploring how we can help your business thrive online.
                 <br><br>
                  We're ready to start this journey with you. As you explore our service guide, if anything catches your eye or sparks your interest, don't hesitate to book a call with us. This is a great opportunity to discuss how our services can specifically benefit your business and help you achieve your goals. Let's talk and find the perfect solutions to elevate your brand's digital presence.
             </p>
@@ -38,7 +38,7 @@ export default {
     methods: {
         downloadPDF() {
             // Set the path to your PDF file
-            const pdfPath = 'SempreStudiosServices.pdf';
+            const pdfPath = 'https://sempreagency.netlify.app/SempreStudiosServices.pdf';
 
             // Create a link element, set the URL, and trigger the download
             const link = document.createElement('a');
@@ -56,9 +56,6 @@ export default {
                 this.messageVisible = false;
             }, 10000); // Hides the message after 10 seconds
         },
-        goToHomePage() {
-            this.$router.push('/');
-        }
     }
 }
 </script>
