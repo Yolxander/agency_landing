@@ -38,7 +38,7 @@ export default {
     methods: {
         downloadPDF() {
             // Set the path to your PDF file
-            const pdfPath = 'http://localhost:8080/SempreStudiosServices.pdf';
+            const pdfPath = 'https://sempreagency.netlify.app/SempreStudiosServices.pdf';
 
             // Attempt to create a link element, set the URL, and trigger the download
             try {
