@@ -61,7 +61,7 @@ export default {
 
 .right-side {
     width: 43%;
-    height: fit-content;
+    height: 100%;
     /*border: 1px solid white;*/
     /*background: #2c3e50;*/
     display: flex;

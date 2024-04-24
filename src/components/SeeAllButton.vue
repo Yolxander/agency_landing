@@ -31,7 +31,7 @@ export default {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    margin-top: 30px;
+
 }
 
 .btn-9 {

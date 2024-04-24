@@ -1,0 +1,10 @@
+## Global headers
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: no-referrer-when-downgrade
+
+## Specific headers for the PDF path
+/pdf
+  Access-Control-Allow-Origin: https://sempreagency.netlify.app/pdf
+  Content-Type: application/pdf
