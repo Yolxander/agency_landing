@@ -13,7 +13,8 @@
             </p>
             <!-- Button for downloading the PDF -->
             <SeeAllButton :title="'Get PDF'" @click="downloadPDF" v-if="!messageVisible" />
-            <SeeAllButton :title="'Go Home'" @click="goToHomePage" v-if="messageVisible" />
+            <!-- Button for going to the home page -->
+            <SeeAllButton :title="'Go Home'" @click="$router.push('/')" v-if="messageVisible" />
 
         </div>
     </section>
@@ -56,7 +57,7 @@ export default {
             }, 10000); // Hides the message after 10 seconds
         },
         goToHomePage() {
-            this.router.push('/');
+            this.$router.push('/');
         }
     }
 }
