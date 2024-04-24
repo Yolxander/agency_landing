@@ -24,7 +24,9 @@ import SeeAllButton from "@/components/SeeAllButton.vue";
 
 export default {
     name: 'AutoDownloadPdf',
-    components: {SeeAllButton},
+    components: {
+        SeeAllButton
+    },
 
     data() {
         return {
