@@ -12,6 +12,7 @@
     "@vueuse/head": "^2.0.0",
     "core-js": "^3.8.3",
     "gsap": "^3.12.5",
+    "splitting": "^1.0.6",
     "vue": "^3.2.13",
     "vue-router": "^4.3.2",
     "vue-scrollto": "^2.20.0",
