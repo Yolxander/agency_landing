@@ -1,5 +1,5 @@
 <template>
-    <div class="logo">
+    <div class="logo" @click="$router.push('/')">
         <p id="a-letter">S</p>
         <p id="y-letter">E</p>
         <p id="y-letter">M</p>

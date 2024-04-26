@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from "../views/HomePage.vue";
 import OurServicesPage from "../views/OurServicesPage.vue";
 import AutoDownloadPdf from "@/views/AutoDownloadPdf.vue";
+import AboutUsPage from "@/views/AboutUsPage.vue";
 
 const routes = [
     {
@@ -13,6 +14,10 @@ const routes = [
     {
         path: "/services",
         component: OurServicesPage,
+    },
+    {
+        path: "/about-us",
+        component: AboutUsPage,
     },
     {
         path: "/pdf",

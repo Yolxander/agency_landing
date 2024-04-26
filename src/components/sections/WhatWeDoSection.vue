@@ -13,7 +13,7 @@
                     </li>
                 </ul>
             </ObserverComponent>
-              <SeeAllButton />
+              <SeeAllButton @click="$router.push('/services')" />
         </div>
     </section>
 </template>
@@ -61,13 +61,14 @@ export default {
 
 .right-side {
     width: 43%;
-    height: 100%;
+    height: 60vh;
     /*border: 1px solid white;*/
     /*background: #2c3e50;*/
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
+    margin-top: 20px;
 }
 
 
@@ -158,6 +159,10 @@ export default {
 
     .left-side, .right-side {
         font-size: 15px;
+    }
+
+    .right-side{
+        height: fit-content;
     }
 }
 </style>
