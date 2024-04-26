@@ -9,10 +9,10 @@
 
 <script>
 
-import AboutUsPage from "@/components/sections/AboutUsSection.vue";
-import LandingPage from "@/components/sections/LandingSection.vue";
-import WhatWeDoPage from "@/components/sections/WhatWeDoSection.vue";
-import ContactUsPage from "@/components/sections/ContactUsSection.vue";
+import AboutUsPage from "@/components/sections/HomePageSections/AboutUsSection.vue";
+import LandingPage from "@/components/sections/HomePageSections/LandingSection.vue";
+import WhatWeDoPage from "@/components/sections/HomePageSections/WhatWeDoSection.vue";
+import ContactUsPage from "@/components/sections/HomePageSections/ContactUsSection.vue";
 
 export default {
     name: "HomePage",
