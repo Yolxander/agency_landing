@@ -60,13 +60,11 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'EB Garamond', serif;
 }
 
 div {
@@ -76,22 +74,29 @@ div {
     align-items: center;
     min-height: 80vh;
     background: #000;
-    padding: 24px;
 }
 
 h1 {
     color: #fff;
-    font-size: 3em;
+    font-size: 35px;
     font-weight: 600;
+    width: 90%;
 }
 
 p {
     max-width: 600px;
     color: #fff;
     font-size: 1.25em;
+    width: 90%;
+    text-align: center;
 }
 
 .logoStyle{
     font-family: 'Gugi', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
 }
 </style>
