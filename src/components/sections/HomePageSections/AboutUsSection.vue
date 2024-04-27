@@ -20,9 +20,9 @@
 </template>
 <script>
 
-import AboutUsHeader from "@/components/AboutUsHeader.vue";
-import ObserverComponent from "@/components/IntersectionObserver.vue";
-import LearnMoreButton from "@/components/LearnMoreButton.vue";
+import AboutUsHeader from "@/components/headers/AboutUsHeader.vue";
+import ObserverComponent from "@/components/animations/IntersectionObserver.vue";
+import LearnMoreButton from "@/components/buttons/LearnMoreButton.vue";
 
 export default {
     name: "AboutUsPage",

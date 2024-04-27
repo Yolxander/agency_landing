@@ -19,9 +19,9 @@
 </template>
 <script>
 
-import AboutUsHeader from "@/components/AboutUsHeader.vue";
-import ObserverComponent from "@/components/IntersectionObserver.vue";
-import SeeAllButton from "@/components/SeeAllButton.vue";
+import AboutUsHeader from "@/components/headers/AboutUsHeader.vue";
+import ObserverComponent from "@/components/animations/IntersectionObserver.vue";
+import SeeAllButton from "@/components/buttons/SeeAllButton.vue";
 
 export default {
     name: "WhatWeDoPage",

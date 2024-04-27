@@ -7,11 +7,11 @@
 
 
 <script>
-import FooterComponent from "@/components/FooterComponent.vue";
+import FooterComponent from "@/components/global/FooterComponent.vue";
 import { computed, reactive } from "vue";
 import { useHead } from "@vueuse/head";
 import router from "./router";
-import NavBarComponent from "@/components/NavBarComponent.vue";
+import NavBarComponent from "@/components/global/NavBarComponent.vue";
 
 export default {
     name: 'App',

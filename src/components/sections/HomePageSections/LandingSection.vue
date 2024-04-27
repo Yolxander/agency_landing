@@ -7,8 +7,8 @@
 
 <script>
 
-import CallToAction from "@/components/CallToAction.vue";
-import WhiteStrapComponent from "@/components/WhiteStrapComponent.vue";
+import CallToAction from "@/components/buttons/CallToAction.vue";
+import WhiteStrapComponent from "@/components/animations/WhiteStrapComponent.vue";
 
 export default {
     name: "LandingPage",

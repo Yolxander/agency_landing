@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import HamburgerMenu from "@/components/HamburgerMenu.vue";
-import LogoComponent from "@/components/LogoComponent.vue";
+import HamburgerMenu from "@/components/menus/HamburgerMenu.vue";
+import LogoComponent from "@/components/global/LogoComponent.vue";
 
 export default {
     name: "NavBarComponent",

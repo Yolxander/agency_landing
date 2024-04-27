@@ -18,8 +18,8 @@
 <script>
 
 
-import ContactUsHeader from "@/components/ContactUsHeader.vue";
-import ContactForm from "@/components/ContactForm.vue";
+import ContactUsHeader from "@/components/headers/ContactUsHeader.vue";
+import ContactForm from "@/components/forms/ContactForm.vue";
 
 export default {
     name: "ContactUsPage",

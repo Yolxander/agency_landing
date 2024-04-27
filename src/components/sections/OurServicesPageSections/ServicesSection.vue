@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import ObserverComponent from "@/components/IntersectionObserver.vue";
-import AboutUsHeader from "@/components/AboutUsHeader.vue";
+import ObserverComponent from "@/components/animations/IntersectionObserver.vue";
+import AboutUsHeader from "@/components/headers/AboutUsHeader.vue";
 
 export default {
     name: "ServicesSection",

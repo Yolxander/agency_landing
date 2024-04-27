@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import SeeAllButton from "@/components/SeeAllButton.vue";
+import SeeAllButton from "@/components/buttons/SeeAllButton.vue";
 
 export default {
     name: 'AutoDownloadPdf',
