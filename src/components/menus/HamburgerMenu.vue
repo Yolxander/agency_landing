@@ -7,7 +7,8 @@
             <nav>
                 <ul>
                     <li><router-link to="/" @click="toggleOverlay">Home</router-link></li>
-                    <li><router-link to="/services" @click="toggleOverlay">Services</router-link></li>
+                    <li><router-link to="/services" @click="toggleOverlay">Our Services</router-link></li>
+                    <li><router-link to="/about-us" @click="toggleOverlay">About Us</router-link></li>
 <!--                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#whatWeDoPage'">WhatWeDoPage</a></li>-->
 <!--                    <li><a @click="toggleOverlay" href="javascript:void(0)" v-scroll-to="'#contactUsPage'">ContactUsPage</a></li>-->
                 </ul>

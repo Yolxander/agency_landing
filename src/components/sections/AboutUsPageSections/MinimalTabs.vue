@@ -101,6 +101,7 @@ ul, li, p{
     position: relative;
     width: 33%;
     margin: 0 0 0 -4px;
+    cursor: pointer;
 }
 
 .sexytabs.dark > ul > li.ui-tabs-active:before,

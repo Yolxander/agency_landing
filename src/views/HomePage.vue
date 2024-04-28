@@ -12,7 +12,7 @@
 import AboutUsPage from "@/components/sections/HomePageSections/AboutUsSection.vue";
 import LandingPage from "@/components/sections/HomePageSections/LandingSection.vue";
 import WhatWeDoPage from "@/components/sections/HomePageSections/WhatWeDoSection.vue";
-import ContactUsPage from "@/components/sections/HomePageSections/ContactUsSection.vue";
+import ContactUsPage from "@/components/sections/ContactUsSection.vue";
 
 export default {
     name: "HomePage",

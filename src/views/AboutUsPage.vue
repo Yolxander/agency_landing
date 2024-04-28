@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ContactUsPage from "@/components/sections/HomePageSections/ContactUsSection.vue";
+import ContactUsPage from "@/components/sections/ContactUsSection.vue";
 import MainDescription from "@/components/sections/AboutUsPageSections/MainDescription.vue";
 import MinimalTabs from "@/components/sections/AboutUsPageSections/MinimalTabs.vue";
 

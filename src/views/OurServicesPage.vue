@@ -5,7 +5,7 @@
 
 <script>
 import ServicesSection from "@/components/sections/OurServicesPageSections/ServicesSection.vue";
-import ContactUsPage from "@/components/sections/HomePageSections/ContactUsSection.vue";
+import ContactUsPage from "@/components/sections/ContactUsSection.vue";
 
 export default {
     name: "OurServicesPage",

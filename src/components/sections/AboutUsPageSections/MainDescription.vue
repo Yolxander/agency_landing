@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h1 ref="title" data-splitting>We're <span class="logoStyle">SEMPREstudios</span></h1>
+        <h1 ref="title" data-splitting> About Us</h1>
         <p ref="paragraph" data-splitting="words">
-            SEMPREstudios is your go-to crew for making your small business shine online. We started this journey with a simple idea: help small businesses, like yours, thrive in the digital world without the stress of big budgets. Whether you're tuning up cars in your garage or replacing roofs, we tailor our digital magic to fit your unique needs. We're all about creating connections, keeping things running smoothly, and making sure your business stands out from the crowd. Ready to start our collaboration?
+            <span class="logoStyle">SEMPREstudios </span>is your go-to crew for making your small business shine online. We started this journey with a simple idea: help small businesses, like yours, thrive in the digital world without the stress of big budgets. Whether you're tuning up cars in your garage or replacing roofs, we tailor our digital magic to fit your unique needs. We're all about creating connections, keeping things running smoothly, and making sure your business stands out from the crowd. Ready to start our collaboration?
         </p>
     </div>
 </template>
@@ -72,15 +72,19 @@ div {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    min-height: 80vh;
+    min-height: 85vh;
     background: #000;
 }
 
 h1 {
     color: #fff;
-    font-size: 35px;
-    font-weight: 600;
     width: 90%;
+    margin-bottom: 40px;
+    font-family: 'Notable', sans-serif;
+    font-size: 60px; /* Default size for larger screens */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* Adjust if necessary for mobile */
 }
 
 p {
