@@ -1,12 +1,12 @@
 <template>
     <div class="hero">
       <div class="right-side">
-          <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
+          <ObserverComponent classToToggle="fadeInLeft" :playOnce="true">
               <AboutUsHeader :header="header"/>
           </ObserverComponent>
       </div>
         <div class="left-side" >
-            <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
+            <ObserverComponent classToToggle="fadeInLeft" :playOnce="true">
               <p id="first_paragraph">
                 <span>SEMPRE</span> <span class="small-header">studios</span> is a full-service digital agency. We can make all your digital dreams come true. As your dedicated digital partner, we focus on bringing your business's unique vision and goals to life online. Our approach is to blend creativity with technology, crafting a digital presence that captures your business’s essence and objectives in vibrant, effective digital narratives.              <br>
                 <br>

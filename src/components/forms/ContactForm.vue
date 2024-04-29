@@ -1,17 +1,17 @@
 <template>
     <div class="container" :class="{ 'thank-you-active': submitted }">
         <h3 class="signup">{{ message }}</h3>
-        <form v-if="!submitted" ref="form" @submit.prevent="sendEmail" class="contact-form row">
-            <div  class="form-field col x-50">
-                <input id="name" class="input-text js-input" type="text" name="name" required>
+        <form v-if="!submitted" @submit.prevent="sendEmail" class="contact-form row">
+            <div class="form-field col x-50">
+                <input id="name" class="input-text js-input" type="text" v-model="emailData.name" required>
                 <label class="label" for="name">Name</label>
             </div>
             <div class="form-field col x-50">
-                <input id="email" class="input-text js-input" type="email" name="email" required>
+                <input id="email" class="input-text js-input" type="email" v-model="emailData.email" required>
                 <label class="label" for="email">E-mail</label>
             </div>
             <div class="form-field col x-100 select-field">
-                <select id="services" class="input-text js-input" name="services" required>
+                <select id="services" class="input-text js-input" v-model="emailData.services" required>
                     <option value="">Select Service</option>
                     <option value="web-development-design">Web Development and Design</option>
                     <option value="hosting-domain-services">Hosting and Domain Services</option>
@@ -22,22 +22,22 @@
                 </select>
             </div>
             <div class="form-field col x-100">
-                <input id="message" class="input-text js-input" type="text" name="message" required>
+                <input id="message" class="input-text js-input" type="text" v-model="emailData.message" required>
                 <label class="label" for="message">Message</label>
             </div>
             <div class="form-field col x-100 align-center">
                 <button type="submit" class="white">{{ buttonText }}</button>
             </div>
         </form>
-        <div id="thankYouContainer" v-if="submitted" >
-        <!-- Displayed after form submission -->
+        <div id="thankYouContainer" v-if="submitted">
             <p>We will get back to you soon. A confirmation email has been sent to your email address.</p>
         </div>
     </div>
 </template>
 
 <script>
-import emailjs from '@emailjs/browser';
+import brevoApi from '../../brevoApi';
+
 
 export default {
     name: "ContactForm",
@@ -45,20 +45,39 @@ export default {
         return {
             submitted: false,
             buttonText: 'Send',
-            message: 'Contact Us'
+            message: 'Contact Us',
+            emailData: { // Add this object to store the form data
+                name: '',
+                email: '',
+                services: '',
+                message: ''
+            }
         };
     },
     methods: {
-        sendEmail() {
-            emailjs.sendForm('service_v98lvdp', 'template_32vbj3t', this.$refs.form, 'NxLLnhlEW3KDj2zPO')
-                .then((result) => {
-                    console.log('SUCCESS!', result.text);
-                    this.submitted = true;
-                    this.buttonText = 'Message Submitted';
-                    this.message = 'Thank you for contacting us';
-                }, (error) => {
-                    console.log('FAILED...', error.text);
-                });
+        async sendEmail() {
+            const emailPayload = {
+                to: [{ email: this.emailData.email, name: this.emailData.name }],
+                templateId: 3, // Assuming you have a template configured
+                params: {
+                    name: this.emailData.name,
+                    surname: this.emailData.name // Adjust according to your template variables
+                },
+                headers: {
+                    'X-Mailin-custom': 'custom_header_1:custom_value_1|custom_header_2:custom_value_2'
+                }
+            };
+
+            try {
+                const response = await brevoApi.post('/email', emailPayload);
+                console.log('Email sent:', response.data);
+                this.submitted = true;
+                this.buttonText = 'Message Submitted';
+                this.message = 'Thank you for contacting us';
+            } catch (error) {
+                console.error('Failed to send email:', error);
+                alert('Failed to send email.');
+            }
         }
     }
 };
@@ -155,23 +174,6 @@ export default {
     }
 }
 
-.note {
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    line-height: 21px;
-
-    .link {
-        color: #FFFFFF;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
 
 .select-field .label {
     /* Adjust label positioning for select specifically */

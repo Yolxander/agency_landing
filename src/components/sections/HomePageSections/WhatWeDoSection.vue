@@ -1,12 +1,12 @@
 <template>
     <section class="hero">
       <div class="right-side">
-          <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
+          <ObserverComponent classToToggle="fadeInLeft" :playOnce="true">
             <AboutUsHeader :header="header"/>
           </ObserverComponent>
       </div>
         <div class="left-side" >
-            <ObserverComponent classToToggle="fadeInLeft" playOnce="true">
+            <ObserverComponent classToToggle="fadeInLeft" :playOnce="true">
                 <ul class="list">
                     <li v-for="service in services" :key="service.name">
                         <span>{{ service.name }}</span> - {{ service.description }}
