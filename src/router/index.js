@@ -5,6 +5,7 @@ import Home from "../views/HomePage.vue";
 import OurServicesPage from "../views/OurServicesPage.vue";
 import AutoDownloadPdf from "@/views/AutoDownloadPdf.vue";
 import AboutUsPage from "@/views/AboutUsPage.vue";
+import FaqPage from "@/views/FaqPage.vue";
 
 const routes = [
     {
@@ -18,6 +19,10 @@ const routes = [
     {
         path: "/about-us",
         component: AboutUsPage,
+    },
+    {
+        path: "/fqa",
+        component: FaqPage,
     },
     {
         path: "/pdf",

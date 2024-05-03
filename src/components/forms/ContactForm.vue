@@ -4,11 +4,11 @@
         <form v-if="!submitted" @submit.prevent="sendEmail" class="contact-form row">
             <div class="form-field col x-50">
                 <input id="name" class="input-text js-input" type="text" v-model="emailData.name" required>
-                <label class="label" for="name">Name</label>
+                <label class="label" for="name" :class="{ 'active_field': emailData.name }">Name</label>
             </div>
             <div class="form-field col x-50">
                 <input id="email" class="input-text js-input" type="email" v-model="emailData.email" required>
-                <label class="label" for="email">E-mail</label>
+                <label class="label" for="email" :class="{ 'active_field': emailData.email }" >E-mail</label>
             </div>
             <div class="form-field col x-100 select-field">
                 <select id="services" class="input-text js-input" v-model="emailData.services" required>
@@ -23,7 +23,7 @@
             </div>
             <div class="form-field col x-100">
                 <input id="message" class="input-text js-input" type="text" v-model="emailData.message" required>
-                <label class="label" for="message">Message</label>
+                <label class="label" for="message" :class="{ 'active_field': emailData.message }" >Message</label>
             </div>
             <div class="form-field col x-100 align-center">
                 <button type="submit" class="white">{{ buttonText }}</button>
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import brevoApi from '../../brevoApi';
+import brevoApi from '@/brevoApi';
 
 
 export default {
@@ -230,6 +230,11 @@ button {
     &:hover::after {
         opacity: 1;
     }
+}
+
+.active_field{
+    transform: translateY(-24px);
+    outline: none;
 }
 
 @media (max-width: 568px) {

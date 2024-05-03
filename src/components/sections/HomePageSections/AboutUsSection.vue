@@ -8,10 +8,11 @@
         <div class="left-side" >
             <ObserverComponent classToToggle="fadeInLeft" :playOnce="true">
               <p id="first_paragraph">
-                <span>SEMPRE</span> <span class="small-header">studios</span> is a full-service digital agency. We can make all your digital dreams come true. As your dedicated digital partner, we focus on bringing your business's unique vision and goals to life online. Our approach is to blend creativity with technology, crafting a digital presence that captures your business’s essence and objectives in vibrant, effective digital narratives.              <br>
+                <span>SEMPRE</span> <span class="small-header">studios</span>is a digital agency that offers a wide range of services. We can do anything with the help of technology. We will make your wildest digital dreams come true. As your digital partner, our aim is to create for you an online reflection of your business’s unique vision and who you are.        <br>
                 <br>
-                Join us at SEMPRE studios for a journey into the digital future. Our team is committed to creating engaging, seamless online experiences for your customers. Let's work together to elevate your business in the digital world, ensuring it's not just seen, but remembered.
-            </p>
+
+                  Our method at SEMPRE studios is combining creative ideas with technology in order to provide lively and effective digital narratives that represent brands well
+              </p>
             </ObserverComponent>
            <LearnMoreButton @click="$router.push('/about-us')"   />
         </div>
@@ -45,12 +46,12 @@ export default {
 
 <style scoped>
 .hero{
-    height: 80vh;
+    height: 70vh;
     width: 100vw;
     background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
 }
 

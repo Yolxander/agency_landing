@@ -38,9 +38,9 @@ export default {
             },
             services: [
                 { name: 'Web Development and Design', description: 'Offering custom website creation with responsive design for optimal user experience across all devices.' },
+                { name: 'Booking and Scheduling', description: 'Streamline appointment bookings with an automated scheduling system and reminders....' },
                 { name: 'Hosting and Domain Services', description: 'Reliable web hosting and domain registration services to ensure your website is always accessible and running smoothly.' },
-                { name: 'Booking and Scheduling', description: 'Streamline appointment bookings with an automated scheduling system and reminders.' },
-                { name: 'Online Lead Generation', description: 'Boost lead capture with custom online forms and a quote generator, optimizing your CRM process.' },
+                // { name: 'Online Lead Generation', description: 'Boost lead capture with custom online forms and a quote generator, optimizing your CRM process.' },
             ],
         }
     }
