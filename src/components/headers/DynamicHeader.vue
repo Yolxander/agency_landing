@@ -35,7 +35,7 @@ export default {
       text-transform: capitalize;
       width: 500px;
       margin: 0;
-      text-align: start;
+      text-align: center;
   }
 
   span{

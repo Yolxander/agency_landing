@@ -33,22 +33,22 @@ export default {
             items: [
                 {
                     number: '01',
-                    title: 'Consultation',
-                    content: 'During the initial consultation, we will discuss your business goals and objectives...',
+                    title: 'What services does your digital agency offer?',
+                    content: 'Our agency specializes in a broad spectrum of digital services tailored for small to medium-sized businesses. These include web design and development, search engine optimization (SEO), social media management, and email marketing campaigns. Our goal is to help your business establish a strong online presence and drive growth.',
                     isOpen: false,
                     scrollHeight: 0
                 },
                 {
                     number: '02',
-                    title: 'Research and Strategy Development',
-                    content: 'In today\'s marketplace, R&D strategy helps a business take a leading position...',
+                    title: 'How does the process work when starting a project with your agency?',
+                    content: 'The process begins with a consultation to understand your business goals and requirements. We then propose a customized strategy that includes a project timeline, deliverables, and a detailed quote. Once agreed upon, our team starts working on your project, keeping you updated with regular progress reports.',
                     isOpen: false,
                     scrollHeight: 0
                 },
                 {
                     number: '03',
-                    title: 'Implementation',
-                    content: 'Strategy implementation is the process of turning your strategic plan into action...',
+                    title: 'Can you work with businesses outside of your local area?',
+                    content: 'Absolutely! We are equipped to work with clients from all over the globe. Our team is proficient in remote collaboration tools and communication platforms to ensure seamless interaction and project management, regardless of your location.',
                     isOpen: false,
                     scrollHeight: 0
                 }
