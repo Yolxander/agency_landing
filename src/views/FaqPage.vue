@@ -1,19 +1,28 @@
 <template>
-    <FaqDropdown />
+    <DynamicHeader :header="header"/>
+    <DropdownComponent />
     <ContactUsPage id="contactUsPage"/>
 </template>
 
 <script>
 import ContactUsPage from "@/components/sections/ContactUsSection.vue";
-import FaqDropdown from "@/components/sections/FQAPageSections/FaqDropdown.vue";
+import DynamicHeader from "@/components/headers/DynamicHeader.vue";
+import DropdownComponent from "@/components/sections/FQAPageSections/DropdownComponent.vue";
 
 export default {
     name: "FaqPage",
     components: {
-        FaqDropdown,
+        DropdownComponent,
+        DynamicHeader,
         ContactUsPage,
     },
+    data() {
+        return {
+            header: {
+                part1: "FAQ",
+            }
+        }
+    }
 
 }
 </script>
-

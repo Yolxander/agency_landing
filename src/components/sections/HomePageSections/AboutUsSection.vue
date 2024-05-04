@@ -2,7 +2,7 @@
     <div class="hero">
       <div class="right-side">
           <ObserverComponent classToToggle="fadeInLeft" :playOnce="true">
-              <AboutUsHeader :header="header"/>
+              <DynamicHeader :header="header"/>
           </ObserverComponent>
       </div>
         <div class="left-side" >
@@ -21,7 +21,7 @@
 </template>
 <script>
 
-import AboutUsHeader from "@/components/headers/AboutUsHeader.vue";
+import DynamicHeader from "@/components/headers/DynamicHeader.vue";
 import ObserverComponent from "@/components/animations/IntersectionObserver.vue";
 import LearnMoreButton from "@/components/buttons/LearnMoreButton.vue";
 
@@ -30,7 +30,7 @@ export default {
     components: {
         LearnMoreButton,
         ObserverComponent,
-        AboutUsHeader
+        DynamicHeader
     },
     data() {
         return {

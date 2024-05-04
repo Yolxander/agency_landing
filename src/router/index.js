@@ -21,7 +21,7 @@ const routes = [
         component: AboutUsPage,
     },
     {
-        path: "/fqa",
+        path: "/faq",
         component: FaqPage,
     },
     {

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: "AboutUsHeader",
+    name: "DynamicHeader",
     props: {
         header: {
             required: true,
@@ -21,8 +21,9 @@ export default {
   .container{
       display: flex;
       justify-content: center;
-      align-items: start;
+      align-items: center;
       height: fit-content;
+      background: black;
   }
   h1{
       color: #FFF;

@@ -2,7 +2,7 @@
     <section id="service" class="hero">
         <ObserverComponent classToToggle="fadeInRight" :playOnce="true">
             <div class="header-container">
-                <AboutUsHeader :header="header"/>
+                <DynamicHeader :header="header"/>
             </div>
         </ObserverComponent>
         <div class="services-container content">
@@ -43,12 +43,12 @@
 
 <script>
 import ObserverComponent from "@/components/animations/IntersectionObserver.vue";
-import AboutUsHeader from "@/components/headers/AboutUsHeader.vue";
+import DynamicHeader from "@/components/headers/DynamicHeader.vue";
 
 export default {
     name: "ServicesSection",
     components: {
-        AboutUsHeader,
+        DynamicHeader,
         ObserverComponent
     },
     data() {
