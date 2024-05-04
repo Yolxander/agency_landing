@@ -1,16 +1,16 @@
 <template>
     <section class="process">
         <div class="process__container">
-            <div class="process__intro intro">
-                <h2 class="process__title title">Our Working Process</h2>
-                <div class="process__text text">Step-by-Step Guide to Achieving Your Business Goals</div>
-            </div>
+<!--            <div class="process__intro intro">-->
+<!--                <h2 class="process__title title">Our Working Process</h2>-->
+<!--                <div class="process__text text">Step-by-Step Guide to Achieving Your Business Goals</div>-->
+<!--            </div>-->
             <div class="process__accordions">
                 <ul class="accordions__list">
                     <li v-for="(item, index) in items" :key="index" class="accordions__item" :class="{ open: item.isOpen }">
                         <button class="accordions__control" @click="toggleItem(index)" :aria-expanded="item.isOpen.toString()">
-                            <span class="accordions__number">{{ item.number }}</span>
-                            <span class="accordions__title">{{ item.title }}</span>
+                            <span class="accordions__number" :style="{ color: item.isOpen ? 'white' : '' }">{{ item.number }}</span>
+                            <span class="accordions__title" :style="{ color: item.isOpen ? 'white' : '' }">{{ item.title }}</span>
                             <span class="accordions__icon"></span>
                         </button>
                         <div class="accordions__content text"
@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 .process {
     padding: 70px 0;
     font-family: "Space Grotesk", sans-serif;
+    background-color: black; /* Dark background for the whole component */
 }
 .process__container {
     max-width: 1240px;
@@ -134,12 +135,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: #b9ff66;
+    background-color: #f3f3f3; /* Light background for the title */
     border-radius: 0.4375rem;
 }
 .text {
     font-size: 18px;
     line-height: 127%;
+    color: #f3f3f3; /* Light text color for better readability on dark background */
 }
 .accordions__list {
     display: flex;
@@ -147,12 +149,12 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.8rem;
 }
 .accordions__item {
-    background-color: #f3f3f3;
+    background-color: #f3f3f3; /* Light background for items */
     border-radius: 2.8rem;
     overflow: hidden;
     transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
-    box-shadow: 0 0.3125rem 0 0 #191a23;
-    border: 0.0625rem solid #191a23;
+    box-shadow: 0 0.3125rem 0 0 #f3f3f3; /* Light shadow */
+    border: 0.0625rem solid #f3f3f3; /* Light border */
 }
 .accordions__control {
     display: flex;
@@ -184,8 +186,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     width: 58px;
     height: 58px;
-    background-color: #f3f3f3;
-    border: 1px solid #191a23;
+    background-color: black; /* Dark background for icons */
+    border: 1px solid #f3f3f3; /* Light border for icons */
     border-radius: 50%;
     position: relative;
     transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
@@ -194,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     content: "";
     width: 1.5625rem;
     height: 0.3125rem;
-    background-color: #191a23;
+    background-color: #f3f3f3; /* Light color for icon lines */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -216,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 60px 40px;
 }
 .open {
-    background-color: #b9ff66;
+    background-color: black; /* Dark background when open */
 }
 .open .accordions__icon {
     transform: rotate(225deg);
