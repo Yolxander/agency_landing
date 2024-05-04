@@ -85,7 +85,7 @@ html, body {
     min-width: 320px;
     font-size: 16px;
     line-height: 1;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -165,12 +165,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .accordions__number {
     font-size: 60px;
-    font-family: "Space Grotesk";
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     padding-right: 1.5625rem;
     font-weight: 500;
 }
 .accordions__title {
-    font-family: "Space Grotesk";
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     font-size: 30px;
     font-weight: 500;
     text-transform: capitalize;
