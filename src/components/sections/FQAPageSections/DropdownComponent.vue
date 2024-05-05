@@ -251,7 +251,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .accordions__control{
         flex-direction: column;
-        padding: 20px 40px;
+        padding: 30px 40px;
+    }
+
+    .accordions__title{
+        text-align: center;
+        padding-right: 0px;
     }
 
     .mobile_visible{
