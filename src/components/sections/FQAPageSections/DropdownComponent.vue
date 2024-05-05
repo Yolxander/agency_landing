@@ -11,7 +11,7 @@
                         <button class="accordions__control" @click="toggleItem(index)" :aria-expanded="item.isOpen.toString()">
                             <span class="accordions__number" :style="{ color: item.isOpen ? 'white' : '' }">{{ item.number }}</span>
                             <span class="accordions__title" :style="{ color: item.isOpen ? 'white' : '' }">{{ item.title }}</span>
-                            <span class="accordions__icon"></span>
+                            <span class="accordions__icon desktop_visible"></span>
                         </button>
                         <div class="accordions__content text"
                              ref="contentRefs"
@@ -19,6 +19,9 @@
                              :aria-hidden="item.isOpen.toString()">
                             <p>{{ item.content }}</p>
                         </div>
+                        <button class="accordions__control mobile_visible" @click="toggleItem(index)" :aria-expanded="item.isOpen.toString()" >
+                            <span class="accordions__icon"></span>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -47,11 +50,24 @@ export default {
                 },
                 {
                     number: '03',
-                    title: 'Can you work with businesses outside of your local area?',
-                    content: 'Absolutely! We are equipped to work with clients from all over the globe. Our team is proficient in remote collaboration tools and communication platforms to ensure seamless interaction and project management, regardless of your location.',
+                    title: 'How do you price your services?',
+                    content: 'Our pricing is project-based, taking into consideration the scope of work, complexity, and the specific services required. We provide a detailed quote after our initial consultation. Rest assured, we aim to offer competitive pricing that aligns with your budget and business needs.',                    isOpen: false,
+                    scrollHeight: 0
+                },
+                {
+                    number: '04',
+                    title: 'How does the process work when starting a project with your agency?',
+                    content: 'The process begins with a consultation to understand your business goals and requirements. We then propose a customized strategy that includes a project timeline, deliverables, and a detailed quote. Once agreed upon, our team starts working on your project, keeping you updated with regular progress reports.',
                     isOpen: false,
                     scrollHeight: 0
-                }
+                },
+                {
+                    number: '05',
+                    title: 'How often can I expect updates about my project?',
+                    content: 'We like to keep communication honest and straightforward; therefore, each week, you should receive an update regarding your venture. Nevertheless, if you want to have more frequent conversations with the person assigned as your manager throughout this time or even need us urgently at some point in between for anything else via email – feel free! ‘’Where there’s smoke there’s fire!’’ ‘’I gotcha back!’’’, said I.',
+                    isOpen: false,
+                    scrollHeight: 0
+                },
             ]
         };
     },
@@ -224,10 +240,28 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(225deg);
 }
 
+.desktop_visible {
+    display: block;
+}
+
+.mobile_visible{
+    display: none;
+}
+
 @media (max-width: 768px) {
     .accordions__control{
         flex-direction: column;
         padding: 20px 40px;
     }
+
+    .mobile_visible{
+        display: block;
+    }
+
+    .desktop_visible {
+        display: none;
+    }
+
+
 }
 </style>
