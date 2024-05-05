@@ -223,4 +223,11 @@ h1, h2, h3, h4, h5, h6 {
 .open .accordions__icon {
     transform: rotate(225deg);
 }
+
+@media (max-width: 768px) {
+    .accordions__control{
+        flex-direction: column;
+        padding: 20px 40px;
+    }
+}
 </style>
