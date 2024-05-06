@@ -25,7 +25,7 @@ export default {
   .strap{
       display: flex;
       width: 120vw;
-      height: 59.031px;
+      height: 15%;
       transform: rotate(-12.95deg);
       align-items: center;
       gap: 45px;
@@ -50,9 +50,8 @@ export default {
       border-top: 1px solid white;
       border-bottom: 1px solid white;
       width: fit-content;
-      height: 66.416px;
       flex-shrink: 0;
-      font-size: 50px;
+      font-size: 80px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -60,7 +59,6 @@ export default {
       padding-right: 40px;
       padding-left: 40px;
       margin: 0;
-      border-top: 2px solid goldenrod;
   }
 
   .marquee {

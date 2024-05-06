@@ -47,7 +47,7 @@ export default {
 .footer {
     background-color: black;
     padding: 80px 0;
-    border-top: 1px solid white;
+    border-top: 1px solid gray;
     height: 20vh;
     z-index:1;
 }

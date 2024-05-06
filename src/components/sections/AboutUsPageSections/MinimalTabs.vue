@@ -9,9 +9,14 @@
                 </li>
             </ul>
             <div class="contents">
-                <div v-for="tab in tabs" :key="tab.id" v-show="tab.id === activeTab">
+                <div v-for="tab in tabs" :key="tab.id" v-show="tab.id === activeTab" >
                     <h2>{{ tab.name }}</h2>
                     <p v-for="paragraph in tab.content" :key="paragraph">{{ paragraph }}</p>
+                    <div class="accordions__content text"
+                         ref="contentRefs">
+                        <h2>{{ tab.name }}</h2>
+                        <p v-for="paragraph in tab.content" :key="paragraph">{{ paragraph }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,4 +162,5 @@ h2 {
         font-size: 15px;
     }
 }
+
 </style>

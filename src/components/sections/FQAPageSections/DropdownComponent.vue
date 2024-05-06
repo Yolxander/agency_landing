@@ -134,26 +134,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 2.5rem;
 }
-.title {
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 127.5%;
-    position: relative;
-    text-transform: capitalize;
-    display: inline-flex;
-    padding: 0 7px;
-}
-.title::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-color: #f3f3f3; /* Light background for the title */
-    border-radius: 0.4375rem;
-}
+
 .text {
     font-size: 18px;
     line-height: 127%;

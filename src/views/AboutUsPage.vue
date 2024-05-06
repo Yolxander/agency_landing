@@ -1,22 +1,27 @@
 <template>
-    <MainDescription />
-    <MinimalTabs />
-    <ContactUsPage id="contactUsPage"/>
+    <DynamicHeader :header="header"/>
+    <ModernTabs />
 </template>
 
 <script>
-import ContactUsPage from "@/components/sections/ContactUsSection.vue";
-import MainDescription from "@/components/sections/AboutUsPageSections/MainDescription.vue";
-import MinimalTabs from "@/components/sections/AboutUsPageSections/MinimalTabs.vue";
+// import MainDescription from "@/components/sections/AboutUsPageSections/MainDescription.vue";
+import ModernTabs from "@/components/sections/AboutUsPageSections/ModernTabs.vue";
+import DynamicHeader from "@/components/headers/DynamicHeader.vue";
 
 export default {
     name: "AboutUsPage",
     components: {
-        MinimalTabs,
-        MainDescription,
-        ContactUsPage,
+        DynamicHeader,
+        ModernTabs,
+        // MainDescription,
     },
+    data() {
+        return {
+            header: {
+                part1: "About Us",
+            }
+        }
+    }
 
 }
 </script>
-
