@@ -1,13 +1,18 @@
 <template>
     <div class="darkpage">
             <div class="contents">
-                <div v-for="(tab, index) in tabs" :key="tab.id" class="accordions__item flip open" :class="{ 'right-margin': index % 2 === 0, 'left-margin': index % 2 !== 0 }">
-                    <h2 class="front back">{{ tab.name }}</h2>
-                    <p class="front back" v-for="paragraph in tab.content" :key="paragraph">{{ paragraph }}</p>
+                <div v-for="(tab, index) in tabs" :key="tab.id" class="card card-brutalism flip open" :class="{ 'right-margin': index % 2 === 0, 'left-margin': index % 2 !== 0 }">
+                    <div class="card-header">
+                        <h2>{{ tab.name }}</h2>
+                    </div>
+
+                    <div class="card-content">
+                        <p v-for="paragraph in tab.content" :key="paragraph">{{ paragraph }}</p>
+                    </div>
                 </div>
             </div>
     </div>
-</template> `
+</template>
 
 <script>
 export default {
@@ -16,37 +21,40 @@ export default {
         return {
             activeTab: 'mission',
             tabs: [
+
                 {
                     id: 'our mission',
                     title: 'Our Mission',
                     name: 'Mission',
                     imgSrc: 'https://example.com/images/mission.jpg', // Placeholder image URL
                     content: [
-                        'At SEMPREstudios, our mission is to empower small businesses by providing top-notch digital solutions that enhance online presence and drive growth. We believe every small business deserves to shine online, regardless of its size or budget.',
-                        'Our approach is tailored to meet the unique needs of each client, ensuring personalized and effective strategies that not only attract but also retain customers.'
+                        'At SEMPREstudios, we want to make digital success possible for small businesses everywhere. We aim to do this by providing cheap yet effective digital solutions which will break down all the barriers towards online growth. We know what it’s like when you’re running a small business in the digital age – sometimes there just isn’t enough money for everything that needs doing! ',
+                        "We work out our strategies basing on different types of small business’ in various industries because they’ve got one thing in common – limited resources. Our dreams are big so our prices are low – we want your company thrive online without any financial strain."
                     ]
+
                 },
+
                 {
                     id: 'our values',
-                    title: 'Our Values',
-                    name: 'Values',
+                    title: 'Core Principles: Innovation & Support',
+                    name: 'Core Principles',
                     imgSrc: 'https://example.com/images/values.jpg', // Placeholder image URL
                     content: [
-                        'Integrity, innovation, and commitment are the core values that define SEMPREstudios. We operate with transparency and always prioritize the interests of our clients.',
-                        'We are committed to continuous improvement and staying ahead of industry trends to provide the best possible service to our clients.'
+                        'Our basic principles at SEMPREstudios are innovation, support and empowerment. For us, small businesses come first; this is why we provide them with strong digital services that can work well even with low investment. We make our services scalable and flexible so that all companies could take advantage of technology whether they are just starting or already established enterprises.',
+                        'We believe in the transformative power of digital technology to enhance operational efficiency, increase market visibility, and foster opportunities for exponential growth.Through our efforts, we aim to inspire a wave of innovation and resilience across the small business sector'
                     ]
                 },
                 {
                     id: 'our approach',
-                    title: 'Kick Off',
+                    title: 'Our Approach',
                     name: 'Approach',
                     imgSrc: 'https://example.com/images/values.jpg', // Placeholder image URL
                     content: [
-                        "Getting started smoothly is what we do best at SEMPREstudios. Choose the package that suits your business, and within 24 hours, our team will reach out. We're quick to connect because we believe in kicking things off without delay. This quick start helps us dive right into understanding your needs and setting the stage for your success."
+                        "We know very well that time is money for small businesses. Choose a service package that suits your needs and wallet. We prioritize a quick start that is easy to follow through, making sure we understand your business needs and goals right away.",
+                        "Our way of doing things is participatory and practical. We collaborate with you closely so as to come up with digital strategies which are not only affordable but also capable of yielding tangible results.From there on cheap yet effective solutions become the foundation upon which online triumphs for your enterprise are built at large thereby enabling optimization of returns made out of investments in technology."
                     ]
                 }
-
-            ],
+            ]
         };
     },
     methods: {
@@ -58,6 +66,12 @@ export default {
 </script>
 
 <style scoped>
+/* Font and other global styles */
+:root {
+    --border-width: 5px;
+    --border-radius: 5px;
+}
+
 .flip {
     position: relative;
     width: 100%;
@@ -68,19 +82,6 @@ export default {
     animation: flipIn 0.6s forwards; /* Animation to flip on load */
 }
 
-@keyframes flipIn {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(180deg);
-    }
-}
-
-/* Counter-rotate the text inside the flip container */
-.flip .front, .flip .back {
-    transform: rotateY(180deg);
-}
 
 ul, li, p {
     color: #fff;
@@ -104,26 +105,6 @@ ul, li, p {
     padding-bottom: 40px;
     width: 95%;
     gap: 15px; /* Added gap between items */
-}
-
-.accordions__item {
-    background-color: #f3f3f3; /* Light background for items */
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
-    box-shadow: 0 0.3125rem 0 0 #f3f3f3; /* Light shadow */
-    border: 0.0625rem solid #f3f3f3; /* Light border */
-    padding: 40px;
-    margin-top: 30px;
-    height: 70vh;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.open {
-    background-color: black; /* Dark background when open */
 }
 
 ul, li, p{
@@ -163,16 +144,10 @@ ul, li, p{
     min-height: fit-content;
     color: white;
     padding-bottom: 40px;
-    width: 95%;
+    width: 90%;
     gap: 15px; /* Added gap between items */
 }
 
-img {
-    width: 60px;
-    float: left;
-    margin: 0 1em 1em 0;
-    border-radius: 3px;
-}
 
 h2 {
     clear: both;
@@ -182,15 +157,6 @@ h2 {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 700px;
-    min-width: 320px;
-    font-size: 16px;
-    line-height: 1;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 button {
     cursor: pointer;
     color: inherit;
@@ -202,22 +168,6 @@ ul li {
 h1, h2, h3, h4, h5, h6 {
     font-weight: inherit;
     font-size: inherit;
-}
-
-.accordions__item {
-    background-color: #f3f3f3; /* Light background for items */
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.5s cubic-bezier(0.65, 0.2, 0.65, 1);
-    box-shadow: 0 0.3125rem 0 0 #f3f3f3; /* Light shadow */
-    border: 0.0625rem solid #f3f3f3; /* Light border */
-    padding: 40px;
-    margin-top: 30px;
-    height: 70vh;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .open {
@@ -237,6 +187,58 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .accordions__item{
+        width: 100%;
+        padding: 10px;
+        height: fit-content;
+    }
+}
+
+.card-brutalism {
+    border: 2px solid black; /* Adjusted for visibility on dark bg */
+    box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.7);; /* Adjusted for visibility */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: black; /* Ensuring text visibility */
+    color: white; /* Text color for visibility */
+    height: fit-content;
+}
+
+.card-header {
+    min-height: 40px;
+    border-bottom: var(--border-width) solid white; /* Adjusted for visibility */
+    background: white;
+    color: black;
+}
+
+.card-header h2 {
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.card-img img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .darkpage {
+        height: fit-content;
+    }
+    .contents {
+        flex-direction: column;
+    }
+    .card-brutalism {
         width: 100%;
         padding: 10px;
         height: fit-content;
