@@ -7,6 +7,10 @@
                 <label class="label" for="name" :class="{ 'active_field': emailData.name }">Name</label>
             </div>
             <div class="form-field col x-50">
+                <input id="name" class="input-text js-input" type="text" v-model="emailData.company" required>
+                <label class="label" for="name" :class="{ 'active_field': emailData.company }">Company Name</label>
+            </div>
+            <div class="form-field col x-50">
                 <input id="email" class="input-text js-input" type="email" v-model="emailData.email" required>
                 <label class="label" for="email" :class="{ 'active_field': emailData.email }" >E-mail</label>
             </div>
@@ -48,6 +52,7 @@ export default {
             message: 'Contact Us',
             emailData: { // Add this object to store the form data
                 name: '',
+                company: '',
                 email: '',
                 services: '',
                 message: ''
