@@ -1,18 +1,18 @@
 <template>
     <div class="container" :class="{ 'thank-you-active': submitted }">
         <h3 class="signup">{{ message }}</h3>
-        <form v-if="!submitted" @submit.prevent="sendEmail" class="contact-form row">
+        <form v-if="!submitted" ref="form" @submit.prevent="sendEmail" class="contact-form row">
             <div class="form-field col x-50">
                 <input id="name" class="input-text js-input" type="text" v-model="emailData.name" required>
                 <label class="label" for="name" :class="{ 'active_field': emailData.name }">Name</label>
             </div>
             <div class="form-field col x-50">
-                <input id="name" class="input-text js-input" type="text" v-model="emailData.company" required>
-                <label class="label" for="name" :class="{ 'active_field': emailData.company }">Company Name</label>
+                <input id="company" class="input-text js-input" type="text" v-model="emailData.company" required>
+                <label class="label" for="company" :class="{ 'active_field': emailData.company }">Company Name</label>
             </div>
             <div class="form-field col x-50">
                 <input id="email" class="input-text js-input" type="email" v-model="emailData.email" required>
-                <label class="label" for="email" :class="{ 'active_field': emailData.email }" >E-mail</label>
+                <label class="label" for="email" :class="{ 'active_field': emailData.email }">E-mail</label>
             </div>
             <div class="form-field col x-100 select-field">
                 <select id="services" class="input-text js-input" v-model="emailData.services" required>
@@ -27,7 +27,7 @@
             </div>
             <div class="form-field col x-100">
                 <input id="message" class="input-text js-input" type="text" v-model="emailData.message" required>
-                <label class="label" for="message" :class="{ 'active_field': emailData.message }" >Message</label>
+                <label class="label" for="message" :class="{ 'active_field': emailData.message }">Message</label>
             </div>
             <div class="form-field col x-100 align-center">
                 <button type="submit" class="white">{{ buttonText }}</button>
@@ -41,7 +41,7 @@
 
 <script>
 import brevoApi from '@/brevoApi';
-
+import * as emailjs from "@emailjs/browser";
 
 export default {
     name: "ContactForm",
@@ -50,7 +50,7 @@ export default {
             submitted: false,
             buttonText: 'Send',
             message: 'Contact Us',
-            emailData: { // Add this object to store the form data
+            emailData: {
                 name: '',
                 company: '',
                 email: '',
@@ -66,13 +66,27 @@ export default {
                 templateId: 3, // Assuming you have a template configured
                 params: {
                     name: this.emailData.name,
-                    surname: this.emailData.name // Adjust according to your template variables
+                    surname: this.emailData.name, // Adjust according to your template variables
+                    company: this.emailData.company, // Adjust according to your template variables
+                    email: this.emailData.email, // Ensure this is included
+                    services: this.emailData.services, // Ensure this is included
+                    message: this.emailData.message // Ensure this is included
                 },
                 headers: {
                     'X-Mailin-custom': 'custom_header_1:custom_value_1|custom_header_2:custom_value_2'
                 }
             };
 
+            emailjs.sendForm('service_v98lvdp', 'template_32vbj3t', this.$refs.form, 'NxLLnhlEW3KDj2zPO')
+                .then((result) => {
+                    console.log('SUCCESS!', result.text);
+                    this.submitted = true;
+                    this.buttonText = 'Message Submitted';
+                    this.message = 'Thank you for contacting us';
+                }, (error) => {
+                    console.log('FAILED...', error.text);
+                    console.log(error)
+                });
             try {
                 const response = await brevoApi.post('/email', emailPayload);
                 console.log('Email sent:', response.data);

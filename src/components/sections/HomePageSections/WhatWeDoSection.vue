@@ -113,7 +113,8 @@ export default {
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
-        height: 85vh;
+        height: fit-content;
+        padding-top: 0px;
     }
 
     .left-side, .right-side {
