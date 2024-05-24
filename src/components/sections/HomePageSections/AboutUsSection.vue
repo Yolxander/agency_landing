@@ -8,7 +8,7 @@
         <div class="left-side" >
             <ObserverComponent classToToggle="fadeInLeft" :playOnce="true">
               <p id="first_paragraph">
-                <span>SEMPRE</span> <span class="small-header">studios</span>is a digital agency that offers a wide range of services. We can do anything with the help of technology. We will make your wildest digital dreams come true. As your digital partner, our aim is to create for you an online reflection of your business’s unique vision and who you are.        <br>
+                <span>SEMPRE</span> <span class="small-header">studios</span> is a digital agency that offers a wide range of services. We can do anything with the help of technology. We will make your wildest digital dreams come true. As your digital partner, our aim is to create for you an online reflection of your business’s unique vision and who you are.        <br>
                 <br>
 
                   Our method at SEMPRE studios is combining creative ideas with technology in order to provide lively and effective digital narratives that represent brands well

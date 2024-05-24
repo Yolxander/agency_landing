@@ -5,7 +5,7 @@
             <div class="right-side">
                 <p>
                     Whatever you’ve got going on,
-                    we’re keen to here about it
+                    we’re keen to hear about it
                 </p>
             </div>
             <div class="left-side" >
