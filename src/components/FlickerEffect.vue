@@ -2,17 +2,30 @@
     <div>
         <div class="flickerContainer" ref="flickerContainer">
             <!-- text generated with JS -->
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">S</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">E</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">M</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">P</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">R</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">E</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;"> </p>
+          <span style="color: black">---</span>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">S</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">t</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">u</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">d</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">i</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">o</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">s</p>
         </div>
     </div>
 </template>
 
 <script>
-
 export default {
     name: "FlickerEffect",
     data() {
         return {
-            text: "SEMPRE Studios",
             fade: 0,
             flickerDuration: 50, // Reduced flicker duration for faster display
             temp: 0,
@@ -20,8 +33,7 @@ export default {
         };
     },
     mounted() {
-        this.createP(this.text);
-        this.startFlickerEffect();
+        this.showP();
     },
     watch: {
         fade() {
@@ -32,14 +44,14 @@ export default {
         }
     },
     methods: {
-        createP(text) {
+        showP() {
             const flickerContainer = this.$refs.flickerContainer;
-            for (let i = 0; i < text.length; i++) {
-                const p = document.createElement("p");
-                p.classList.add("flicker");
-                flickerContainer.appendChild(p);
-                p.innerHTML = text[i];
-            }
+            flickerContainer.style.display = 'flex'; // Display the flickerContainer
+            flickerContainer.style.color = 'black'; // Start with opacity 0
+            setTimeout(() => {
+                flickerContainer.style.opacity = 1; // Fade in to opacity 1
+                this.startFlickerEffect(); // Start flicker effect after fade-in
+            }, 800); // 0.5 seconds delay for fade-in
         },
         startFlickerEffect() {
             this.myInterval = setInterval(() => {
@@ -65,7 +77,7 @@ export default {
                 }
                 if (this.temp == this.flickerDuration + 100) { // Reduced delay for faster display
                     clearInterval(this.myInterval);
-                    this.$refs.flickerContainer.style.opacity = 0; // Fade out the container
+                    this.applyFinalStyles(); // Apply final styles
                     setTimeout(() => {
                         this.$emit('flicker-complete'); // Emit event when flicker is complete
                     }, 500); // Adjust the timeout as needed for the fade effect
@@ -76,6 +88,15 @@ export default {
             clearInterval(this.myInterval);
             this.temp = 0;
             this.startFlickerEffect();
+        },
+        applyFinalStyles() {
+            const flickerContainer = this.$refs.flickerContainer;
+            flickerContainer.classList.add('headline');
+            const pElements = flickerContainer.getElementsByTagName('p');
+            for (let p of pElements) {
+                p.classList.add('header');
+                p.classList.add('white-text');
+            }
         },
         reloadPage() {
             window.location.reload(true);
@@ -94,24 +115,23 @@ export default {
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 20px;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
     height: 50%;
     transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+    display: none;
 }
 
-.flickerContainer p {
+.flickerContainerText {
     text-transform: uppercase;
     font-family: 'Gugi', sans-serif;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 700;
-    line-height: 80px;
     text-align: center;
-    margin: 0px 20px;
     transition: all 0.2s ease-in-out;
     word-wrap: break-word;
+    margin: 0;
 }
 
 .on {
@@ -164,7 +184,7 @@ export default {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    #app{
+    #app {
         background: darkgoldenrod;
     }
     .flickerContainer {
@@ -209,4 +229,12 @@ export default {
         width: 200px;
     }
 }
+
+/*.white-text {*/
+/*    color: white;*/
+/*    font-size: 65px;*/
+/*    font-weight: 700;*/
+/*    line-height: 80px;*/
+/*    word-wrap: break-word;*/
+/*}*/
 </style>

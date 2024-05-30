@@ -15,7 +15,8 @@ export default {
 
 <style>
 body{
-    background: #110F0F;
+    /*background: #110F0F;*/
+    background: black;
 }
 #app {
     overflow-x: hidden;

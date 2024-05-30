@@ -2,7 +2,7 @@
     <div class="text-container">
         <div class="text-block">
             <div class="headline">
-                <span class="header fade-in">SEMPRE studios </span>
+<!--                <span class="header fade-in">SEMPRE studios </span>-->
                 <span class="white-text fade-in-delayed-3">is getting a new</span>
                 <span class="highlight-text fade-in-delayed-3"> look</span>
             </div>
@@ -33,14 +33,14 @@ export default {
 <style scoped>
 .text-container {
     height: fit-content;
-    left: 489px;
-    top: 191px;
-    position: absolute;
+    left: 1%;
+    top: 90px;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 32px;
+    position: relative;
 }
 
 .text-block {
