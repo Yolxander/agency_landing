@@ -264,7 +264,6 @@ export default {
 @media (max-width: 450px) {
     .text-container {
         left: 0px;
-        width: 60%;
     }
 
     .input-container{

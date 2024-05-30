@@ -174,7 +174,7 @@ export default {
         top: 40%;
         left: 22%;
         transform: translate(-50%, -50%);
-        width: 24%;
+        width: 200px;
         padding: 0px;
     }
 
@@ -206,8 +206,7 @@ export default {
 
 @media (max-width: 450px) {
     .flickerContainer {
-        width: 25%;
-        left: 25%;
+        width: 200px;
     }
 }
 </style>
