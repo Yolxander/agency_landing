@@ -202,7 +202,7 @@ export default {
 @media (max-width: 768px) {
     .text-container{
         left: 0px;
-        top: 190px;
+        top: 155px;
         width: 50%;
     }
     .header{

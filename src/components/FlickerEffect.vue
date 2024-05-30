@@ -171,7 +171,7 @@ export default {
         margin-top: 0;
         height: auto;
         position: absolute;
-        top: 40%;
+        top: 195px;
         left: 22%;
         transform: translate(-50%, -50%);
         width: 200px;
