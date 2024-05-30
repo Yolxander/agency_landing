@@ -215,7 +215,11 @@ export default {
         width: 100vh;
         height: fit-content;
     }
+}
 
-
+@media (max-width: 430px) {
+    .container {
+        height: 100vh;
+    }
 }
 </style>

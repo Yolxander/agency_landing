@@ -261,12 +261,15 @@ export default {
     }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 430px) {
     .text-container {
         left: 0px;
         min-width: 50%;
     }
 
+    .input-container{
+        width: 90%;
+    }
     .button{
         align-self: inherit;
     }
