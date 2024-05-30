@@ -112,8 +112,7 @@ export default {
 }
 
 .input-box {
-    width: 100%;
-    max-width: 320px;
+    width: 320px;
     background: #0F0F0F;
     border-radius: 4px;
     display: inline-flex;
@@ -148,7 +147,7 @@ export default {
 
 .button {
     width: 111px;
-    align-self: inherit;
+    align-self: stretch;
     padding: 12px 24px;
     background: #FFA800;
     border-radius: 1000px;
