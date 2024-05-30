@@ -234,15 +234,13 @@ export default {
 }
 
 @media (max-width: 768px) {
-    .container {
-        width: 100vh;
-        height: fit-content;
+    #info-container{
+        width: 100%;
+        align-items: center;
     }
 }
 
 @media (max-width: 430px) {
-    .container {
-        height: 100vh;
-    }
+
 }
 </style>

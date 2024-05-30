@@ -3,8 +3,8 @@
         <div class="text-block">
             <div class="headline">
 
-                <span class="white-text fade-in-delayed-3">is getting a new</span>
-                <span class="highlight-text fade-in-delayed-3"> look</span>
+                <span class="header-text white-text fade-in-delayed-3">is getting a new</span>
+                <span class="header-text highlight-text fade-in-delayed-3"> look</span>
             </div>
             <div class="subtext-container fade-in-delayed-4">
                 <p> Our site is getting an upgrade with another look. Leave your email and we will contact you soon.</p>
@@ -199,85 +199,42 @@ export default {
 }
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .text-container{
-        left: 0px;
-        top: 155px;
-        width: 50%;
-    }
-    .header{
-        font-size: 30px;
-    }
-    .white-text{
-        font-size: 30px;
-    }
-    .highlight-text{
+    .header-text {
         font-size: 30px;
     }
 
-    .headline {
-        width: 90%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+    .headline{
+        align-self: stretch;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
+        gap: 10px
     }
 
-    .header {
-        line-height: 40px;
-    }
-
-    .white-text {
-        line-height: 40px;
-    }
-
-    .highlight-text {
-        line-height: 40px;
-    }
-
-    .subtext-container{
-        width: 80%;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    .subtext{
-        text-align: center;
-        font-size: 16px;
+    .text-block{
+        width: 95%;
     }
 
     .input-container{
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .text-block {
-        width: 100%;
     }
 
-    .input-inner-box > input {
-        padding: 14px;
+    .input-box{
+        width: 90%;
+    }
+
+    .button{
+        align-self: unset;
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 450px) {
-    .text-container {
-        left: 0px;
-    }
 
-    .input-container{
-        width: 90%;
-    }
-    .button{
-        align-self: inherit;
-    }
 }
 
 @media (max-width: 375px) {
 
-    .input-container{
-        width: 90%;
-    }
 }
 </style>
 

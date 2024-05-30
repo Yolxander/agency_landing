@@ -183,50 +183,17 @@ export default {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    #app {
-        background: darkgoldenrod;
-    }
-    .flickerContainer {
-        margin-top: 0;
-        height: auto;
-        position: absolute;
-        top: 195px;
-        left: 22%;
-        transform: translate(-50%, -50%);
-        width: 200px;
-        padding: 0px;
-    }
 
-    .flickerContainer p {
+    .flickerContainer{
+        width: 100%;
+    }
+    .flickerContainerText {
         font-size: 30px;
-        line-height: 60px;
-        margin: 0px 5px;
-        text-align: center;
-    }
-
-    #reload-button {
-        padding: 10px;
-    }
-
-    .slider {
-        margin: 10px 0px 0px 10px;
-        gap: 15px;
-    }
-
-    .slider input[type=range] {
-        height: 5px;
-    }
-
-    .slider input[type="range"]::-webkit-slider-thumb {
-        width: 5px;
-        height: 13px;
     }
 }
 
 @media (max-width: 450px) {
-    .flickerContainer {
-        width: 200px;
-    }
+
 }
 
 /*.white-text {*/
