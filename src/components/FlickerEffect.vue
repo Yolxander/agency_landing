@@ -63,13 +63,13 @@ export default {
                         p[randomNumber].classList.remove("on");
                     }
                 }
-                if (this.temp == this.flickerDuration + 100) { // Reduced delay for faster display
-                    clearInterval(this.myInterval);
-                    this.$refs.flickerContainer.style.opacity = 0; // Fade out the container
-                    setTimeout(() => {
-                        this.$emit('flicker-complete'); // Emit event when flicker is complete
-                    }, 500); // Adjust the timeout as needed for the fade effect
-                }
+                // if (this.temp == this.flickerDuration + 100) { // Reduced delay for faster display
+                //     clearInterval(this.myInterval);
+                //     this.$refs.flickerContainer.style.opacity = 0; // Fade out the container
+                //     setTimeout(() => {
+                //         this.$emit('flicker-complete'); // Emit event when flicker is complete
+                //     }, 500); // Adjust the timeout as needed for the fade effect
+                // }
             }, 20);
         },
         updateFlickerEffect() {
@@ -202,12 +202,12 @@ export default {
         width: 5px;
         height: 13px;
     }
+}
 
-    @media (max-width: 768px) {
-        .flickerContainer {
-            width: 30%;
-            left: 27%;
-        }
+@media (max-width: 450px) {
+    .flickerContainer {
+        width: 25%;
+        left: 25%;
     }
 }
 </style>

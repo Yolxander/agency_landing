@@ -261,10 +261,10 @@ export default {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
     .text-container {
         left: 0px;
-        min-width: 50%;
+        width: 60%;
     }
 
     .input-container{
@@ -276,9 +276,6 @@ export default {
 }
 
 @media (max-width: 375px) {
-    .text-container {
-        min-width: 60%;
-    }
 
     .input-container{
         width: 90%;
