@@ -109,24 +109,23 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
 .flickerContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: 20px;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 30vw;
+    /* padding: 20px; */
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
-    height: 50%;
-    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+    justify-content: space-evenly;
+    /* height: 50%; */
+    transition: opacity 0.5s ease-in-out;
     display: none;
+    position: relative;
 }
 
 .flickerContainerText {
-    text-transform: uppercase;
+
     font-family: 'Gugi', sans-serif;
-    font-size: 55px;
+    font-size: 53px;
     font-weight: 700;
     text-align: center;
     transition: all 0.2s ease-in-out;

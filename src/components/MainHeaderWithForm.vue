@@ -2,12 +2,12 @@
     <div class="text-container">
         <div class="text-block">
             <div class="headline">
-<!--                <span class="header fade-in">SEMPRE studios </span>-->
+
                 <span class="white-text fade-in-delayed-3">is getting a new</span>
                 <span class="highlight-text fade-in-delayed-3"> look</span>
             </div>
             <div class="subtext-container fade-in-delayed-4">
-                <div class="subtext">Our site is getting an upgrade with another look. Leave your email and we will contact you soon.</div>
+                <p> Our site is getting an upgrade with another look. Leave your email and we will contact you soon.</p>
             </div>
         </div>
         <form class="input-container ease-in">
@@ -33,28 +33,26 @@ export default {
 <style scoped>
 .text-container {
     height: fit-content;
-    left: 1%;
-    top: 90px;
     display: inline-flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 32px;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    margin-top: 20px;
 }
 
 .text-block {
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
 }
 
 .headline {
-    align-self: stretch;
-    width: 520px;
+    width: 100%;
+    text-align: center;
 }
 
 .header {
@@ -89,30 +87,31 @@ export default {
     align-items: center;
     gap: 10px;
 }
+.subtext-container p {
 
-.subtext {
-    flex: 1 1 0;
     color: rgba(255, 255, 255, 0.60);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.32px;
-    word-wrap: break-word;
-    width: 300px;
+    word-wrap: break-word;;
+    text-align: start;
+    width: 84%;
 }
 
 .input-container {
-    display: inline-flex;
-    justify-content: flex-start;
+    width: 85%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     opacity: 0;
     animation: ease-in 2s forwards;
     animation-delay: 2s;
 }
 
 .input-box {
-    width: 320px;
+    flex: 1;
     background: #0F0F0F;
     border-radius: 4px;
     display: inline-flex;

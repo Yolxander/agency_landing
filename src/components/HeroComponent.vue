@@ -10,10 +10,13 @@
             </defs>
         </svg>
         <div class="content">
+            <div id="info-container">
                 <FlickerEffect v-if="showFlickerEffect" @flicker-complete="showBlurBoxes" />
-            <transition name="fade">
-                <MainHeaderWithForm v-if="showMainHeader" />
-            </transition>
+                <transition name="fade">
+                    <MainHeaderWithForm v-if="showMainHeader" />
+                </transition>
+            </div>
+
             <div v-if="showBlurBox1" class="blur-box-1 fade-in-delayed-2" ref="blurBox1"></div>
             <div v-if="showBlurBox2" class="blur-box-2 fade-in-delayed" ref="blurBox2"></div>
         </div>
@@ -122,6 +125,15 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#info-container{
+    /*background: #42b983;*/
+    height: 50vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
 
 .input-inner-box > input {
