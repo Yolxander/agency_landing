@@ -75,7 +75,7 @@ export default {
                         p[randomNumber].classList.remove("on");
                     }
                 }
-                if (this.temp == this.flickerDuration + 50) { // Reduced delay for faster display
+                if (this.temp == this.flickerDuration + 100) { // Reduced delay for faster display
                     clearInterval(this.myInterval);
                     this.applyFinalStyles(); // Apply final styles
                     setTimeout(() => {
