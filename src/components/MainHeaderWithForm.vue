@@ -200,7 +200,7 @@ export default {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .header-text {
-        font-size: 31px;
+        font-size: 30px;
     }
 
     .headline{
@@ -212,7 +212,7 @@ export default {
     }
 
     .text-block{
-        width: 100%
+        width: 95%;
     }
 
     .input-container{
