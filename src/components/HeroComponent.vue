@@ -108,6 +108,7 @@ export default {
 };
 </script>
 
+<!--TODO::fixed vector as the mobile background-->
 <style scoped>
 .container {
     height: fit-content;
