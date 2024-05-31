@@ -88,7 +88,6 @@ export default {
     gap: 10px;
 }
 .subtext-container p {
-
     color: rgba(255, 255, 255, 0.60);
     font-size: 16px;
     font-weight: 400;
@@ -118,6 +117,7 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    border-radius: 55px;
 }
 
 .input-inner-box {
@@ -217,6 +217,7 @@ export default {
 
     .input-container{
         flex-direction: column;
+        width: 100%;
     }
 
     .input-box{
@@ -226,6 +227,19 @@ export default {
     .button{
         align-self: unset;
         margin-top: 10px;
+    }
+
+    .subtext-container{
+        width: 100vw;
+    }
+
+    .subtext-container p{
+        text-align: center;
+        width: 90%;
+    }
+
+    .text-container{
+        margin-top: 0;
     }
 }
 
