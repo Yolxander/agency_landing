@@ -212,7 +212,7 @@ export default {
     }
 
     .text-block{
-        width: 95%;
+        width: 100%;
     }
 
     .input-container{
