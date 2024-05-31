@@ -1,21 +1,23 @@
 <template>
-    <div class="flickerContainer" ref="flickerContainer">
-        <!-- text generated with JS -->
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">S</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">E</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">M</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">P</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">R</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">E</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;"> </p>
-        &
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">S</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">t</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">u</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">d</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">i</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">o</p>
-        <p class="flicker flickerContainerText" style="transition-duration: 0s;">s</p>
+    <div>
+        <div class="flickerContainer" ref="flickerContainer">
+            <!-- text generated with JS -->
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">S</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">E</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">M</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">P</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">R</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">E</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;"> </p>
+          <span style="color: black">---</span>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">S</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">t</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">u</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">d</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">i</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">o</p>
+            <p class="flicker flickerContainerText" style="transition-duration: 0s;">s</p>
+        </div>
     </div>
 </template>
 
@@ -73,7 +75,7 @@ export default {
                         p[randomNumber].classList.remove("on");
                     }
                 }
-                if (this.temp == this.flickerDuration + 100) { // Reduced delay for faster display
+                if (this.temp == this.flickerDuration + 50) { // Reduced delay for faster display
                     clearInterval(this.myInterval);
                     this.applyFinalStyles(); // Apply final styles
                     setTimeout(() => {
@@ -183,7 +185,7 @@ export default {
 @media (max-width: 768px) {
 
     .flickerContainer{
-        width: 75%;
+        width: 100%;
     }
     .flickerContainerText {
         font-size: 30px;
