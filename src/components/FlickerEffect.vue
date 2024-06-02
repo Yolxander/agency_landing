@@ -188,7 +188,7 @@ export default {
         width: 100%;
     }
     .flickerContainerText {
-        font-size: 30px;
+        font-size: 10vw;
     }
 }
 

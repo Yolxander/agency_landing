@@ -200,7 +200,7 @@ export default {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .header-text {
-        font-size: 30px;
+        font-size: 9vw;
     }
 
     .headline{
@@ -217,7 +217,7 @@ export default {
 
     .input-container{
         flex-direction: column;
-        width: 100%;
+        width: 90%;
     }
 
     .input-box{
