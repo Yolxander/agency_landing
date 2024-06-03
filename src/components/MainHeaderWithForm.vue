@@ -2,7 +2,6 @@
     <div class="text-container">
         <div class="text-block">
             <div class="headline">
-
                 <span class="header-text white-text fade-in-delayed-3">is getting a new</span>
                 <span class="header-text highlight-text fade-in-delayed-3"> look</span>
             </div>
@@ -10,7 +9,7 @@
                 <p> Our site is getting an upgrade with another look. Leave your email and we will contact you soon.</p>
             </div>
         </div>
-        <form class="input-container ease-in">
+        <form class="input-container ease-in" @submit.prevent="handleSubmit">
             <div class="input-box">
                 <div class="input-inner-box">
                     <input type="text" class="input-text" placeholder="Email" />
@@ -23,10 +22,14 @@
     </div>
 </template>
 
-
 <script>
 export default {
-    name: "MainHeaderWithForm"
+    name: "MainHeaderWithForm",
+    methods: {
+        handleSubmit() {
+            this.$emit('submit');
+        }
+    }
 }
 </script>
 

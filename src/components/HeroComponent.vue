@@ -11,9 +11,14 @@
         </svg>
         <div class="content">
             <div id="info-container">
-                <FlickerEffect v-if="showFlickerEffect" @flicker-complete="showBlurBoxes" />
                 <transition name="fade">
-                    <MainHeaderWithForm v-if="showMainHeader" />
+                    <FlickerEffect v-if="showFlickerEffect" @flicker-complete="showBlurBoxes" />
+                </transition>
+                <transition name="fade">
+                    <MainHeaderWithForm v-if="showMainHeader" @submit="handleFormSubmit" />
+                </transition>
+                <transition name="fade">
+                    <ThankYouModal class="fade-in" v-if="showThankYouModal" />
                 </transition>
             </div>
 
@@ -29,6 +34,7 @@ import { Flip } from "gsap/Flip";
 import mitt from 'mitt';
 import FlickerEffect from "@/components/FlickerEffect.vue";
 import MainHeaderWithForm from "@/components/MainHeaderWithForm.vue";
+import ThankYouModal from "@/components/global/ThankYouModal.vue";
 
 gsap.registerPlugin(Flip);
 
@@ -36,13 +42,18 @@ const emitter = mitt();
 
 export default {
     name: 'HeroComponent',
-    components: { MainHeaderWithForm, FlickerEffect },
+    components: {
+        ThankYouModal,
+        MainHeaderWithForm,
+        FlickerEffect
+    },
     data() {
         return {
             showBlurBox1: false,
             showBlurBox2: false,
             showFlickerEffect: true,
             showMainHeader: false,
+            showThankYouModal: false,
             opacityValue: 0,
             dynamicContainerBackground: '#110F0F',
         };
@@ -95,25 +106,29 @@ export default {
             this.showBlurBox2 = true;
             this.animateHeadline();
             setTimeout(() => {
-                // this.showFlickerEffect = false;
                 this.opacityValue = 0.1;
                 this.showMainHeader = true;
                 setTimeout(() => {
                     this.opacityValue = 0.1;
                 }, 800);
-            }, 500); // Adjust the timeout as needed for the fade effect
-
+            }, 500);
+        },
+        handleFormSubmit() {
+            this.showFlickerEffect = false;
+            this.showMainHeader = false;
+            setTimeout(() => {
+                this.showThankYouModal = true;
+            }, 1000); // Adjust the timeout as needed for the fade effect
         }
     }
 };
 </script>
 
-<!--TODO::fixed vector as the mobile background-->
 <style scoped>
 .container {
     height: fit-content;
     position: relative;
-    background: black
+    background: black;
 }
 
 .content {
@@ -127,13 +142,12 @@ export default {
     left: 0;
 }
 
-#info-container{
-    /*background: #42b983;*/
+#info-container {
     height: 50vh;
     width: 35vw;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
 }
 
 .input-inner-box > input {
@@ -203,7 +217,7 @@ export default {
     animation: fade-in 1s forwards;
 }
 
-.fade-in-delayed{
+.fade-in-delayed {
     opacity: 0;
     animation: fade-in 1s forwards;
     animation-delay: 1s;
@@ -233,12 +247,20 @@ export default {
     }
 }
 
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
 @media (max-width: 768px) {
-    #info-container{
+    #info-container {
         width: 100%;
         align-items: center;
     }
-    .content{
+    .content {
         height: 100%;
     }
 
@@ -251,6 +273,6 @@ export default {
 }
 
 @media (max-width: 430px) {
-
+    /* Add any additional styles for smaller screens here */
 }
 </style>

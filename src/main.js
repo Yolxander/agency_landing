@@ -12,7 +12,8 @@ WebFont.load({
         families: [
             'Gugi',
             'Notable',
-            'Audiowide'
+            'Audiowide',
+             'Agrandir'
         ]
     }
 });
