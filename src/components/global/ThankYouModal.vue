@@ -1,10 +1,10 @@
 <template>
     <div class="modal-container">
         <div class="header">
-            <span class="header-text">Thanks for trying <span class="header-highlight"> out! </span> </span>
+            <span class="header-text">Thank you for leaving your email. <span class="header-highlight">We'll be in touch soon.</span></span>
         </div>
         <div class="divider"></div>
-        <div class="support-text">Support me to make more template like this by following on </div>
+        <div class="support-text">We appreciate your interest and will keep you updated.</div>
         <div class="divider"></div>
         <div class="footer">
             <div class="profile">
@@ -48,6 +48,7 @@ export default {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 27px; /* 20px * 1.35 */
+    margin-bottom: 40px;
 }
 
 .header {
@@ -170,6 +171,8 @@ export default {
     .modal-container {
         width: 80%;
         height: fit-content;
+
+        padding: 20px;
     }
 
     .header-text, .header-highlight{
