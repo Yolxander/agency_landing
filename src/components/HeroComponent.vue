@@ -261,7 +261,7 @@ export default {
         align-items: center;
     }
     .content {
-        height: 100%;
+        height: 85%;
     }
 
     .blur-box-1[data-v-27e3feba] {
