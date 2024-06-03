@@ -165,4 +165,28 @@ export default {
     line-height: 10.8px; /* 8px * 1.35 */
     word-wrap: break-word;
 }
+
+@media (max-width: 750px) {
+    .modal-container {
+        width: 80%;
+        height: fit-content;
+    }
+
+    .header-text, .header-highlight{
+        font-size: 10vw;
+    }
+
+    .support-text{
+        font-size: 8vw;
+    }
+    .profile{
+        display: none;
+    }
+
+    .social-buttons{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
 </style>
