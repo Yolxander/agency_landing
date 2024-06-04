@@ -120,6 +120,7 @@ export default {
     transition: opacity 0.5s ease-in-out;
     display: none;
     position: relative;
+    margin-top: 20px;
 }
 
 .flickerContainerText {
