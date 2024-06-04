@@ -21,7 +21,7 @@ body{
     /*background: #110F0F;*/
     background: black;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 #app {
     overflow-x: hidden;
