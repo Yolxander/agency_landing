@@ -76,7 +76,7 @@ export default {
 }
 
 .highlight-text {
-    color: #FFA800;
+    color: #9DE8EE;
     font-size: 65px;
     font-weight: 700;
     line-height: 80px;

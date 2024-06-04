@@ -9,7 +9,7 @@
         <div class="footer">
             <div class="profile">
                 <div class="profile-icon">
-                    <div class="icon"></div>
+                    <div class="icon">R</div>
                 </div>
                 <div class="profile-info">
                     <div class="profile-name">SEMPREStudios</div>
@@ -18,10 +18,10 @@
             </div>
             <div class="social-buttons">
                 <div class="social-button">
-                    <div class="social-text">Instagram</div>
+                    <div class="social-text">Services</div>
                 </div>
                 <div class="social-button">
-                    <div class="social-text">FIGMA</div>
+                    <div class="social-text">About Us</div>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@ export default {
 
 .header-text, .header-highlight {
     color: white;
-    font-size: 55.8px; /* 48px * 1.35 */
+    font-size: 48px; /* 48px * 1.35 */
     font-family: Agrandir;
     font-weight: 700;
 }
@@ -76,7 +76,7 @@ export default {
 
 .support-text {
     color: white;
-    font-size: 32.4px; /* 24px * 1.35 */
+    font-size: 30.4px; /* 24px * 1.35 */
     font-family: Agrandir;
     font-weight: 400;
     line-height: 35px; /* 25.92px * 1.35 */
@@ -113,7 +113,12 @@ export default {
     position: absolute;
     left: 8.65875px; /* 6.415px * 1.35 */
     top: 7.695px; /* 5.7px * 1.35 */
-    background: white;
+    background: transparent;
+    font-family: 'Gugi', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-info {
@@ -149,7 +154,7 @@ export default {
     padding: 10.8px 21.6px; /* 8px * 1.35, 16px * 1.35 */
     background: rgba(50.71, 50.71, 50.71, 0.20);
     border-radius: 67.5px; /* 50px * 1.35 */
-    border: 0.675px #424242 solid; /* 0.5px * 1.35 */
+    border: 0.675px #FFA800 solid; /* 0.5px * 1.35 */
     backdrop-filter: blur(20px);
     display: flex;
     justify-content: center;
@@ -167,6 +172,14 @@ export default {
     word-wrap: break-word;
 }
 
+.social-button:hover {
+    background: #FFA800;
+}
+
+.social-button:hover .social-text {
+    color: black;
+    text-decoration: none;
+}
 @media (max-width: 750px) {
     .modal-container {
         width: 80%;
