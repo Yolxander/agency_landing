@@ -22,6 +22,7 @@ body{
     background: black;
     overflow-x: hidden;
     /*overflow-y: hidden;*/
+    font-family: 'Agrandir', sans-serif;
 }
 #app {
     overflow-x: hidden;

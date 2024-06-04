@@ -69,14 +69,18 @@ export default {
 
 .white-text {
     color: white;
-    font-size: 65px;
+    font-size: 60px;
     font-weight: 700;
     line-height: 80px;
     word-wrap: break-word;
+    font-family: 'Agrandir', sans-serif;
 }
 
 .highlight-text {
-    color: #9DE8EE;
+    background: var(--Gradient, linear-gradient(218deg, #9DE8EE 25.05%, #9DE8EE 25.05%, #FA7C0B 51.71%, #9F8CED 79.45%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 65px;
     font-weight: 700;
     line-height: 80px;

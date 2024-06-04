@@ -71,7 +71,7 @@ export default {
     text-align: center;
     color: white;
     font-size: 40px;
-    font-family: Agrandir;
+    font-family: 'Agrandir', sans-serif;
     font-weight: 700;
     line-height: 56px;
 }
@@ -80,7 +80,7 @@ export default {
     text-align: center;
     color: rgba(230, 230, 230, 0.60);
     font-size: 16px;
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.32px;

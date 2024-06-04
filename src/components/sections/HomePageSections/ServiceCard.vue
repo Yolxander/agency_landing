@@ -64,7 +64,7 @@ export default {
     align-self: stretch;
     color: white;
     font-size: 28px;
-    font-family: Agrandir;
+    font-family: 'Agrandir', sans-serif;
     font-weight: 700;
     line-height: 36px;
     word-wrap: break-word;
@@ -74,7 +74,7 @@ export default {
     align-self: stretch;
     color: rgba(255, 255, 255, 0.60);
     font-size: 14px;
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.28px;

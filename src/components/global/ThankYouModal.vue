@@ -60,7 +60,7 @@ export default {
 .header-text, .header-highlight {
     color: white;
     font-size: 48px; /* 48px * 1.35 */
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 700;
 }
 
@@ -77,7 +77,7 @@ export default {
 .support-text {
     color: white;
     font-size: 30.4px; /* 24px * 1.35 */
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 400;
     line-height: 35px; /* 25.92px * 1.35 */
     word-wrap: break-word;
@@ -130,7 +130,7 @@ export default {
 .profile-name {
     color: white;
     font-size: 10.8px; /* 8px * 1.35 */
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 800;
     line-height: 11.664px; /* 8.64px * 1.35 */
     word-wrap: break-word;
@@ -139,7 +139,7 @@ export default {
 .profile-site {
     color: #808182;
     font-size: 10.8px; /* 8px * 1.35 */
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 400;
     line-height: 11.664px; /* 8.64px * 1.35 */
     word-wrap: break-word;
@@ -165,7 +165,7 @@ export default {
 .social-text {
     color: white;
     font-size: 10.8px; /* 8px * 1.35 */
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 800;
     text-decoration: underline;
     text-transform: uppercase;

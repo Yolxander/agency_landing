@@ -125,7 +125,7 @@ export default {
     cursor: pointer;
     color: white;
     font-size: 10.8px; /* 8px * 1.35 */
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 10.8px; /* 8px * 1.35 */
@@ -158,7 +158,7 @@ export default {
     cursor: pointer;
     color: white;
     font-size: 10.8px; /* 8px * 1.35 */
-    font-family: Agrandir;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 10.8px; /* 8px * 1.35 */
