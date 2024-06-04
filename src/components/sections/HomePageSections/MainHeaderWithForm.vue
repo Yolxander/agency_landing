@@ -69,7 +69,7 @@ export default {
 
 .white-text {
     color: white;
-    font-size: 60px;
+    font-size: 58px;
     font-weight: 700;
     line-height: 80px;
     word-wrap: break-word;
