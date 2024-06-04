@@ -116,7 +116,7 @@ const toggleOverlay = () => {
     margin: 0;
     padding: 0;
     display: block;
-    position: static;
+
 }
 
 #overlay nav ul {

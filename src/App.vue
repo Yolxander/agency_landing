@@ -1,15 +1,17 @@
 <template>
-
-    <HeroComponent />
+    <WelcomePage/>
 </template>
 
 <script>
-import HeroComponent from "@/components/HeroComponent.vue";
+
+
+import WelcomePage from "@/views/WelcomePage.vue";
 
 export default {
     name: 'App',
     components: {
-        HeroComponent,
+        WelcomePage
+
     }
 }
 </script>

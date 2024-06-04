@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 // Import components that you want to route
-import Home from "../views/HomePage.vue";
 import OurServicesPage from "../views/OurServicesPage.vue";
 import AutoDownloadPdf from "@/views/AutoDownloadPdf.vue";
 import AboutUsPage from "@/views/AboutUsPage.vue";
 import FaqPage from "@/views/FaqPage.vue";
+import WelcomePage from "@/views/WelcomePage.vue";
 
 const routes = [
     {
         path: "/",
-        component: Home,
+        component: WelcomePage,
     },
     {
         path: "/services",
