@@ -49,14 +49,14 @@ export default {
 <style scoped>
 .container {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     padding: 80px 70px 75px 0px;
     background: #110F0F;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 3;
-    position: absolute;
+    position: relative;
 }
 
 .header {

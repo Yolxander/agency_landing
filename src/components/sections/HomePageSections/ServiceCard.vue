@@ -61,7 +61,7 @@ export default {
 }
 
 .title {
-    align-self: stretch;
+
     color: white;
     font-size: 28px;
     font-family: 'Agrandir', sans-serif;
