@@ -18,10 +18,10 @@
             </div>
             <div class="social-buttons">
                 <div class="social-button">
-                    <div class="social-text">Services</div>
+                    <div class="social-text">Go Back</div>
                 </div>
                 <div class="social-button">
-                    <div class="social-text">About Us</div>
+                    <div class="social-text">Learn More</div>
                 </div>
             </div>
         </div>
@@ -148,6 +148,7 @@ export default {
 .social-buttons {
     display: flex;
     gap: 10.8px; /* 8px * 1.35 */
+    cursor: pointer;
 }
 
 .social-button {

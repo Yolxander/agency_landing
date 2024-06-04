@@ -165,6 +165,7 @@ export default {
     word-wrap: break-word;
     border: none;
     outline: none;
+    color: #FFA800;
 }
 
 .contact-button:hover {
