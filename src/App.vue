@@ -1,4 +1,5 @@
 <template>
+
     <HeroComponent />
 </template>
 
@@ -17,6 +18,8 @@ export default {
 body{
     /*background: #110F0F;*/
     background: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 #app {
     overflow-x: hidden;

@@ -191,7 +191,6 @@ export default {
 
 .blur-box-1, .blur-box-2 {
     position: absolute;
-    background: #EF9364;
     box-shadow: 120px 120px 120px;
     filter: blur(150px);
     transition: width 0.2s, height 0.2s;
@@ -199,21 +198,23 @@ export default {
 
 .blur-box-1 {
     left: 281.65px;
-    top: 1127.98px;
-    width: 100.96px;
-    height: 570.60px;
+    top: 900px;
+    width: 50vw;
+    height: 50vh;
     transform: rotate(177.33deg);
     transform-origin: 0 0;
+    background: #EF9364;
 }
 
 .blur-box-2 {
     left: 1290px;
-    top: -160px;
+    bottom: 300px;
     width: 100px;
-    height: 507px;
+    height: 407px;
     background: #8B7BCF;
     box-shadow: 150px 150px 150px;
 }
+
 
 .fade-in {
     opacity: 0;
@@ -260,6 +261,7 @@ export default {
 
 @media (max-width: 768px) {
     .container{
+
         height: 90vh;
     }
     #info-container {

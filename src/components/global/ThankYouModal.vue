@@ -9,7 +9,7 @@
         <div class="footer">
             <div class="profile">
                 <div class="profile-icon">
-                    <div class="icon">R</div>
+                    <div class="icon">S</div>
                 </div>
                 <div class="profile-info">
                     <div class="profile-name">SEMPREStudios</div>
