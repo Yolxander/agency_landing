@@ -37,7 +37,7 @@ export default {
 <style scoped>
 .modal-container {
     width: 40vw;
-    height: 50vh;
+    height: fit-content;
     padding: 27px; /* 20px * 1.35 */
     background: transparent;
     border-radius: 16px;
@@ -59,7 +59,7 @@ export default {
 
 .header-text, .header-highlight {
     color: white;
-    font-size: 64.8px; /* 48px * 1.35 */
+    font-size: 55.8px; /* 48px * 1.35 */
     font-family: Agrandir;
     font-weight: 700;
 }
@@ -171,8 +171,7 @@ export default {
     .modal-container {
         width: 80%;
         height: fit-content;
-
-        padding: 20px;
+        gap: 20px;
     }
 
     .header-text, .header-highlight{
