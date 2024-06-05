@@ -276,11 +276,8 @@ export default {
         height: 85%;
     }
 
-    .blur-box-1 {
-        left: 281.65px;
-        top: 156px;
-        width: 100.96px;
-        height: 570.60px;
+    .blur-box-1, .blur-box-2 {
+        display: none;
     }
 }
 
