@@ -255,7 +255,6 @@ export default {
 }
 
 .description-container {
-    align-self: stretch;
     justify-content: center;
     align-items: center;
     gap: 10px;

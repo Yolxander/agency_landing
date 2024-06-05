@@ -222,7 +222,7 @@ export default {
 
     .input-container{
         flex-direction: column;
-        width: 90%;
+        width: 100%;
     }
 
     .input-box{

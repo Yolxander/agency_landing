@@ -139,6 +139,8 @@ export default {
         padding-bottom: 40px;
         gap: 40px;
 }
+
+
 .header{
     justify-content: center;
     align-items: center;
@@ -159,6 +161,10 @@ export default {
 
 .project-section, .section{
     width: 85%;
+    margin-right: 0;
+}
+
+.contact-button{
     margin-right: 0;
 }
 
