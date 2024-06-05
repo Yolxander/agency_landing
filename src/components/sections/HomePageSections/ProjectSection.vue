@@ -104,7 +104,7 @@ export default {
     align-self: stretch;
     color: white;
     font-size: 24px;
-    font-family: Quicksand;
+    font-family: 'Agrandir', sans-serif;
     font-weight: 700;
     line-height: 32px;
     word-wrap: break-word;
@@ -127,7 +127,7 @@ export default {
     display: inline-flex;
     color: #728095;
     font-size: 16px;
-    font-family: Quicksand;
+    font-family: 'Agrandir', sans-serif;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.32px;
