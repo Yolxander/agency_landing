@@ -310,4 +310,36 @@ export default {
     border: 1px solid #FFA800;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container{
+       flex-direction: column;
+    }
+
+    .container svg{
+        display: none;
+    }
+
+    .section{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .description-container{
+        text-align: center;
+    }
+
+    .contact-button{
+        margin-right: 0;
+    }
+
+    .header{
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
 </style>
