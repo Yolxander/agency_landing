@@ -8,28 +8,12 @@
         </div>
         <div class="services">
             <ServiceCard
-                    title="Branding"
-                    description="Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices"
-            />
-            <ServiceCard
-                    title="Web development"
-                    description="Integer ante non nunc, eget est justo vel semper nunc. Lacus"
-            />
-            <ServiceCard
-                    title="Digital marketing"
-                    description="Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est."
-            />
-            <ServiceCard
-                    title="Mobile App"
-                    description="Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices"
-            />
-            <ServiceCard
-                    title="SEO"
-                    description="Integer ante non nunc, eget est justo vel semper nunc. Lacus"
-            />
-            <ServiceCard
-                    title="User testing"
-                    description="Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est."
+                v-for="(service, index) in services"
+                :key="service.title"
+                :title="service.title"
+                :description="service.description"
+                :style="{ animationDelay: `${index * 0.5}s` }"
+                class="fade-in"
             />
         </div>
     </div>
@@ -43,6 +27,18 @@ export default {
     components: {
         ServiceCard,
     },
+    data() {
+        return {
+            services: [
+                { title: "Branding", description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices" },
+                { title: "Web development", description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus" },
+                { title: "Digital marketing", description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est." },
+                { title: "Mobile App", description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices" },
+                { title: "SEO", description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus" },
+                { title: "User testing", description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est." }
+            ]
+        };
+    }
 };
 </script>
 
@@ -80,7 +76,7 @@ export default {
     text-align: center;
     color: rgba(230, 230, 230, 0.60);
     font-size: 16px;
-      font-family: 'Agrandir', sans-serif;
+    font-family: 'Agrandir', sans-serif;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.32px;
@@ -92,5 +88,16 @@ export default {
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 </style>
