@@ -262,5 +262,9 @@ export default {
     .menu, .contact-button {
         display: none;
     }
+
+    .logo-container{
+        margin-left: 5px;
+    }
 }
 </style>
