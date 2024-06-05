@@ -5,6 +5,7 @@
    <WhyUsSection />
     <PorfolioSection />
   <CallToActionSection />
+  <FooterComponent />
 </template>
 
 <script>
@@ -14,11 +15,14 @@ import NewServicesSection from "@/components/sections/HomePageSections/NewServic
 import WhyUsSection from "@/components/sections/HomePageSections/WhyUsSection.vue";
 import PorfolioSection from "@/components/sections/HomePageSections/PorfolioSection.vue";
 import CallToActionSection from "@/components/sections/HomePageSections/CallToActionSection.vue";
+import FooterComponent from "@/components/global/FooterComponent.vue";
 
 
 export default {
     name: "WelcomePage",
-    components: {CallToActionSection, PorfolioSection, WhyUsSection, NewServicesSection, NavBarComponent, HeroComponent}
+    components: {
+        FooterComponent,
+        CallToActionSection, PorfolioSection, WhyUsSection, NewServicesSection, NavBarComponent, HeroComponent}
 }
 </script>
 

@@ -13,7 +13,8 @@ WebFont.load({
             'Gugi',
             'Notable',
             'Audiowide',
-             'Agrandir'
+             'Agrandir',
+            'Archivo'
         ]
     }
 });
