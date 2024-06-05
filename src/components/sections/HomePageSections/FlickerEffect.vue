@@ -112,7 +112,7 @@ export default {
     /* top: 50%; */
     /* left: 50%; */
     /* transform: translate(-50%, -50%); */
-    width: 30vw;
+    width: 35vw;
     /* padding: 20px; */
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -124,8 +124,8 @@ export default {
 }
 
 .flickerContainerText {
-
-    font-family: 'Gugi', sans-serif;
+    /*font-family: 'Gugi', sans-serif;*/
+    font-family: 'Agrandir', sans-serif;
     font-size: 53px;
     font-weight: 700;
     text-align: center;

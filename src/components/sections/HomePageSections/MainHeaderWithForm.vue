@@ -39,7 +39,7 @@ export default {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap:25px;
     margin-top: 20px;
 }
@@ -55,7 +55,7 @@ export default {
 
 .headline {
     width: 100%;
-    text-align: center;
+    text-align: start;
 }
 
 .header {
@@ -102,11 +102,11 @@ export default {
     letter-spacing: 0.32px;
     word-wrap: break-word;;
     text-align: start;
-    width: 84%;
+    width: 100%;
 }
 
 .input-container {
-    width: 85%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
