@@ -39,21 +39,46 @@
 </template>
 
 <script>
+
 export default {
     name: "NavBarComponent",
-    components: {},
+    components: {
+
+    },
+    data() {
+        return {
+            observer: null
+        };
+    },
     mounted() {
-        window.addEventListener('scroll', this.showLettersSequentially);
+        const newServicesSection = document.querySelector('.new-services-section');
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.showLettersSequentially();
+                    this.observer.unobserve(newServicesSection); // Stop observing after triggering
+                }
+            });
+        }, {threshold: 0.1}); // Adjust threshold as needed
+
+        if (newServicesSection) {
+            this.observer.observe(newServicesSection);
+        }
     },
     beforeUnmount() {
-        window.removeEventListener('scroll', this.showLettersSequentially);
+        const newServicesSection = document.querySelector('.new-services-section');
+        if (newServicesSection && this.observer) {
+            this.observer.unobserve(newServicesSection);
+        }
     },
     methods: {
         showLettersSequentially() {
             const letters = document.querySelectorAll('.brand-name .letter');
             let delay = 0;
-            letters.forEach((letter) => { // Removed 'index' parameter
-                setTimeout(() => { letter.style.display = 'inline'; }, delay);
+            letters.forEach((letter) => {
+                setTimeout(() => {
+                    letter.style.display = 'inline';
+                }, delay);
                 delay += 200; // Delay for each letter (200ms)
             });
         }
@@ -178,6 +203,43 @@ export default {
     text-decoration: none;
 }
 
+.contact-button {
+    padding: 10.8px 21.6px; /* 8px * 1.35, 16px * 1.35 */
+    background: rgba(50.71, 50.71, 50.71, 0.20);
+    border-radius: 67.5px; /* 50px * 1.35 */
+    border: 0.675px #FFA800 solid; /* 0.5px * 1.35 */
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    z-index: 4;
+    cursor: pointer;
+    color: white;
+    font-size: 10.8px; /* 8px * 1.35 */
+    font-family: 'Agrandir', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 10.8px; /* 8px * 1.35 */
+    word-wrap: break-word;
+    border: none;
+    outline: none;
+    color: #FFA800;
+}
+
+.contact-button:hover {
+    background: #FFA800;
+}
+
+.contact-button:hover .contact-text {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-button {
+    border: 1px solid #FFA800;
+}
+
 
 @media (max-width: 768px) {
     nav {
@@ -193,6 +255,10 @@ export default {
     }
 
     svg {
+        display: none;
+    }
+
+    .menu, .contact-button {
         display: none;
     }
 }
