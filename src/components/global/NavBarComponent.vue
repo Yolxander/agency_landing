@@ -4,7 +4,22 @@
             <div class="logo">
                 <div class="icon">S</div>
             </div>
-<!--            <div class="brand-name">SEMPRE studios</div>-->
+            <div class="brand-name">
+                <span class="letter">S</span>
+                <span class="letter">E</span>
+                <span class="letter">M</span>
+                <span class="letter">P</span>
+                <span class="letter">R</span>
+                <span class="letter">E</span>
+                <span class="letter"> </span>
+                <span class="letter">S</span>
+                <span class="letter">t</span>
+                <span class="letter">u</span>
+                <span class="letter">d</span>
+                <span class="letter">i</span>
+                <span class="letter">o</span>
+                <span class="letter">s</span>
+            </div>
         </div>
         <div class="menu">
             <a href="#" class="menu-item">
@@ -26,7 +41,23 @@
 <script>
 export default {
     name: "NavBarComponent",
-    components: {}
+    components: {},
+    mounted() {
+        window.addEventListener('scroll', this.showLettersSequentially);
+    },
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.showLettersSequentially);
+    },
+    methods: {
+        showLettersSequentially() {
+            const letters = document.querySelectorAll('.brand-name .letter');
+            let delay = 0;
+            letters.forEach((letter) => { // Removed 'index' parameter
+                setTimeout(() => { letter.style.display = 'inline'; }, delay);
+                delay += 200; // Delay for each letter (200ms)
+            });
+        }
+    }
 }
 </script>
 
@@ -65,7 +96,6 @@ export default {
     background: linear-gradient(253deg, #9DE8EE 0%, #9DE8EE 0%, #FA7C0B 49%, #9F8CED 100%);
 }
 
-
 .logo {
     width: 38.475px; /* 28.5px * 1.35 */
     height: 38.475px; /* 28.5px * 1.35 */
@@ -102,6 +132,10 @@ export default {
     margin: 0;
 }
 
+.letter {
+    display: none; /* Initially hide letters */
+}
+
 .menu {
     flex: 1 1 0;
     height: 44px;
@@ -125,7 +159,7 @@ export default {
     cursor: pointer;
     color: white;
     font-size: 10.8px; /* 8px * 1.35 */
-      font-family: 'Agrandir', sans-serif;
+    font-family: 'Agrandir', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 10.8px; /* 8px * 1.35 */
@@ -144,42 +178,6 @@ export default {
     text-decoration: none;
 }
 
-.contact-button {
-    padding: 10.8px 21.6px; /* 8px * 1.35, 16px * 1.35 */
-    background: rgba(50.71, 50.71, 50.71, 0.20);
-    border-radius: 67.5px; /* 50px * 1.35 */
-    border: 0.675px #FFA800 solid; /* 0.5px * 1.35 */
-    backdrop-filter: blur(20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    z-index: 4;
-    cursor: pointer;
-    color: white;
-    font-size: 10.8px; /* 8px * 1.35 */
-      font-family: 'Agrandir', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 10.8px; /* 8px * 1.35 */
-    word-wrap: break-word;
-    border: none;
-    outline: none;
-    color: #FFA800;
-}
-
-.contact-button:hover {
-    background: #FFA800;
-}
-
-.contact-button:hover .contact-text {
-    color: black;
-    text-decoration: none;
-}
-
-.contact-button{
-    border: 1px solid #FFA800;
-}
 
 @media (max-width: 768px) {
     nav {

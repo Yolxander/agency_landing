@@ -76,7 +76,7 @@ export default {
     text-align: center;
     color: rgba(230, 230, 230, 0.60);
     font-size: 16px;
-    font-family: 'Agrandir', sans-serif;
+      font-family: 'Agrandir', sans-serif;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.32px;
@@ -88,16 +88,5 @@ export default {
     flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
 }
 </style>
