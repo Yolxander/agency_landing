@@ -10,9 +10,7 @@
                 </div>
                 <form class="cta-form">
                     <div class="email-input-wrapper">
-                        <div class="email-input">
-                            <input type="email" class="email-input-inner" placeholder="Your email" />
-                        </div>
+                        <input type="email" class="email-input-inner" placeholder="Your email" />
                     </div>
                     <button type="submit" class="send-button">
                         <div class="send-button-text">Send</div>
@@ -115,7 +113,7 @@ export default {
 
 .email-input-wrapper {
     width: 320px;
-    background: #FBFDFE;
+    background: transparent;
     border-radius: 43px;
     overflow: hidden;
     display: inline-flex;
@@ -141,6 +139,8 @@ export default {
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
+    background: transparent;
+    border: 1px solid black;
 }
 
 .email-input-text {
