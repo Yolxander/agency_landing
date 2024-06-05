@@ -4,23 +4,23 @@
             <div class="footer-column">
                 <div class="footer-title">Company</div>
                 <div class="footer-item">About us</div>
-                <div class="footer-item">Team</div>
-                <div class="footer-item">Careers</div>
+<!--                <div class="footer-item">Team</div>-->
+<!--                <div class="footer-item">Careers</div>-->
             </div>
-            <div class="footer-column">
-                <div class="footer-title">Services</div>
-                <div class="footer-item">Branding</div>
-                <div class="footer-item">Web development</div>
-                <div class="footer-item">Digital marketing</div>
-                <div class="footer-item">Mobile app</div>
-                <div class="footer-item">SEO</div>
-                <div class="footer-item">User testing</div>
-            </div>
+<!--            <div class="footer-column">-->
+<!--                <div class="footer-title">Services</div>-->
+<!--                <div class="footer-item">Branding</div>-->
+<!--                <div class="footer-item">Web development</div>-->
+<!--                <div class="footer-item">Digital marketing</div>-->
+<!--                <div class="footer-item">Mobile app</div>-->
+<!--                <div class="footer-item">SEO</div>-->
+<!--                <div class="footer-item">User testing</div>-->
+<!--            </div>-->
             <div class="footer-column">
                 <div class="footer-title">Resources</div>
                 <div class="footer-item">Blog</div>
                 <div class="footer-item">Case study</div>
-                <div class="footer-item">Testimonials</div>
+<!--                <div class="footer-item">Testimonials</div>-->
             </div>
             <div class="footer-column">
                 <div class="footer-title">Follow us</div>
@@ -45,7 +45,7 @@ export default {
 <style scoped>
 .container {
     width: 100%;
-    height: 75vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,7 @@ export default {
 
 .footer-section {
     width: 88%;
-    height: 284px;
+    height: 20vh;
     justify-content: space-between;
     align-items: flex-start;
     display: inline-flex;

@@ -260,6 +260,7 @@ export default {
     align-items: center;
     gap: 10px;
     display: inline-flex;
+    width: 85%;
 }
 
 .description {

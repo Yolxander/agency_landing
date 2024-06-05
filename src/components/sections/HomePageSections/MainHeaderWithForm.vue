@@ -41,7 +41,6 @@ export default {
     justify-content: center;
     align-items: start;
     gap:25px;
-    margin-top: 20px;
 }
 
 .text-block {
@@ -71,7 +70,7 @@ export default {
     color: white;
     font-size: 58px;
     font-weight: 700;
-    line-height: 80px;
+    line-height: 5px;
     word-wrap: break-word;
     font-family: 'Agrandir', sans-serif;
 }
@@ -83,7 +82,6 @@ export default {
     -webkit-text-fill-color: transparent;
     font-size: 65px;
     font-weight: 700;
-    line-height: 80px;
     word-wrap: break-word;
 }
 

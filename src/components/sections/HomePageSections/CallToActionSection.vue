@@ -198,7 +198,7 @@ export default {
     .cta-content {
          align-self: unset;
         width: 100%;
-        height: 40vh;
+        height: fit-content;
     }
 
     .cta-header{
@@ -206,6 +206,10 @@ export default {
     }
     .cta-form{
         flex-direction: column;
+    }
+
+    .cta-box{
+        height: fit-content;
     }
 
 }
