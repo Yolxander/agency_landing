@@ -4,7 +4,7 @@
     <NewServicesSection />
     <WhyUsSection/>
     <PortfolioSection/>
-<!--    <CallToActionSection/>-->
+    <CallToActionSection/>
 <!--    <FooterComponent/>-->
 </template>
 
@@ -14,7 +14,7 @@ import NavBarComponent from "@/components/global/NavBarComponent.vue";
 import NewServicesSection from "@/components/sections/HomePageSections/NewServicesSection.vue";
 import WhyUsSection from "@/components/sections/HomePageSections/WhyUsSection.vue";
 import PortfolioSection from "@/components/sections/HomePageSections/PortfolioSection.vue";
-// import CallToActionSection from "@/components/sections/HomePageSections/CallToActionSection.vue";
+import CallToActionSection from "@/components/sections/HomePageSections/CallToActionSection.vue";
 // import FooterComponent from "@/components/global/FooterComponent.vue";
 
 
@@ -22,7 +22,7 @@ export default {
     name: "WelcomePage",
     components: {
         // FooterComponent,
-        // CallToActionSection,
+        CallToActionSection,
         PortfolioSection,
         WhyUsSection,
         NewServicesSection,

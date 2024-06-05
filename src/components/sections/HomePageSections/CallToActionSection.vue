@@ -180,4 +180,33 @@ export default {
     text-transform: uppercase;
     word-wrap: break-word;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .cta-description-wrapper{
+        padding: 0;
+    }
+
+    .cta-description {
+        width: 100%;
+    }
+
+    .cta-content {
+         align-self: unset;
+        width: 100%;
+        height: 40vh;
+    }
+
+    .cta-header{
+        height: fit-content;
+    }
+    .cta-form{
+        flex-direction: column;
+    }
+
+}
 </style>
