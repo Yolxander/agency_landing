@@ -276,7 +276,7 @@ export default {
         height: 85%;
     }
 
-    .blur-box-1[data-v-27e3feba] {
+    .blur-box-1 {
         left: 281.65px;
         top: 156px;
         width: 100.96px;

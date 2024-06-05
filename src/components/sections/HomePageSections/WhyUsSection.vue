@@ -329,6 +329,7 @@ export default {
 
     .description-container{
         text-align: center;
+        width: 100%;
     }
 
     .contact-button{
