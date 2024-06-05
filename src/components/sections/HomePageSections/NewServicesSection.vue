@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container new-services-section">
         <div class="header">
             <div class="title">We Offer</div>
             <div class="description">
