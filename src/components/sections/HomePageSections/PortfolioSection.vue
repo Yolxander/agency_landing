@@ -21,8 +21,11 @@ import ProjectsSection from "@/components/sections/HomePageSections/ProjectSecti
 import ProjectSection2 from "@/components/sections/HomePageSections/ProjectSection2.vue";
 
 export default {
-    name: "ProfolioSection",
-    components: {ProjectSection2, ProjectsSection}
+    name: "PortfolioSection",
+    components: {
+        ProjectSection2,
+        ProjectsSection
+    }
 }
 </script>
 
@@ -64,7 +67,7 @@ export default {
 .title {
     align-self: stretch;
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Agrandir', sans-serif;
     font-weight: 700;
     line-height: 56px;
@@ -126,5 +129,38 @@ export default {
 .contact-button {
     border: 1px solid #FFA800;
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 3;
+        padding-top: 0;
+        padding-bottom: 40px;
+        gap: 40px;
+}
+.header{
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    text-align: center;
+}
 
+.text-section{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.description{
+  text-align: center;
+}
+
+.project-section, .section{
+    width: 85%;
+    margin-right: 0;
+}
+
+}
 </style>

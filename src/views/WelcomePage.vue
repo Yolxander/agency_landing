@@ -3,7 +3,7 @@
     <HeroComponent />
     <NewServicesSection />
     <WhyUsSection/>
-<!--    <PorfolioSection/>-->
+    <PortfolioSection/>
 <!--    <CallToActionSection/>-->
 <!--    <FooterComponent/>-->
 </template>
@@ -13,7 +13,7 @@ import HeroComponent from "@/components/sections/HomePageSections/HeroComponent.
 import NavBarComponent from "@/components/global/NavBarComponent.vue";
 import NewServicesSection from "@/components/sections/HomePageSections/NewServicesSection.vue";
 import WhyUsSection from "@/components/sections/HomePageSections/WhyUsSection.vue";
-// import PorfolioSection from "@/components/sections/HomePageSections/PorfolioSection.vue";
+import PortfolioSection from "@/components/sections/HomePageSections/PortfolioSection.vue";
 // import CallToActionSection from "@/components/sections/HomePageSections/CallToActionSection.vue";
 // import FooterComponent from "@/components/global/FooterComponent.vue";
 
@@ -23,7 +23,7 @@ export default {
     components: {
         // FooterComponent,
         // CallToActionSection,
-        // PorfolioSection,
+        PortfolioSection,
         WhyUsSection,
         NewServicesSection,
         NavBarComponent,
