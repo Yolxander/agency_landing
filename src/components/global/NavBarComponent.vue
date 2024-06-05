@@ -98,6 +98,7 @@ export default {
     display: flex;
     z-index: 5;
     position: fixed;
+    top: 0;
 }
 
 .logo-container {

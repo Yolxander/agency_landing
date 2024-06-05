@@ -44,7 +44,7 @@ export default {
     padding: 80px 32px;
     background: #FFB219;
     border-radius: 4px;
-    border: 1px #A1AEBF solid;
+    /*border: 1px #A1AEBF solid;*/
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
