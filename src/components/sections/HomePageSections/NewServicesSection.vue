@@ -89,4 +89,21 @@ export default {
     gap: 32px;
     justify-content: center;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container{
+        padding: 50px 70px 45px 0px;
+        height: fit-content;
+        gap: 32px;
+    }
+    .header{
+        height: fit-content;;
+        gap: 10px;
+    }
+    .description{
+        width: 100%;
+    }
+}
+
 </style>

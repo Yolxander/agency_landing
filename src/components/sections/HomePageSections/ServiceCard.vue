@@ -80,4 +80,11 @@ export default {
     letter-spacing: 0.28px;
     word-wrap: break-word;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .service-card {
+        width: 90%;
+    }
+}
 </style>
