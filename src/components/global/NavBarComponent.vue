@@ -106,7 +106,7 @@ export default {
     align-items: center;
     gap: 12px;
     display: flex;
-    margin-left: 20px;
+    margin-left: 40px;
     cursor: pointer;
 }
 
@@ -214,7 +214,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 40px;
     z-index: 4;
     cursor: pointer;
     color: white;

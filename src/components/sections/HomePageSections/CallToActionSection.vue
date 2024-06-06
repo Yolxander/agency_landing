@@ -43,6 +43,7 @@ export default {
     height: 40%;
     padding: 80px 32px;
     background: #FFB219;
+    opacity: 0.8;
     border-radius: 4px;
     /*border: 1px #A1AEBF solid;*/
     display: inline-flex;

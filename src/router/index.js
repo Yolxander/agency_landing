@@ -9,7 +9,7 @@ import WelcomePage from "@/views/WelcomePage.vue";
 
 const routes = [
     {
-        path: "/",
+        path: "/home",
         component: WelcomePage,
     },
     {
@@ -17,7 +17,7 @@ const routes = [
         component: OurServicesPage,
     },
     {
-        path: "/about-us",
+        path: "/",
         component: AboutUsPage,
     },
     {

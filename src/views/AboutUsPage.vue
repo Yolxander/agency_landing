@@ -1,19 +1,18 @@
 <template>
-    <DynamicHeader :header="header"/>
-    <ModernTabs />
+  <AboutUsHeroComponent/>
+  <OurGoalSection />
 </template>
 
 <script>
-// import MainDescription from "@/components/sections/AboutUsPageSections/MainDescription.vue";
-import ModernTabs from "@/components/sections/AboutUsPageSections/ModernTabs.vue";
-import DynamicHeader from "@/components/headers/DynamicHeader.vue";
+import AboutUsHeroComponent from "@/components/sections/AboutUsPageSections/AboutUsHeroComponent.vue";
+import OurGoalSection from "@/components/sections/AboutUsPageSections/OurGoalSection.vue";
 
 export default {
     name: "AboutUsPage",
     components: {
-        DynamicHeader,
-        ModernTabs,
-        // MainDescription,
+        OurGoalSection,
+        AboutUsHeroComponent
+
     },
     data() {
         return {
