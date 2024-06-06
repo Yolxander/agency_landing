@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="menu">
-            <a href="#" class="menu-item">
+            <a @click="$router.push('/about-us')" href="#" class="menu-item">
                 <span class="menu-item-text">Company</span>
             </a>
             <a href="#" class="menu-item">
