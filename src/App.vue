@@ -51,5 +51,6 @@ body{
 #app {
     overflow-x: hidden;
     overflow-y: hidden;
+    height: fit-content;
 }
 </style>

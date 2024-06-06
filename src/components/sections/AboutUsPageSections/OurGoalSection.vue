@@ -40,7 +40,6 @@ export default {
     flex-direction: column;
     align-items: start;
     justify-content: space-evenly;
-    z-index: 3;
     font-family: 'Agrandir', sans-serif;
     position: relative;
     padding-left: 55px;
@@ -165,7 +164,20 @@ export default {
 @media (max-width: 768px) {
     .container{
        flex-direction: column;
+        padding-left: 5px;
+        height: fit-content;
+        gap: 32px;
+        margin-bottom: 50px;
     }
+
+    .company-description-container{
+        width: 90vw;
+    }
+
+    .company-info{
+        height: fit-content;
+    }
+
 }
 
 

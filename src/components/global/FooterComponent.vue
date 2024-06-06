@@ -203,4 +203,10 @@ export default {
     letter-spacing: 0.32px;
     word-wrap: break-word;
 }
+
+@media (max-width: 768px) {
+    .container{
+       height: fit-content;
+    }
+}
 </style>

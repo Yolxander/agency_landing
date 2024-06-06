@@ -281,6 +281,17 @@ export default {
     #info-container {
         width: 100%;
         align-items: center;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .info-content{
+        height: fit-content;
+    }
+
+    .info-box {
+        width: 100%;
+        height: fit-content;
     }
     .content {
         height: 85%;
@@ -288,6 +299,14 @@ export default {
 
     .blur-box-1, .blur-box-2 {
         display: none;
+    }
+
+    .description-container{
+        width: 96vw;
+    }
+
+    .company-name{
+        font-size: 35px;
     }
 }
 
