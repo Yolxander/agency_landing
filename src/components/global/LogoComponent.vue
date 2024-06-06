@@ -1,102 +1,131 @@
 <template>
-    <div class="logo" @click="$router.push('/')">
-        <p id="a-letter">S</p>
-        <p id="y-letter">E</p>
-        <p id="y-letter">M</p>
-        <p id="y-letter">P</p>
-        <p id="y-letter">R</p>
-        <p id="y-letter">E</p>
-        <span class="letter">s</span>
-        <span class="letter">t</span>
-        <span class="letter">u</span>
-        <span class="letter">d</span>
-        <span class="letter">i</span>
-        <span class="letter">o</span>
-        <span class="letter">s</span>
+    <div class="logo-container" @click="$router.push('/')">
+        <div class="logo">
+            <div class="icon">S</div>
+        </div>
+        <div class="brand-name">
+            <span class="letter">S</span>
+            <span class="letter">E</span>
+            <span class="letter">M</span>
+            <span class="letter">P</span>
+            <span class="letter">R</span>
+            <span class="letter">E</span>
+            <span class="letter"> </span>
+            <span class="letter">S</span>
+            <span class="letter">t</span>
+            <span class="letter">u</span>
+            <span class="letter">d</span>
+            <span class="letter">i</span>
+            <span class="letter">o</span>
+            <span class="letter">s</span>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
     name: "LogoComponent",
-    // mounted() {
-    //     setTimeout(() => {
-    //         this.showLettersSequentially();
-    //     }, 1000);
-    //
-    // },
-    // methods: {
-    //     showLettersSequentially() {
-    //         const letters = document.querySelectorAll('.logo .letter');
-    //         const y_letter = document.getElementById('y-letter');
-    //         let delay = 0;
-    //         // eslint-disable-next-line no-unused-vars
-    //         letters.forEach((letter, index) => {
-    //             setTimeout(() => { letter.style.display = 'block'; }, delay);
-    //             delay += 200; // Delay for each letter (500ms)
-    //         });
-    //
-    //         setTimeout(() => {
-    //             letters.forEach((letter, index) => {
-    //                 setTimeout(() => { letter.style.display = 'none'}, index * 500);
-    //             });
-    //         }, 4000); // Hide letters after 3 seconds
-    //
-    //         setTimeout(() => {
-    //             y_letter.style.transform = 'none'
-    //         }, 6000); //Move
-    //     }
-    // }
+    data() {
+        return {
+            observer: null
+        };
+    },
+    mounted() {
+        const newServicesSection = document.querySelector('.new-services-section');
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.showLettersSequentially();
+                    this.observer.unobserve(newServicesSection); // Stop observing after triggering
+                }
+            });
+        }, {threshold: 0.1}); // Adjust threshold as needed
+
+        if (newServicesSection) {
+            this.observer.observe(newServicesSection);
+        }
+    },
+    beforeUnmount() {
+        const newServicesSection = document.querySelector('.new-services-section');
+        if (newServicesSection && this.observer) {
+            this.observer.unobserve(newServicesSection);
+        }
+    },
+    methods: {
+        showLettersSequentially() {
+            const letters = document.querySelectorAll('.brand-name .letter');
+            let delay = 0;
+            letters.forEach((letter) => {
+                setTimeout(() => {
+                    letter.style.display = 'inline';
+                }, delay);
+                delay += 200; // Delay for each letter (200ms)
+            });
+        }
+    }
 }
 </script>
 
 <style scoped>
 
-.logo{
-    width: 80px; /* Adjust based on layout */
-    display: flex;
+.logo-container {
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 60px;
+    gap: 12px;
+    display: flex;
+    margin-left: 20px;
 }
 
-.logo p {
-    color: #FFF;
+.logo {
+    width: 38px;
+    height: 42px;
+    position: relative;
+}
+
+.logo-background {
+    width: 37.98px;
+    height: 42.01px;
+    position: absolute;
+    background: linear-gradient(253deg, #9DE8EE 0%, #9DE8EE 0%, #FA7C0B 49%, #9F8CED 100%);
+}
+
+.logo {
+    width: 38.475px; /* 28.5px * 1.35 */
+    height: 38.475px; /* 28.5px * 1.35 */
+    position: relative;
+    background: rgba(0, 0, 0, 0.20);
+    border-radius: 74.81px; /* 55.415px * 1.35 */
+    overflow: hidden;
+    border: 0.96px #645959 solid; /* 0.71px * 1.35 */
+    backdrop-filter: blur(18.72px);
+}
+
+.icon {
+    width: 20.23275px; /* 15.365px * 1.35 */
+    height: 23.29425px; /* 17.255px * 1.35 */
+    position: absolute;
+    left: 8.65875px; /* 6.415px * 1.35 */
+    top: 7.695px; /* 5.7px * 1.35 */
+    background: transparent;
     font-family: 'Gugi', sans-serif;
-    font-size: 30px; /* This might need adjustment */
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 10.48px; /* Adjust as necessary */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-name {
+    color: white;
+    font-size: 16px;
+    font-family: 'Gugi', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    word-wrap: break-word;
     margin: 0;
 }
 
-.letter{
-    color: white;
-}
-
-.logo span {
-    font-size: 25px; /* Adjust if necessary for clarity */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .logo {
-        width: 40px; /* Smaller logo for mobile */
-        margin-left: 20px; /* Less margin */
-    }
-
-    p, span{
-        display: none;
-    }
-    #a-letter{
-        display: unset;
-        font-size: 40px
-    }
-
-    .logo{
-        margin-left: 0;
-    }
+.letter {
+    display: none; /* Initially hide letters */
 }
 </style>

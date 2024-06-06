@@ -1,6 +1,6 @@
 <template>
     <div class="navbar">
-        <div class="logo-container">
+        <div class="logo-container" @click="$router.push('/')">
             <div class="logo">
                 <div class="icon">S</div>
             </div>
@@ -107,6 +107,7 @@ export default {
     gap: 12px;
     display: flex;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .logo {

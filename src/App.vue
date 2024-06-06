@@ -1,18 +1,42 @@
 <template>
-    <WelcomePage/>
+    <NavBarComponent class="nav"/>
+    <router-view />
+    <FooterComponent/>
 </template>
 
 <script>
 
 
-import WelcomePage from "@/views/WelcomePage.vue";
+import FooterComponent from "@/components/global/FooterComponent.vue";
+import { computed, reactive } from "vue";
+import { useHead } from "@vueuse/head";
+import router from "./router";
+import NavBarComponent from "@/components/global/NavBarComponent.vue";
 
 export default {
     name: 'App',
     components: {
-        WelcomePage
+        NavBarComponent,
+        FooterComponent,
 
-    }
+    },
+    setup() {
+        const siteData = reactive({
+            title: `SEMPRE studios`,
+            description: `SEMPRE studios is a full-service digital agency. We can make all your digital dreams come true.`,
+        });
+        useHead({
+            // Can be static or computed
+            title: computed(() => siteData.title),
+            meta: [
+                {
+                    name: `description`,
+                    content: computed(() => siteData.description),
+                },
+            ],
+        });
+    },
+    router,
 }
 </script>
 
