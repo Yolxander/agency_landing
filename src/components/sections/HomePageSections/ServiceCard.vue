@@ -20,15 +20,15 @@ export default {
             switch (this.title) {
                 case 'Branding':
                     return brandingIcon;
-                case 'Web development':
+                case 'Web Development':
                     return webDevelopmentIcon;
-                case 'Digital marketing':
+                case 'Digital Marketing':
                     return digitalMarketingIcon;
                 case 'Mobile App':
                     return mobileAppIcon;
                 case 'SEO':
                     return seoIcon;
-                case 'User testing':
+                case 'User Testing':
                     return userTestingIcon;
                 default:
                     return '';

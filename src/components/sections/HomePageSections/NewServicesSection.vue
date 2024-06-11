@@ -1,13 +1,13 @@
 <template>
-    <div className="container new-services-section">
-        <div className="header">
-            <div className="title">We Offer</div>
-            <div className="description">
+    <div class="container new-services-section">
+        <div class="header">
+            <div class="title">We Offer</div>
+            <div class="description">
                 Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi
                 rhoncus, tellus, eros consequat magna semper orci a tincidunt.
             </div>
         </div>
-        <div className="services">
+        <div class="services">
             <ServiceCard
                 v-for="(service, index) in services"
                 :key="service.title"
@@ -33,40 +33,40 @@ export default {
         return {
             services: [
                 {
-                    title: "Branding",
-                    description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices",
-                    companyName: "Find your niche",
-                    buttonTitle: "Build my brand"
+                    "title": "Branding",
+                    "description": "Empower your business with a unique brand identity that resonates with your audience and enhances market presence.",
+                    "companyName": "Find your niche",
+                    "buttonTitle": "Build my brand"
                 },
                 {
-                    title: "Web development",
-                    description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus",
-                    companyName: "Develop your site",
-                    buttonTitle: "Start development"
+                    "title": "Web Development",
+                    "description": "Create a professional, user-friendly website that drives engagement and supports your business growth.",
+                    "companyName": "Develop your site",
+                    "buttonTitle": "Start development"
                 },
                 {
-                    title: "Digital marketing",
-                    description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est.",
-                    companyName: "Boost your reach",
-                    buttonTitle: "Market now"
+                    "title": "Digital Marketing",
+                    "description": "Leverage cutting-edge digital marketing strategies to expand your reach and connect with your target audience effectively.",
+                    "companyName": "Boost your reach",
+                    "buttonTitle": "Market now"
                 },
                 {
-                    title: "Mobile App",
-                    description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices",
-                    companyName: "Go mobile",
-                    buttonTitle: "Build app"
+                    "title": "Mobile App Development",
+                    "description": "Develop intuitive and engaging mobile apps that enhance customer interaction and support your business objectives.",
+                    "companyName": "Go mobile",
+                    "buttonTitle": "Build app"
                 },
                 {
-                    title: "SEO",
-                    description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus",
-                    companyName: "Optimize search",
-                    buttonTitle: "Optimize now"
+                    "title": "SEO",
+                    "description": "Optimize your online presence with advanced SEO techniques to improve search engine rankings and drive organic traffic.",
+                    "companyName": "Optimize search",
+                    "buttonTitle": "Optimize now"
                 },
                 {
-                    title: "User testing",
-                    description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est.",
-                    companyName: "Test your product",
-                    buttonTitle: "Start testing"
+                    "title": "User Testing",
+                    "description": "Ensure your product meets user expectations with comprehensive user testing services that provide valuable insights for improvement.",
+                    "companyName": "Test your product",
+                    "buttonTitle": "Start testing"
                 }
             ]
         };
