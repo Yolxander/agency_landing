@@ -6,7 +6,6 @@
             button-title="Contact"
     />
     <OurGoalSection />
-  <OurGoalSection />
 </template>
 
 <script>

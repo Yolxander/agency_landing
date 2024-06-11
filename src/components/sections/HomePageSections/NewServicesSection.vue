@@ -51,7 +51,7 @@ export default {
                     "buttonTitle": "Market now"
                 },
                 {
-                    "title": "Mobile App Development",
+                    "title": "Mobile App",
                     "description": "Develop intuitive and engaging mobile apps that enhance customer interaction and support your business objectives.",
                     "companyName": "Go mobile",
                     "buttonTitle": "Build app"

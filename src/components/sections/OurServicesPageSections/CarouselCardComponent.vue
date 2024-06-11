@@ -8,10 +8,8 @@
             <div class="card-button-container">
                 <div class="card-button-flex">
                     <div class="card-button-text">Read more</div>
-                    <div class="card-button-icon-container">
-                        <div class="card-button-icon">
-                            <div class="card-button-icon-inner"></div>
-                        </div>
+                    <div style="width: 16px; height: 16px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+                        <div style="width: 13.33px; height: 13.33px; background: #728095"></div>
                     </div>
                 </div>
             </div>
@@ -51,7 +49,7 @@ export default {
 }
 
 .card-image {
-    width: 365px;
+    width: 100%;
     height: 142px;
     position: relative;
     background-size: cover;
