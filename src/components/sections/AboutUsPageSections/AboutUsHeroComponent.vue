@@ -123,7 +123,7 @@ export default {
 
 .info-content {
     align-self: stretch;
-    height: 239px;
+    height: fit-content;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -303,6 +303,11 @@ export default {
 
     .blur-box-1, .blur-box-2 {
         display: none;
+    }
+
+
+    .company-name{
+        font-size: 35px;
     }
 }
 
