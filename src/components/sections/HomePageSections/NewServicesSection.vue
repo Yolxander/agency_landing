@@ -1,12 +1,13 @@
 <template>
-    <div class="container new-services-section">
-        <div class="header">
-            <div class="title">We Offer</div>
-            <div class="description">
-                Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt.
+    <div className="container new-services-section">
+        <div className="header">
+            <div className="title">We Offer</div>
+            <div className="description">
+                Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi
+                rhoncus, tellus, eros consequat magna semper orci a tincidunt.
             </div>
         </div>
-        <div class="services">
+        <div className="services">
             <ServiceCard
                 v-for="(service, index) in services"
                 :key="service.title"
@@ -14,6 +15,7 @@
                 :description="service.description"
                 :style="{ animationDelay: `${index * 0.5}s` }"
                 class="fade-in"
+                @click="selectService(service)"
             />
         </div>
     </div>
@@ -30,14 +32,49 @@ export default {
     data() {
         return {
             services: [
-                { title: "Branding", description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices" },
-                { title: "Web development", description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus" },
-                { title: "Digital marketing", description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est." },
-                { title: "Mobile App", description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices" },
-                { title: "SEO", description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus" },
-                { title: "User testing", description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est." }
+                {
+                    title: "Branding",
+                    description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices",
+                    companyName: "Find your niche",
+                    buttonTitle: "Build my brand"
+                },
+                {
+                    title: "Web development",
+                    description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus",
+                    companyName: "Develop your site",
+                    buttonTitle: "Start development"
+                },
+                {
+                    title: "Digital marketing",
+                    description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est.",
+                    companyName: "Boost your reach",
+                    buttonTitle: "Market now"
+                },
+                {
+                    title: "Mobile App",
+                    description: "Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices",
+                    companyName: "Go mobile",
+                    buttonTitle: "Build app"
+                },
+                {
+                    title: "SEO",
+                    description: "Integer ante non nunc, eget est justo vel semper nunc. Lacus",
+                    companyName: "Optimize search",
+                    buttonTitle: "Optimize now"
+                },
+                {
+                    title: "User testing",
+                    description: "Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est.",
+                    companyName: "Test your product",
+                    buttonTitle: "Start testing"
+                }
             ]
         };
+    },
+    methods: {
+        selectService(service) {
+            this.$emit('service-selected', service);
+        }
     }
 };
 </script>
@@ -76,7 +113,7 @@ export default {
     text-align: center;
     color: rgba(230, 230, 230, 0.60);
     font-size: 16px;
-      font-family: 'Agrandir', sans-serif;
+    font-family: 'Agrandir', sans-serif;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.32px;
@@ -92,18 +129,17 @@ export default {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .container{
+    .container {
         padding: 50px 70px 45px 0px;
         height: fit-content;
         gap: 32px;
     }
-    .header{
-        height: fit-content;;
+    .header {
+        height: fit-content;
         gap: 10px;
     }
-    .description{
+    .description {
         width: 100%;
     }
 }
-
 </style>

@@ -24,8 +24,9 @@ const routes = [
         component: FaqPage,
     },
     {
-        path: "/our-services",
+        path: '/our-services',
         component: OurServicesPage,
+        props: route => ({ service: route.query.service })
     },
 ];
 

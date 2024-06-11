@@ -1,6 +1,6 @@
 <template>
     <HeroComponent />
-    <NewServicesSection />
+    <NewServicesSection @service-selected="selectService" />
     <WhyUsSection/>
     <PortfolioSection/>
     <CallToActionSection/>
@@ -13,17 +13,21 @@ import WhyUsSection from "@/components/sections/HomePageSections/WhyUsSection.vu
 import PortfolioSection from "@/components/sections/HomePageSections/PortfolioSection.vue";
 import CallToActionSection from "@/components/sections/HomePageSections/CallToActionSection.vue";
 
-
-
 export default {
     name: "WelcomePage",
     components: {
-        CallToActionSection,
-        PortfolioSection,
-        WhyUsSection,
+        HeroComponent,
         NewServicesSection,
-        HeroComponent}
-}
+        WhyUsSection,
+        PortfolioSection,
+        CallToActionSection
+    },
+    methods: {
+        selectService(service) {
+            this.$router.push({ path: '/our-services', query: { service: JSON.stringify(service) } });
+        }
+    }
+};
 </script>
 
 <style scoped>

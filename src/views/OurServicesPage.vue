@@ -1,9 +1,9 @@
 <template>
     <AboutUsHeroComponent
-        about-us="Branding"
-        company-name="Find your niche"
-        description="Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros "
-        button-title="Build my brand"
+        :about-us="selectedService.title"
+        :company-name="selectedService.companyName"
+        :description="selectedService.description"
+        :button-title="selectedService.buttonTitle"
     />
     <OurGoalSection />
 </template>
@@ -15,10 +15,39 @@ import AboutUsHeroComponent from "@/components/sections/AboutUsPageSections/Abou
 export default {
     name: "OurServicesPage",
     components: {
-        AboutUsHeroComponent, OurGoalSection
-
+        AboutUsHeroComponent,
+        OurGoalSection
     },
-
-}
+    props: {
+        service: {
+            type: Object,
+            default: () => ({
+                title: "About us",
+                companyName: "SEMPRE Studios",
+                description: "Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros",
+                buttonTitle: "Contact"
+            })
+        }
+    },
+    data() {
+        return {
+            selectedService: this.service
+        };
+    },
+    watch: {
+        '$route.query.service': {
+            handler(newService) {
+                if (newService) {
+                    this.selectedService = JSON.parse(newService);
+                }
+            },
+            immediate: true
+        }
+    }
+};
 </script>
 
+
+<style scoped>
+/* Add any additional styles here */
+</style>
