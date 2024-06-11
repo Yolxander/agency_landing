@@ -6,18 +6,19 @@
         :description="selectedService.description"
         :button-title="selectedService.buttonTitle"
     />
-    <OurGoalSection />
+    <ServiceInfoSection/>
 </template>
 
 <script>
-import OurGoalSection from "@/components/sections/AboutUsPageSections/OurGoalSection.vue";
+
 import AboutUsHeroComponent from "@/components/sections/AboutUsPageSections/AboutUsHeroComponent.vue";
+import ServiceInfoSection from "@/components/sections/OurServicesPageSections/ServiceInfoSection.vue";
 
 export default {
     name: "OurServicesPage",
     components: {
+        ServiceInfoSection,
         AboutUsHeroComponent,
-        OurGoalSection
     },
     props: {
         service: {
