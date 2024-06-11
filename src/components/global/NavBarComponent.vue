@@ -23,9 +23,9 @@
         </div>
         <div class="menu">
             <a @click="$router.push('/about-us')" href="#" class="menu-item">
-                <span class="menu-item-text">Company</span>
+                <span class="menu-item-text">About Us</span>
             </a>
-            <a href="#" class="menu-item">
+            <a @click="$router.push('/our-services')"  href="#" class="menu-item">
                 <span class="menu-item-text">Services</span>
             </a>
             <a href="#" class="menu-item">

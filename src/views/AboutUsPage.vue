@@ -1,5 +1,11 @@
 <template>
-  <AboutUsHeroComponent/>
+    <AboutUsHeroComponent
+            about-us="About us"
+            company-name="SEMPRE Studios"
+            description="Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros"
+            button-title="Contact"
+    />
+    <OurGoalSection />
   <OurGoalSection />
 </template>
 

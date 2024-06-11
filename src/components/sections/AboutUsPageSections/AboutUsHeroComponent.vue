@@ -13,14 +13,14 @@
             <div id="info-container">
                 <div class="info-box">
                     <div class="info-content">
-                        <div class="about-us">About us</div>
-                        <div class="company-name">SEMPRE Studios</div>
+                        <div class="about-us">{{ aboutUs }}</div>
+                        <div class="company-name">{{ companyName }}</div>
                         <div class="description-container">
-                            <div class="description">Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros</div>
+                            <div class="description">{{ description }}</div>
                         </div>
                     </div>
                     <div class="contact-button">
-                        <div class="contact-text">Contact</div>
+                        <div class="contact-text">{{ buttonTitle }}</div>
                     </div>
                 </div>
             </div>
@@ -41,8 +41,23 @@ const emitter = mitt();
 
 export default {
     name: 'AboutUsHeroComponent',
-    components: {
-
+    props: {
+        aboutUs: {
+            type: String,
+            default: 'About us'
+        },
+        companyName: {
+            type: String,
+            default: 'SEMPRE Studios'
+        },
+        description: {
+            type: String,
+            default: 'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros'
+        },
+        buttonTitle: {
+            type: String,
+            default: 'Contact'
+        }
     },
     data() {
         return {
@@ -281,17 +296,6 @@ export default {
     #info-container {
         width: 100%;
         align-items: center;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .info-content{
-        height: fit-content;
-    }
-
-    .info-box {
-        width: 100%;
-        height: fit-content;
     }
     .content {
         height: 85%;
@@ -299,14 +303,6 @@ export default {
 
     .blur-box-1, .blur-box-2 {
         display: none;
-    }
-
-    .description-container{
-        width: 96vw;
-    }
-
-    .company-name{
-        font-size: 35px;
     }
 }
 
