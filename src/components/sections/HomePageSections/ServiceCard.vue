@@ -52,6 +52,7 @@ export default {
     align-items: flex-start;
     gap: 12px;
     color: white;
+    cursor: pointer;
 }
 
 .icon {

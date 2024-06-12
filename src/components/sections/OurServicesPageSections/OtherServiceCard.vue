@@ -1,5 +1,5 @@
 <template>
-    <div class="service-card">
+    <div class="service-card" @click="handleClick">
         <div class="icon" v-html="getIcon()"></div>
         <div class="service-title">{{ title }}</div>
         <div class="service-description">{{ description }}</div>
@@ -20,16 +20,11 @@ export default {
             type: String,
             required: true
         },
-        iconBackgroundStyle: {
-            type: Object,
-            required: true
-        },
-        iconForegroundStyle: {
-            type: Object,
-            required: true
-        }
     },
     methods: {
+        handleClick() {
+            this.$emit('click');
+        },
         getIcon() {
             switch (this.title) {
                 case 'Branding':
@@ -55,6 +50,7 @@ export default {
 <style scoped>
 .service-card {
     width: 370px;
+    height: 168px;
     padding: 24px;
     border-radius: 4px;
     overflow: hidden;
@@ -64,6 +60,7 @@ export default {
     align-items: flex-start;
     gap: 12px;
     display: inline-flex;
+    cursor: pointer;
 }
 
 .icon {

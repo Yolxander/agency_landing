@@ -4,22 +4,11 @@
         <div class="services-container">
             <div class="services-row">
                 <OtherServiceCard
-                    title="Mobile App"
-                    description="Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices"
-                    :iconBackgroundStyle="{ width: '27px', height: '39px', left: '10.50px', top: '4.50px', background: 'linear-gradient(253deg, #9DE8EE 0%, #9DE8EE 0%, #FA7C0B 49%, #9F8CED 100%)' }"
-                    :iconForegroundStyle="{ width: '17.40px', height: '12.09px', left: '25.54px', top: '31.46px', background: 'white' }"
-                />
-                <OtherServiceCard
-                    title="SEO"
-                    description="Integer ante non nunc, eget est justo vel semper nunc. Lacus"
-                    :iconBackgroundStyle="{ width: '42px', height: '36px', left: '3px', top: '6px', background: 'linear-gradient(253deg, #9DE8EE 0%, #9DE8EE 0%, #FA7C0B 49%, #9F8CED 100%)' }"
-                    :iconForegroundStyle="{ width: '24.93px', height: '24.18px', left: '19.50px', top: '21px', background: 'white' }"
-                />
-                <OtherServiceCard
-                    title="User Testing"
-                    description="Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est."
-                    :iconBackgroundStyle="{ width: '42px', height: '42px', left: '3px', top: '3px', background: 'linear-gradient(253deg, #9DE8EE 0%, #9DE8EE 0%, #FA7C0B 49%, #9F8CED 100%)' }"
-                    :iconForegroundStyle="{ width: '18px', height: '19.29px', left: '15px', top: '15px', background: 'white' }"
+                    v-for="(service, index) in services"
+                    :key="index"
+                    :title="service.title"
+                    :description="service.description"
+                    @click="selectService(service)"
                 />
             </div>
         </div>
@@ -33,6 +22,53 @@ export default {
     name: "CarouselOtherServices",
     components: {
         OtherServiceCard
+    },
+    data() {
+        return {
+            services: [
+                {
+                    "title": "Branding",
+                    "description": "Empower your business with a unique brand identity that resonates with your audience and enhances market presence.",
+                    "companyName": "Find your niche",
+                    "buttonTitle": "Build my brand"
+                },
+                {
+                    "title": "Web Development",
+                    "description": "Create a professional, user-friendly website that drives engagement and supports your business growth.",
+                    "companyName": "Develop your site",
+                    "buttonTitle": "Start development"
+                },
+                {
+                    "title": "Digital Marketing",
+                    "description": "Leverage cutting-edge digital marketing strategies to expand your reach and connect with your target audience effectively.",
+                    "companyName": "Boost your reach",
+                    "buttonTitle": "Market now"
+                },
+                // {
+                //     "title": "Mobile App",
+                //     "description": "Develop intuitive and engaging mobile apps that enhance customer interaction and support your business objectives.",
+                //     "companyName": "Go mobile",
+                //     "buttonTitle": "Build app"
+                // },
+                // {
+                //     "title": "SEO",
+                //     "description": "Optimize your online presence with advanced SEO techniques to improve search engine rankings and drive organic traffic.",
+                //     "companyName": "Optimize search",
+                //     "buttonTitle": "Optimize now"
+                // },
+                // {
+                //     "title": "User Testing",
+                //     "description": "Ensure your product meets user expectations with comprehensive user testing services that provide valuable insights for improvement.",
+                //     "companyName": "Test your product",
+                //     "buttonTitle": "Start testing"
+                // }
+            ]
+        };
+    },
+    methods: {
+        selectService(service) {
+            this.$emit('service-selected', service);
+        }
     }
 }
 </script>
