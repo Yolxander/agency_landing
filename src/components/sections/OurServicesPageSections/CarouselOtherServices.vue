@@ -83,7 +83,7 @@ export default {
     align-items: flex-start;
     gap: 32px;
     display: inline-flex;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .branding-text {
