@@ -18,6 +18,7 @@
 <script>
 import OtherServiceCard from './OtherServiceCard.vue';
 
+
 export default {
     name: "CarouselOtherServices",
     components: {
@@ -67,7 +68,7 @@ export default {
     },
     methods: {
         selectService(service) {
-            this.$emit('service-selected', service);
+            this.$router.push({ path: '/our-services', query: { service: JSON.stringify(service) } });
         }
     }
 }
