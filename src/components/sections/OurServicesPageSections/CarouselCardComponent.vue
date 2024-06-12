@@ -36,7 +36,7 @@ export default {
 <style scoped>
 /* Include the extracted styles here */
 .card-container {
-    width: 412px;
+    width: 390px;
     padding: 24px;
     border-radius: 4px;
     overflow: hidden;
