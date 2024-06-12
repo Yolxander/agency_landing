@@ -9,6 +9,7 @@
             </div>
         </div>
         <ServiceExampleCarousel />
+        <CarouselOtherServices />
         <button class="contact-button" @click="$router.push('/')">
             <span class="contact-text">Go to home</span>
         </button>
@@ -20,17 +21,18 @@
 
 <script>
 import ServiceExampleCarousel from "@/components/sections/OurServicesPageSections/ServiceExampleCarousel.vue";
+import CarouselOtherServices from "@/components/sections/OurServicesPageSections/CarouselOtherServices.vue";
 
 export default {
     name: "ServiceInfoSection",
-    components: {ServiceExampleCarousel}
+    components: {CarouselOtherServices, ServiceExampleCarousel}
 }
 </script>
 
 <style scoped>
 .container {
     width: 100%;
-    height: 95vh;
+    height: fit-content;
     background: #0F0F0F;
     display: flex;
     flex-direction: column;
@@ -39,6 +41,8 @@ export default {
     font-family: 'Agrandir', sans-serif;
     position: relative;
     padding-left: 55px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .company-info {
