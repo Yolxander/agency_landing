@@ -3,7 +3,7 @@
         <div class="footer-section">
             <div class="footer-column">
                 <div class="footer-title">Company</div>
-                <div class="footer-item">About us</div>
+                <div @click="$router.push('/about-us')" class="footer-item">About us</div>
 <!--                <div class="footer-item">Team</div>-->
 <!--                <div class="footer-item">Careers</div>-->
             </div>
@@ -94,6 +94,7 @@ export default {
     line-height: 20px;
     letter-spacing: 0.32px;
     word-wrap: break-word;
+    cursor: pointer;
 }
 
 .footer-logo-section {
