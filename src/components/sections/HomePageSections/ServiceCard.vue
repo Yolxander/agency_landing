@@ -88,4 +88,10 @@ export default {
         width: 90%;
     }
 }
+
+@media (max-width: 468px) {
+    .service-card {
+        width: 200px
+    }
+}
 </style>

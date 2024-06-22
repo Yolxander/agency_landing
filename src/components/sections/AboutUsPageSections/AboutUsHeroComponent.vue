@@ -16,7 +16,7 @@
                         <div class="about-us">{{ aboutUs }}</div>
                         <div class="company-name">{{ companyName }}</div>
                         <div class="description-container">
-                            <div class="description">{{ description }}</div>
+                            <div class="description"><p>{{ description }}</p></div>
                         </div>
                     </div>
                     <div class="contact-button">
@@ -312,6 +312,12 @@ export default {
 }
 
 @media (max-width: 430px) {
-    /* Add any additional styles for smaller screens here */
+    .info-box{
+       width: 460px;
+    }
+
+    .description p{
+        width: 75%;
+    }
 }
 </style>
